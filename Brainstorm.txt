@@ -1,0 +1,5 @@
+Ideer til projekter:
+
+Boligsalg via. https://www.boligsiden.dk/resultat/: Kan skrabes
+Almennyttige boliger via https://www.fsb.dk/find-bolig/: Kan skrabes
+Beer reviews via: https://www.ratebeer.com/api-documentation.asp API adgang
