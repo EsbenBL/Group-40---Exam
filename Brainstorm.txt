@@ -3,3 +3,6 @@ Ideer til projekter:
 Boligsalg via. https://www.boligsiden.dk/resultat/: Kan skrabes
 Almennyttige boliger via https://www.fsb.dk/find-bolig/: Kan skrabes
 Beer reviews via: https://www.ratebeer.com/api-documentation.asp API adgang
+Steam via  https://store.steampowered.com/search/? kan skrabes
+MadOpskrifter via https://start.madopskrifter.nu/MadopskrifternuAPI.aspx API adgang(plot pris mod næring - forudsige næring baseret på pris?)
+Saxo via api.saxo.com/ API adgang
