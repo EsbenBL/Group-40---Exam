@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[danish]{babel}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{pst-tree}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{enumerate} 
+\usepackage{amssymb}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{gauss}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+\pagestyle{fancy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{lscape}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\DeclareMathSizes{12}{12}{10}{10}
+\interfootnotelinepenalty=10000
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{graphics}
+\usepackage[danish]{babel} 
+\usepackage{graphicx}
+\usepackage{multirow, booktabs}
+\usepackage[final]{pdfpages}
+\usepackage{hyperref}
+\pagenumbering{gobble}
+
+\lhead{}
+\rhead{}
+\chead{}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Predicting Evaluation Prices of the Danish Real Estate Property} 
+\author{Exam-numbers 115, 144, 146, 204}
+\maketitle
+\section*{}
+The intention of this project is to predict which features are most relevant for evaluation of real estate properties in Denmark. Two prediction models will be used, one with a classification output by price-intervals. The second model with a continuous output. Data will be scraped from \href{https://www.boliga.dk}{boliga.dk}, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk},
+ \href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik}.
+The data from \href{https://www.boliga.dk}{boliga.dk} and \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} are undoubtedly essential to the model. Whereas the data scraped from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} 
+and \href{https://statistikbanken.dk/statbank5a/default.asp?w=1280}{Statistikbanken} contributes with potential to include socio-economic factors.\newline
+The model will take variation in pricing caused by geographical matters, as well as differences in types of housing into account.
+Machine learning will be applied, for the purpose of prediction of prices. Because of the large amount of terms and corresponding interaction-terms in the prediction-model, regularization by the Lasso-feature will be used. 
+
+\end{document}

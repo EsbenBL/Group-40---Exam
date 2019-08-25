@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  25 AUG 2019 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  25 AUG 2019 13:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**DraftExam.tex
-(./DraftExam.tex
+**Draft-ProjectDescrib.tex
+(./Draft-ProjectDescrib.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -989,27 +989,29 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'danish'.
 
-(./DraftExam.aux)
-\openout1 = `DraftExam.aux'.
+(./Draft-ProjectDescrib.aux)
+\openout1 = `Draft-ProjectDescrib.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 48.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+)
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count270
 \scratchdimen=\dimen316
@@ -1083,7 +1085,7 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 51.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1093,52 +1095,62 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count276
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
-(./DraftExam.out) (./DraftExam.out)
+(./Draft-ProjectDescrib.out) (./Draft-ProjectDescrib.out)
 \@outlinefile=\write4
-\openout4 = `DraftExam.out'.
+\openout4 = `Draft-ProjectDescrib.out'.
 
-<forside.pdf, id=63, 597.50786pt x 845.04686pt>
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf>
-Package pdftex.def Info: forside.pdf  used on input line 49.
-(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf>
-Package pdftex.def Info: forside.pdf  used on input line 49.
-(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<forside.pdf, id=66, page=1, 597.50786pt x 845.04686pt>
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 49.
-(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 49.
-(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 49.
-(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 49.
-(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
-File: forside.pdf Graphic file (type pdf)
-<use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 49.
-(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 56.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 56.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 56.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 56.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 56.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 56.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 64.
  [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -1159,196 +1171,30 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
- <./forside.pdf>]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
- (./DraftExam.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4.
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write5
-\openout5 = `DraftExam.toc'.
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 54.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 54.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 54.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 54.
- [2{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 55.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 55.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 61.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 61.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 62.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 62.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 62.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 64.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--87
-
- []
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 88.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 88.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 89.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 89.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 92.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 92.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 92.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 92.
-[3]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 93.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 93.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 95.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 95.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 99.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 99.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 101.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 106.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 106.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 108.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 108.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 110.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 110.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 111.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 111.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 115.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 115.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 115.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 115.
- [4]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 116.
- [5]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 117.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 117.
-
-Overfull \hbox (20.53908pt too wide) in paragraph at lines 119--122
-\T1/ptm/m/n/12 Hal R. Va-ri-an. Big da-ta: New tri-cks for eco-no-me-tri-cs. Jo
-ur-nal of Eco-no-mic Per-specti-ves, 28(2):3^^U28,
- []
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 123.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 123.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 123.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 123.
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
- (./DraftExam.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
-Package rerunfilecheck Info: File `DraftExam.out' has not changed.
-(rerunfilecheck)             Checksum: 9536264634F57B2780DFDA82C9178BF6;813.
+(./Draft-ProjectDescrib.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
+Package rerunfilecheck Info: File `Draft-ProjectDescrib.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23226 strings out of 492649
- 411456 string characters out of 6129622
- 543961 words of memory out of 5000000
- 26602 multiletter control sequences out of 15000+600000
- 40837 words of font info for 51 fonts, out of 8000000 for 9000
+ 23154 strings out of 492649
+ 410731 string characters out of 6129622
+ 537961 words of memory out of 5000000
+ 26565 multiletter control sequences out of 15000+600000
+ 28481 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,18n,54p,819b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
-e/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-d
-ist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm
-/lmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on DraftExam.pdf (6 pages, 184418 bytes).
+ 54i,6n,54p,830b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Draft-ProjectDescrib.pdf (1 page, 17620 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 30 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
