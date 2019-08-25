@@ -50,15 +50,15 @@
 
 \begin{document}
 
-\title{Predicting Valuation Prices of Danish Real Estate Property} 
+\title{Predicting Evaluation Prices of Danish Real Estate Property} 
 \author{Exam-numbers 115, 144, 146, 204}
 \maketitle
 \section*{}
-The intention of this project is to examine which features are most relevant for predicting the valuation of real estate properties in Denmark. Supervised learning by classification- and regression prediction-model are applied to data scraped from \href{https://www.boliga.dk}{boliga.dk}, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk},
+The intention of this project is to predict which features are most relevant for evaluation of real estate properties in Denmark. Supervised learning by classification- and regression prediction-model. Data will be scraped from \href{https://www.boliga.dk}{boliga.dk}, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk},
  \href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik}.
-The data from \href{https://www.boliga.dk}{boliga.dk} is undoubtedly essential to the model. Whereas the data collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} 
-and \href{https://statistikbanken.dk/statbank5a/default.asp?w=1280}{Statistikbanken} contributes with potential to include socio-economic factors. The scraped data from \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} attempts to add further geographical attributes to the prediction-model. \newline
+The data from \href{https://www.boliga.dk}{boliga.dk} are undoubtedly essential to the model. Whereas the data collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} 
+and \href{https://statistikbanken.dk/statbank5a/default.asp?w=1280}{Statistikbanken} contributes with potential to include socio-economic factors. \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}\newline
 The model will take variation in pricing caused by geographical matters, as well as differences in types of housing into account.
-Because of the large amount of terms and corresponding interaction-terms in the prediction-model, regularization by the Lasso will be used in our ML-process. 
+Machine learning will be applied, for the purpose of prediction of prices. Because of the large amount of terms and corresponding interaction-terms in the prediction-model, regularization by the Lasso-feature will be used. 
 
 \end{document}
