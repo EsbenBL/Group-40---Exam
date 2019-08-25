@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  25 AUG 2019 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  25 AUG 2019 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1326,12 +1326,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `DraftExam.out' has not changed.
-(rerunfilecheck)             Checksum: 9536264634F57B2780DFDA82C9178BF6;813.
+(rerunfilecheck)             Checksum: FEAB65374CCBF865018CBBB0C6C11EFC;830.
  ) 
 Here is how much of TeX's memory you used:
  23226 strings out of 492649
  411456 string characters out of 6129622
- 543961 words of memory out of 5000000
+ 544961 words of memory out of 5000000
  26602 multiletter control sequences out of 15000+600000
  40837 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1345,7 +1345,7 @@ ist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on DraftExam.pdf (6 pages, 184418 bytes).
+Output written on DraftExam.pdf (6 pages, 184891 bytes).
 PDF statistics:
  202 PDF objects out of 1000 (max. 8388607)
  168 compressed objects within 2 object streams

@@ -41,7 +41,7 @@
 \usepackage[final]{pdfpages}
 \usepackage{hyperref}
 \pagenumbering{gobble}
-
+\usepackage{blindtext}
 \lhead{}
 \rhead{}
 \chead{}
@@ -51,7 +51,8 @@
 \begin{document}
 
 \title{Predicting Valuation Prices of Danish Real Estate Property} 
-\author{Exam-numbers 115, 144, 146, 204}
+
+\author{Group 40: Exam numbers 115, 144, 146, 204}
 \maketitle
 \section*{}
 The intention of this project is to examine which features are most relevant for predicting the valuation of real estate properties in Denmark. Supervised learning by classification- and regression prediction-model are applied to data scraped from \href{https://www.boliga.dk}{boliga.dk}, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk},

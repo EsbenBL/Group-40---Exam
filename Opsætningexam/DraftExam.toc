@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {3.1}Supervised Machine Learning}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Regularization / Lasso og derved variable selection}{4}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Lars}{4}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Cross-Validation}{4}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Cross-Validation by K-fold method}{4}{subsection.3.4}
 \contentsline {section}{\numberline {4}Analysis}{5}{section.4}
 \contentsline {section}{\numberline {5}Results}{5}{section.5}
 \contentsline {section}{\numberline {6}Discussion}{5}{section.6}

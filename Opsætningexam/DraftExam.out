@@ -6,7 +6,7 @@
 \BOOKMARK [2][-]{subsection.3.1}{Supervised Machine Learning}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.2}{Regularization / Lasso og derved variable selection}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.3}{Lars}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.4}{Cross-Validation}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Cross-Validation by K-fold method}{section.3}% 9
 \BOOKMARK [1][-]{section.4}{Analysis}{}% 10
 \BOOKMARK [1][-]{section.5}{Results}{}% 11
 \BOOKMARK [1][-]{section.6}{Discussion}{}% 12

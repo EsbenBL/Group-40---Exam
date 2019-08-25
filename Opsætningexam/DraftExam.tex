@@ -53,7 +53,7 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-This project predicts the valuation price of the danish housing market. By scraping \href{https://www.boliga.dk}{boliga.dk} we obtain a broad range of variables of potential interest, on all listed housing by august $23^{th}$, 2019. The AVI, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, constructs measurements of distances from an address to conveniences and necessities such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives more opportunity for geographical-control. The data from hvorlangterder.dk will allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
+This project predicts the valuation price of the danish housing market. By scraping \href{https://www.boliga.dk}{boliga.dk} we obtain a broad range of features of interest, on all listed housing by august $23^{th}$, 2019. The AVI, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, constructs measurements of distances from an address to conveniences and necessities such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives more opportunity for geographical-control. The data from hvorlangterder.dk will allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
 \newline \underline{Måske en anden formulering ovenfor?}
 Also scraping from  \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and 
 \href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik}. 
@@ -70,17 +70,17 @@ A few of the listed housing, have been for sale for over a decade. These are con
    & \multicolumn{2}{c|}{Sjælland} & \multicolumn{3}{c|}{Ikke Sjælland} \\ \hline
   Type/Region & Hovedstaden & Sjælland & Syddanmark & Midtjylland & Nordjylland \\
    \midrule 
-   Villa & 513,36 & 459,67 & 503,62 & 461,96 \\ \hline
-   Rækkehus & 470,67 & 404,95 & 460,93 & 407,24 \\ \hline
-   Ejerlejlighhed & 482,30 & 463,94 & 455,87 & 449,54 \\ \hline
-   Fritidsbolig & 513,36 & 459,67 & 503,62 & 461,96 \\ \hline
-   Kolonihave & 470,67 & 404,95 & 460,93 & 407,24 \\ \hline
-   Andelsbolig & 482,30 & 463,94 & 455,87 & 449,54 \\ \hline
-   Landejendom & 513,36 & 459,67 & 503,62 & 461,96 \\ \hline
-   Helårsgrund & 470,67 & 404,95 & 460,93 & 407,24 \\ \hline
-   Fritidsgrund & 482,30 & 463,94 & 455,87 & 449,54 \\ \hline
-   Villalejlighed & 513,36 & 459,67 & 503,62 & 461,96 \\ \hline
-   Lystejendom & 470,67 & 404,95 & 460,93 & 407,24 \\ 
+   Villa & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
+   Rækkehus & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
+   Ejerlejlighhed & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
+   Fritidsbolig & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
+   Kolonihave & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
+   Andelsbolig & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
+   Landejendom & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
+   Helårsgrund & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
+   Fritidsgrund & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
+   Villalejlighed & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
+   Lystejendom & 470,67 & 404,95 & 460,93 & 407,24 & \\ 
     \bottomrule
 \end{tabular}
 \newline
@@ -93,12 +93,12 @@ Two types of predictive models will be used for the sake of returning different 
 \subsection{Regularization / Lasso og derved variable selection}
 The use of a sizeable amount of regressors leads to a significant risk of over-fitting the prediction model. 
 For the purpose of dealing with over-fitting, a form of regularization needs to be carried out. The Lasso-feature posses the attributes to do so. Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction. \footnote{Big Data in Social Sciences, Forster et al. p. 173}\, \footnote{Python Machine Learning, Sebastian Raschka et al. p. 332}
-\newline The regularization parameter $\lambda$ is determined by: $$Evt-optimeringsproblem$$
-Another convenient attribute of the Lasso-feature is that it produces regressions where some of the variables are set equal to zero \footnote{Hal R. Varian. Big data: New tricks for econometrics. p.19}. Lasso thereby perform the variable selection.   
+\newline Lasso solves the optimizationproblem: $$Evt-optimeringsproblem$$
+Another convenient attribute of the Lasso-feature is that it produces regressions where some of the features are set equal to zero \footnote{Hal R. Varian. Big data: New tricks for econometrics. p.19}. Lasso thereby perform feature selection.   
 
 \subsection{Lars}
 
-\subsection{Cross-Validation}
+\subsection{Cross-Validation by K-fold method}
 Selecting $\lambda$ 
 
 
