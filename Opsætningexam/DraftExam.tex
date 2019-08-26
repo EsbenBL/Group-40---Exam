@@ -53,16 +53,22 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-This project predicts the valuation price of the danish housing market. By scraping \href{https://www.boliga.dk}{boliga.dk} we obtain a broad range of features of interest, on all listed housing by august $23^{th}$, 2019. The AVI, \href{https://www.hvorlangterder.dk}{hvorlangterder.dk}, constructs measurements of distances from an address to conveniences and necessities such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives more opportunity for geographical-control. The data from hvorlangterder.dk will allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
-\newline \underline{Måske en anden formulering ovenfor?}
-Also scraping from  \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and 
-\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik}. 
-By applying supervised machine learning on our combined dataset.  
+
 \section{Data description}
+
+\subsection{Data sources}
+Scraping from \textbf{\href{https://www.boliga.dk}{boliga.dk}} provides key characteristic such as price, squaremeters, location etc.   \newline
+The API \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns measurements of distances from an address to conveniences such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives additional arguments to geographical-control. The data from hvorlangterder.dk can allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
+\newline 
+Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk}   \newline 
+\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes reported crime, income and level of completed education. 
+
 \subsection{Data construction}
-Crime-rates. Traffic offences are not considered as a "serious" offence and are therefore neglected. 
+Traffic offences are not considered as a "serious" offence and are therefore excluded in the crime statistics. 
+Socio-economic data is converted to ratios.
+ 
 \subsection{Exclusion of outliers}
-A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to a bias of overestimation. Number of excluded housing.  
+A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to a bias of overestimation. The total number of excluded housing are approximately 4000.  
 \newline
 \begin{tabular}{| c | c | c | c | c | c |} 
   \toprule
@@ -91,15 +97,15 @@ The objective by applying Machine Learning is to train a model that can predict 
 Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output. As well as a classification-model for predicting the interval which the price is included in. 
 
 \subsection{Regularization / Lasso og derved variable selection}
-The use of a sizeable amount of regressors leads to a significant risk of over-fitting the prediction model. 
+The use of a sizeable amount of features leads to a significant risk of over-fitting the prediction model. 
 For the purpose of dealing with over-fitting, a form of regularization needs to be carried out. The Lasso-feature posses the attributes to do so. Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction. \footnote{Big Data in Social Sciences, Forster et al. p. 173}\, \footnote{Python Machine Learning, Sebastian Raschka et al. p. 332}
-\newline Lasso solves the optimizationproblem: $$Evt-optimeringsproblem$$
-Another convenient attribute of the Lasso-feature is that it produces regressions where some of the features are set equal to zero \footnote{Hal R. Varian. Big data: New tricks for econometrics. p.19}. Lasso thereby perform feature selection.   
+\newline Lasso solves the optimization problem: $$\hat{\beta}(\lambda)=\underset{\beta}{arg\min} \left(\frac{1}{N} \sum_{i=1}^{N} (Y_i-\hat{Y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\beta_j|\right) \qquad s.t \quad \lambda \geq 0 $$
+Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero \footnote{Hal R. Varian. Big data: New tricks for econometrics. p.19}. Lasso thereby performs the feature selection automatic.   
 
 \subsection{Lars}
 
-\subsection{Cross-Validation by K-fold method}
-Selecting $\lambda$ 
+\subsection{K-fold Cross-Validation}
+To get the optimal tuning parameter: $\lambda$ a k-fold cross-validation is performed. The 10-fold CV, divides the data into 10 subsets  
 
 
 
@@ -108,10 +114,15 @@ Selecting $\lambda$
 \section{Results}
 
 \section{Discussion}
+
 \subsection{Data critique}
-Another interesting prediction which could have been obtained using the same methods, could have been to estimate expected selling prices. This could have been done simply by scraping data on sold housing instead. This could be of more value for private agents, whose main interest should be the selling price of their housing. 
+Another interesting prediction which could have been obtained using the same methods, would have been to estimate expected selling prices. This could have been done simply by scraping data on sold housing instead. This could be of more value for private agents, whose main interest should be the selling price of their housing. 
 \newline 
-In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potential important factors can not be acquired. For an example the view from the listed housing will for sure have great impact of the valuation price. Another factor of interest could have been a evaluation of the condition of the housing, unfortunately the "statement of property" red. (tilstandrapport) are not publicly accessible.
+In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potential important factors can not be acquired. For an example the view from the listed housing will for sure have great impact of the valuation price. Another factor of interest could have been a evaluation of the condition of the housing, unfortunately the "statement of property" red. (tilstandrapport) are not publicly accessible. \newline
+The prediction of the cooperative housing valuation %\footnote{http://housingpeople.dk/en/housing-guide/housing-types/cooperative-andelsbolig/},
+are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
+\section{Conclusion}
+
 
 \newpage
 \section{Litterature}
