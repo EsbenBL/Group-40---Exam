@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\paragraph{Scraping process\newline}
+In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled XX and XX.
+
+\subparagraph{Boliga\newline}
+Our data comes from Boliga.dk, the largest independent online web-portal for real-estate sales in Denmark and has access to unique features such as "liggetid", price-development and access to BBR - the Danish Building and Housing Register (boligagruppen.dk 2019). Giving us unique insights into the pricing of real-estate in all 98 municipalities of Denmark. At the time of scraping 65,950 properties were for sale.\newline
+The scraping process was conducted on Friday the 23rd of August 2019. We had advised Boliga of our intent to collect data from their website via our scraper in an effort to identify ourselves and our intent (Shiab 2015). In order to scrape the data of interest we familiarized ourselves with the HTML-structure of Boliga. On the basis of these insights we constructed a code, which were able to scrape every page, containing information pertaining the currently listed real-estates on Boliga. The scraper requested all information available from each individual page, which surmounted to 65,950 URL requests. \newline
+For each URL, 34 features and the target variable (price) was collected. Table XX provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
+1. The feature does not act with independent characteristics according to the our research,\newline
+2. The feature contains insufficient data,\newline
+3. The feature is poorly formatted and cannot efficiently be recreated.
+\subparagraph{Hvorlangterder.dk\newline}
+The scraping of hvorlangterder.dk was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It then constructed an URL, which was then scraped and the json response was then returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
+As Jupyter is bad for running long asynchronous tasks and an estimated running time of 18 hours this procedure was run in Visual Studio.
+
+
+
+\end{document}
+
+Ref:
+Boligagruppen.dk (2019) Om boliga gruppen [Online] https://www.boligagruppen.dk [Accessed on 27/08/2019]
+
+Shiab, Nael (2015) On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network. [Online] https://gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/ [Accessed on 27/08/2019]

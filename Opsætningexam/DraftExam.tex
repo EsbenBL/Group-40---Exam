@@ -39,6 +39,7 @@
 \usepackage{multirow, booktabs}
 \usepackage[final]{pdfpages}
 \usepackage{hyperref}
+\usepackage{xcolor}
 
 \lhead{}
 \rhead{}
@@ -59,17 +60,23 @@
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} ethical guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's web-page were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymize the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
 No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, sometimes, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2019) \textit{Bit by Bit Bit - Social research in the digital age.} p.281} Adhering to this, more complex  understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
 In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page (see appendix XX). Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
-\subsection{Data sources}
-Scraping from \textbf{\href{https://www.boliga.dk}{boliga.dk}} provides key characteristic such as price, squaremeters, location etc.   \newline
-The API \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns measurements of distances from an address to conveniences such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives additional arguments to geographical-control. The data from hvorlangterder.dk can allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
-\newline 
-Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk}   \newline 
-\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes reported crime, income and level of completed education. 
+\subsection{Data Scraping Process}
+In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled \textcolor{red}{XX and XX.} 
+\paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
+Our data comes from \href{https://www.boliga.dk}{Boliga.dk}, the largest independent online web-portal for real-estate sales in Denmark and has access to unique features such as "liggetid", price-development and access to BBR - the Danish Building and Housing Register \footnote{\href{https://www.boligagruppen.dk}{www.boligagruppen.dk}}. Giving us unique insights into the pricing of real-estate in all 98 municipalities of Denmark. At the time of scraping 65,950 properties were for sale.\newline
+The scraping process was conducted on Friday the 23rd of August 2019. We had advised Boliga of our intent to collect data from their website via our scraper in an effort to identify ourselves and our intent\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network.}} (Shiab 2015). In order to scrape the data of interest we familiarized ourselves with the HTML-structure of Boliga. On the basis of these insights we constructed a code, which were able to scrape every page, containing information pertaining the currently listed real-estates on Boliga. The scraper requested all information available from each individual page, which surmounted to 65,950 URL requests. \newline
+For each URL, 34 features and the target variable (price) was collected. Table \textcolor{red}{XX} provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
+1. The feature does not act with independent characteristics according to the our research,\newline
+2. The feature contains insufficient data,\newline
+3. The feature is poorly formatted and cannot efficiently be recreated.
+\paragraph{\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline}
+The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It then constructed an URL, which was then scraped and the json response was then returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
+As Jupyter is bad for running long asynchronous tasks and an estimated running time of 18 hours this procedure was run in Visual Studio.
 
-\subsection{Data construction}
-Traffic offences are not considered as a "serious" offence and are therefore excluded in the crime statistics. 
-Socio-economic data is converted to ratios.
- 
+\paragraph{Social and economic factors\newline}
+Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
+\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes income, reported crime and level of completed education etc. These are transformed to into ratios, by taking the total population in a given municipality into account.   
+
 \subsection{Exclusion of outliers}
 A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to a bias of overestimation. The total number of excluded housing are approximately 4000.  
 \newline
@@ -107,18 +114,20 @@ Regularization by Lasso, will penalize complexity of the model by adjustment of 
 \newline Lasso minimize: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
 Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}. p.19}. Lasso thereby performs the feature selection automatic.   
 \subsubsection{Ridge}
-The ridge model add squared terms of the coefficient as penalty
+The ridge model add squared terms of the coefficient as penalty. In opposed to Lasso, Ridge do not force features to be omitted. Ridge minimizes:
 $$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
-Like Lasso, the Ridge model add bias in exchange for a decrease in variance. Resulting in a better prediction model. 
+Like Lasso, the Ridge model add bias in exchange for a decrease in variance, resulting in a better prediction model. 
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
-$$L_{enet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{P}\hat{\beta_j}^2+\alpha\sum_{j=1}^{P}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
-\subsection{K-fold Cross-Validation}
-To get the optimal tuning parameter: $\lambda$ a k-fold cross-validation is performed. The 10-fold CV, divides the data into 10 subsets  
-
+\subsection{Optimizing the Hyperparameter}
+To minimize the mean squared errors of our Lasso and Ridge regression we performed k-fold cross validation to optimize the hyperparameter $\lambda$. 
+We split the data into a test set and a development set, consisting of respectively 20\% and 80\% of the total observations. Subsequently, we use k-fold cross-validation to randomly split the development set into k folds, where k-1 folds are used to train the model. The remaining fold is used to validate the model’s generalizability by calculating the mean squared errors of the trained model’s prediction of the left-out fold\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.191}. This process is repeated k times and each time a new fold is left out for validation. Since we are working with a relatively large dataset we chose to split our data into 5 folds, and computed the average MSE for the 5 iterations. By using the k-fold cross-validation method we relieve ourselves of the concern that the estimation of our model’s performance is simply due to a lucky or unlucky split of the data. \newline
+We performed this procedure for 12 different values of $\lambda$ spanning between \textcolor{red}{$10^(-4) and 10^4$}. We chose the value of $\lambda$ which yields the smallest average MSE over the 5 folds. 
+We both calculated the optimal hyperparameters for a Ridge regression model, a Lasso regression model and an Elastic Net regression model. \textcolor{red}{The following table} shows the performance of the different models, when trained with their optimal hyperparameter and predicting the test data.
 
 \section{Analysis}
 
@@ -134,8 +143,8 @@ The prediction of the cooperative housing valuation %\footnote{http://housingpeo
 are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
 \section{Conclusion}
 
-\section{Appendix}
-\paragraph{An Ethical Overview \newline}
+\section{An Ethical Overview}
+
 The ethical principles of social research are anchored in the fundamental human rights, which are broadly formulated in the UN Declaration of Human Rights. Additional policies and declarations that codify principles of research ethics and the ethical treatment of research participants include the Nuremberg Code, the Helsinki Declaration, the Belmont Report, and the Menlo Report\footnote{Salganik, Matthew J. (2019) \textit{Bit by Bit Bit - Social research in the digital age.}}\, \footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}}. These codes and addendums originate mostly in the biomedical field, though they encompass the central principles applied to all human research, which have led some academics to call for a Hippocratic oath for data scientists to safeguard against powerful new technologies under development in laboratories and tech firms\footnote{Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}}\, \footnote{Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.}}. This discussion is nothing new however, as a tentative reformulation of the Hippocratic oath was introduced by Karl Popper\footnote{Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}}, wherein he stressed the importance of professional responsibility, a critical mind, and an overriding loyalty towards the betterment of mankind.\newline
 Matthew Salganik offer four principles deduced from the Belmont and Menlo Report that should guide the ethical deliberations of the researcher: 1) the respect for persons, that is individuals should be treated as autonomous and if circumstances require it individuals should be entitled to additional protections. 2) Beneficence stresses the importance of doing no harm and to maximize the possible benefits and minimizing any potential harms. 3) The principle of justice touches upon the importance of the distribution of burdens and benefits of the social scientist's research. This principle stress that is should not be a single stratum of society that bears the costs of the research while another stratum benefits. 4) The fourth and final principle is the respect for law and public interest, according to Salganik, the principle consists of two distinct elements, that is compliance to relevant laws and legal contracts and transparency-based accountability. It is worth noting that Popper’s tentative Hippocratic oath mirrors the first three principles put forth by Salganik, stressing the importance of the ethical conduct of the researcher.\newline
 The need for rigid ethical standards within computational social science was made apparent by the Cambridge Analytica Scandal that broke on the 17th of March 2018. Where Steve Bannon could reveal that between 2013 and 2015 Cambridge Analytica had exploited a loophole in Facebook’s API which allowed the company to harvest profile data from 87 million Facebook users, without the user’s permission and use the harvested data to construct a massive targeted marketing database based on the user’s likes and interests\footnote{Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]}. Other examples of misuse of data acquired from Facebook include the Harvard-run experiment, where students' data was used to create new knowledge about how social networks form and how these networks and their actors' behavior co-evolve, and the emotional contagion experiment from 2012, where approximately 700,000 users were involved in a research experiment to examine the extent to which a person's emotions are affected by the emotions of the people they interact with (Salganik. 2019).\newline
@@ -167,4 +176,7 @@ Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocrati
 
 Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]: \href{https://www.vox.com/2018/4/10/17207394/cambridge-analytica-facebook-zuckerberg-trump-privacy-scandal} [Accessed on 26/08/2019] 
 
+Boligagruppen.dk (2019) \textit{Om boliga gruppen} [Online]: \href{https://www.boligagruppen.dk}{www.boligagruppen.dk}: [Accessed on 27/08/2019]
+
+Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network.} [Online]: \href{https://gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}{gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}: [Accessed on 27/08/2019]
 \end{document}

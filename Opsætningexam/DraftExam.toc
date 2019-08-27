@@ -2,21 +2,22 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
 \contentsline {section}{\numberline {2}Data description \& Ethics}{3}{section.2}
 \contentsline {paragraph}{Ethical considerations in the current research project\newline }{3}{section*.2}
-\contentsline {subsection}{\numberline {2.1}Data sources}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Data construction}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Exclusion of outliers}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.1}Data Scraping Process}{3}{subsection.2.1}
+\contentsline {paragraph}{\href {https://www.boliga.dk}{Boliga}\newline }{4}{section*.3}
+\contentsline {paragraph}{\href {https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline }{4}{section*.4}
+\contentsline {paragraph}{Social and economic factors\newline }{4}{section*.5}
+\contentsline {subsection}{\numberline {2.2}Exclusion of outliers}{5}{subsection.2.2}
 \contentsline {section}{\numberline {3}Methods}{5}{section.3}
 \contentsline {subsection}{\numberline {3.1}Supervised Machine Learning}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Regularization}{5}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Lasso}{5}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Ridge}{5}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Lasso}{6}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Ridge}{6}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Elastic-net}{6}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}K-fold Cross-Validation}{6}{subsection.3.3}
-\contentsline {section}{\numberline {4}Analysis}{6}{section.4}
-\contentsline {section}{\numberline {5}Results}{6}{section.5}
-\contentsline {section}{\numberline {6}Discussion}{6}{section.6}
-\contentsline {subsection}{\numberline {6.1}Data critique}{6}{subsection.6.1}
-\contentsline {section}{\numberline {7}Conclusion}{7}{section.7}
-\contentsline {section}{\numberline {8}Appendix}{7}{section.8}
-\contentsline {paragraph}{An Ethical Overview \newline }{7}{section*.3}
-\contentsline {section}{\numberline {9}Litterature}{9}{section.9}
+\contentsline {subsection}{\numberline {3.3}Optimizing the Hyperparameter}{6}{subsection.3.3}
+\contentsline {section}{\numberline {4}Analysis}{7}{section.4}
+\contentsline {section}{\numberline {5}Results}{7}{section.5}
+\contentsline {section}{\numberline {6}Discussion}{7}{section.6}
+\contentsline {subsection}{\numberline {6.1}Data critique}{7}{subsection.6.1}
+\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}
+\contentsline {section}{\numberline {8}An Ethical Overview}{8}{section.8}
+\contentsline {section}{\numberline {9}Litterature}{10}{section.9}
