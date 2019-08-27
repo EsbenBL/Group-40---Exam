@@ -1,6 +1,5 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{amsmath}
-\usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
@@ -54,8 +53,12 @@
 \newpage
 \section{Introduction}
 
-\section{Data description}
+\section{Data description \& Ethics}
 
+\paragraph{Ethical considerations in the current research project\newline}
+In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} ethical guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's web-page were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymize the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
+No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, sometimes, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2019) \textit{Bit by Bit Bit - Social research in the digital age.} p.281} Adhering to this, more complex  understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
+In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page (see appendix XX). Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
 \subsection{Data sources}
 Scraping from \textbf{\href{https://www.boliga.dk}{boliga.dk}} provides key characteristic such as price, squaremeters, location etc.   \newline
 The API \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns measurements of distances from an address to conveniences such as hospitals, schools and shopping. Obtaining these distances for all of the listed housing and merging the two datasets, gives additional arguments to geographical-control. The data from hvorlangterder.dk can allow more micro-oriented differences within a given municipality. Which otherwise would not have been captured.  
@@ -96,17 +99,25 @@ A few of the listed housing, have been for sale for over a decade. These are con
 The objective by applying Machine Learning is to train a model that can predict pricing of housing listed in near future.
 Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output. As well as a classification-model for predicting the interval which the price is included in. 
 
-\subsection{Regularization / Lasso og derved variable selection}
+\subsection{Regularization}
 The use of a sizeable amount of features leads to a significant risk of over-fitting the prediction model. 
-For the purpose of dealing with over-fitting, a form of regularization needs to be carried out. The Lasso-feature posses the attributes to do so. Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction. \footnote{Big Data in Social Sciences, Forster et al. p. 173}\, \footnote{Python Machine Learning, Sebastian Raschka et al. p. 332}
-\newline Lasso solves the optimization problem: $$\hat{\beta}(\lambda)=\underset{\beta}{arg\min} \left(\frac{1}{N} \sum_{i=1}^{N} (Y_i-\hat{Y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\beta_j|\right) \qquad s.t \quad \lambda \geq 0 $$
-Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero \footnote{Hal R. Varian. Big data: New tricks for econometrics. p.19}. Lasso thereby performs the feature selection automatic.   
+For the purpose of dealing with over-fitting, regularization needs to be carried out. Regularization can be done with different approaches, in this project three types are applied; Lasso, Ridge and Elastic-net.   
+\subsubsection{Lasso}
+Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
+\newline Lasso minimize: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
+Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}. p.19}. Lasso thereby performs the feature selection automatic.   
+\subsubsection{Ridge}
+The ridge model add squared terms of the coefficient as penalty
+$$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
+Like Lasso, the Ridge model add bias in exchange for a decrease in variance. Resulting in a better prediction model. 
 
-\subsection{Lars}
-
+\subsubsection{Elastic-net}
+The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
+$$L_{enet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{P}\hat{\beta_j}^2+\alpha\sum_{j=1}^{P}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
+Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
 \subsection{K-fold Cross-Validation}
 To get the optimal tuning parameter: $\lambda$ a k-fold cross-validation is performed. The 10-fold CV, divides the data into 10 subsets  
-
 
 
 \section{Analysis}
@@ -123,12 +134,37 @@ The prediction of the cooperative housing valuation %\footnote{http://housingpeo
 are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
 \section{Conclusion}
 
+\section{Appendix}
+\paragraph{An Ethical Overview \newline}
+The ethical principles of social research are anchored in the fundamental human rights, which are broadly formulated in the UN Declaration of Human Rights. Additional policies and declarations that codify principles of research ethics and the ethical treatment of research participants include the Nuremberg Code, the Helsinki Declaration, the Belmont Report, and the Menlo Report\footnote{Salganik, Matthew J. (2019) \textit{Bit by Bit Bit - Social research in the digital age.}}\, \footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}}. These codes and addendums originate mostly in the biomedical field, though they encompass the central principles applied to all human research, which have led some academics to call for a Hippocratic oath for data scientists to safeguard against powerful new technologies under development in laboratories and tech firms\footnote{Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}}\, \footnote{Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.}}. This discussion is nothing new however, as a tentative reformulation of the Hippocratic oath was introduced by Karl Popper\footnote{Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}}, wherein he stressed the importance of professional responsibility, a critical mind, and an overriding loyalty towards the betterment of mankind.\newline
+Matthew Salganik offer four principles deduced from the Belmont and Menlo Report that should guide the ethical deliberations of the researcher: 1) the respect for persons, that is individuals should be treated as autonomous and if circumstances require it individuals should be entitled to additional protections. 2) Beneficence stresses the importance of doing no harm and to maximize the possible benefits and minimizing any potential harms. 3) The principle of justice touches upon the importance of the distribution of burdens and benefits of the social scientist's research. This principle stress that is should not be a single stratum of society that bears the costs of the research while another stratum benefits. 4) The fourth and final principle is the respect for law and public interest, according to Salganik, the principle consists of two distinct elements, that is compliance to relevant laws and legal contracts and transparency-based accountability. It is worth noting that Popper’s tentative Hippocratic oath mirrors the first three principles put forth by Salganik, stressing the importance of the ethical conduct of the researcher.\newline
+The need for rigid ethical standards within computational social science was made apparent by the Cambridge Analytica Scandal that broke on the 17th of March 2018. Where Steve Bannon could reveal that between 2013 and 2015 Cambridge Analytica had exploited a loophole in Facebook’s API which allowed the company to harvest profile data from 87 million Facebook users, without the user’s permission and use the harvested data to construct a massive targeted marketing database based on the user’s likes and interests\footnote{Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]}. Other examples of misuse of data acquired from Facebook include the Harvard-run experiment, where students' data was used to create new knowledge about how social networks form and how these networks and their actors' behavior co-evolve, and the emotional contagion experiment from 2012, where approximately 700,000 users were involved in a research experiment to examine the extent to which a person's emotions are affected by the emotions of the people they interact with (Salganik. 2019).\newline
+From this it should be evident that clear ethical guidelines are required in order to protect the user's privacy from tech-savvy companies. To this end, the European Parliament introduced the General Data Protection Regulation (GDPR). With its seven overarching principles the GDPR seeks to formalize the procedures involved in the data processing and storing of sensitive and private information (CDRC\footnote{Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]:}). These principles include and expand upon the principles found in the Belmont and Menlo Report. The most important consideration, however, must be that even a dataset comprising tens of thousands of observations involve human beings who must be protected from adverse side-effects of the social research. There is considerable evidence that point to the fact that even in anonymized data sets it can be possible to backtrack an individual's identity. A researcher must therefore be mindful of the mosaic effect if the dataset combines large amount of data from various sources (European Commission 2018).
 
 \newpage
 \section{Litterature}
 
-Big Data in Social Sciences, Forster et al. 2017
-\newline Python Machine Learning, Sebastian Raschka et al. 2017, $2^{nd}$editon
-\newline Hal R. Varian. Big data: New tricks for econometrics. Journal of Economic Perspectives, 28(2):3–28, 2014.
+
+\ Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools}, CRS Press 2017
+
+
+Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}, $2^{nd}$editon, Packt Publishing 2017.
+
+
+Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}, 28(2):3–28, 2014. 
+
+Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities\_en.pdf} [Accessed on 25/08/2019]
+
+European Commission (2018). \textit{Ethics in Social Sciences and the Humanities} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities\_en.pdf} [Accessed on 25/08/2019] 
+
+Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}. Encounter, March 1969, pp. 52-56 [Online]: \href{http://www.unz.com/print/Encounter-1969mar-00052}{http://www.unz.com/print/Encounter-1969mar-00052} [Accessed on 25/08/2019]
+
+Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}. Science, November 1999: Vol. 286, Issue 5444, pp. 1475 [Online]: \href{https://science.sciencemag.org/content/286/5444/1475.full}{https://science.sciencemag.org/content/286/5444/1475.full} [Accessed on 25/08/2019] DOI: 10.1126/science.286.5444.1475 
+
+Salganik, Matthew J. (2019) \textit{Bit by Bit Bit - Social research in the digital age.} Princeton, NJ: Princeton University Press.
+
+Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.} The Guardian [Online]: \href{https://www.theguardian.com/science/2019/aug/16/mathematicians-need-doctor-style-hippocratic-oath-says-academic-hannah-fry} [Accessed on 25/08/2019]
+
+Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]: \href{https://www.vox.com/2018/4/10/17207394/cambridge-analytica-facebook-zuckerberg-trump-privacy-scandal} [Accessed on 26/08/2019] 
 
 \end{document}
