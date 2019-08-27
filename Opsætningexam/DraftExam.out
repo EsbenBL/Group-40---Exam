@@ -1,23 +1,24 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data Description \046 Ethics}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Ethical Considerations in the Current Research Project}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Data Scraping Process}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Merging Data}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Data Cleaning}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Describtive Statistics}{section.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.5.1}{The Dataset}{subsection.2.5}% 8
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Selecting Features}{subsection.2.5}% 9
-\BOOKMARK [1][-]{section.3}{Methods}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{Supervised Machine Learning}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.2}{Regularization}{section.3}% 12
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Lasso}{subsection.3.2}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Ridge}{subsection.3.2}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Elastic-net}{subsection.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Optimizing the Hyperparameter}{section.3}% 16
-\BOOKMARK [1][-]{section.4}{Analysis}{}% 17
-\BOOKMARK [1][-]{section.5}{Results}{}% 18
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 19
-\BOOKMARK [2][-]{subsection.6.1}{Data critique}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 21
-\BOOKMARK [1][-]{section.8}{An Ethical Overview}{}% 22
-\BOOKMARK [1][-]{section.9}{Litterature}{}% 23
+\BOOKMARK [1][-]{section.2}{Literature Review}{}% 2
+\BOOKMARK [1][-]{section.3}{Data Description \046 Ethics}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Ethical Considerations in the Current Research Project}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Data Scraping Process}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Merging Data}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Data Cleaning}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Describtive Statistics}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.5.1}{The Dataset}{subsection.3.5}% 9
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Selecting Features}{subsection.3.5}% 10
+\BOOKMARK [1][-]{section.4}{Methods}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Supervised Machine Learning}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Regularization}{section.4}% 13
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Lasso}{subsection.4.2}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Ridge}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Elastic-net}{subsection.4.2}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Optimizing the Hyperparameter}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 18
+\BOOKMARK [1][-]{section.6}{Results}{}% 19
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 20
+\BOOKMARK [2][-]{subsection.7.1}{Data critique}{section.7}% 21
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 22
+\BOOKMARK [1][-]{section.9}{An Ethical Overview}{}% 23
+\BOOKMARK [1][-]{section.10}{Litterature}{}% 24
