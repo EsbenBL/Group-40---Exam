@@ -68,15 +68,45 @@ The scraping process was conducted on Friday the 23rd of August 2019. We had adv
 For each URL, 34 features and the target variable (price) was collected. Table \textcolor{red}{XX} provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
 1. The feature does not act with independent characteristics according to the research,\newline
 2. The feature contains insufficient data,\newline
-3. The feature is poorly formatted and cannot efficiently be recreated.
+3. The feature is poorly formatted and cannot efficiently be recreated. 
+\vspace*{10px} \newline
+\textit{Features Obtained:} \newline
+\begin{tabular}{c c}
+Continuous: & basementSize, buildYear, Ejerudgift, lotSize	, price, rooms, size  \\	
+\end{tabular}\newline 
+\begin{tabular}{c c}
+Categorical: & ForClosure, Type, Municipality, lotSize	, price, rooms, size  \\	
+\end{tabular}\newline 
+
 \paragraph{\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline}
 \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns distances from a given address, to conveniences such as supermarkets, hospitals and schools.   
 The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It constructed a URL (65,950 URL request), which was scraped and the json response was returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
 As Jupyter performs poorly at running long asynchronous tasks and estimated a running time of 18 hours this procedure was run in Visual Studio.
-
+ \vspace*{10px} \newline
+\textit{Features obtained:}\newline
+\begin{tabular}{c c}
+Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, train \\	
+\end{tabular}\newline 
+\begin{tabular}{c c}
+\qquad \qquad \qquad \qquad &  pharmacy, library, coast, junction \\	
+\end{tabular}\newline 
 \paragraph{Social and economic factors\newline}
 Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
 \href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes income, reported crime and level of highest completed education etc. These are transformed to into ratios, by taking the total population in a given municipality into account.   
+ \vspace*{5px} \newline
+\begin{tabular}{c c}
+\textit{Features obtained:}: & Relativ Ledighed, Grundskole, Gymnasiale uddannelser \\	
+\end{tabular}\newline 
+\begin{tabular}{c c}
+\qquad \qquad \qquad \qquad & Erhvervsfaglige uddannelser,	 KVU, 	MVU, Bacheloruddannelser  \\	
+\end{tabular}\newline 
+\begin{tabular}{c c}
+\qquad \qquad \qquad \qquad & LVU, Kommunal\_gennemsnitsinkomst\_2017, Total_reported, Population_in_urban_development  \\	
+\end{tabular}\newline 
+\begin{tabular}{c c}
+\qquad \qquad \qquad \qquad & Erhvervsfaglige uddannelser,	 KVU, 	MVU, Bacheloruddannelser  \\	
+\end{tabular}\newline 
+% 			Socioeconomic_index	expenses_per_school_student	average_class_size	expenses_sport_and_other_cultural_activities
 \subsection{Merging Data}
 
 \subsection{Data Cleaning}
@@ -111,7 +141,9 @@ A few of the listed housing, have been listed for over a decade. These are consi
 
 
 \subsubsection{The Dataset}
-The merged dataset contains 61.618 observations and 37 features.   The features are of both categorical and continuous measures. 
+The merged dataset contains 61.618 observations and 37 features.   The features are of both categorical and continuous measures. \newline 
+
+
 
 \subsubsection{Selecting Features}
 
@@ -164,13 +196,14 @@ We both calculated the optimal hyperparameters for a Ridge regression model, a L
 \section{Results}
 
 \section{Discussion}
-
 \subsection{Data critique}
 Another interesting prediction which could have been obtained using the same methods, would have been to estimate expected selling prices. This could have been done simply by scraping data on sold housing instead. This could be of more value for private agents, whose main interest should be the selling price of their housing. 
 \newline 
 In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potential important factors can not be acquired. For an example the view from the listed housing will for sure have great impact of the valuation price. Another factor of interest could have been a evaluation of the condition of the housing, unfortunately the "statement of property" red. (tilstandrapport) are not publicly accessible. \newline
 The prediction of the cooperative housing valuation %\footnote{http://housingpeople.dk/en/housing-guide/housing-types/cooperative-andelsbolig/},
 are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
+
+
 \section{Conclusion}
 
 \section{An Ethical Overview}
