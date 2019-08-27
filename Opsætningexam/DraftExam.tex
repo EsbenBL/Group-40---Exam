@@ -112,22 +112,25 @@ A few of the listed housing, have been for sale for over a decade. These are con
 \subsection{Supervised Machine Learning}
 The objective by applying Machine Learning is to train a model that can predict pricing of housing listed in near future.
 Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output. As well as a classification-model for predicting the interval which the price is included in. 
+\subsection{Fitting the model}
+The potential problems of underfitting and overfitting should be assessed when fitting a model. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalize poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularization}.
 
-\subsection{Regularization}
+\subsubsection{Regularization}
+
 The use of a sizeable amount of features leads to a significant risk of over-fitting the prediction model. 
-For the purpose of dealing with over-fitting, regularization needs to be carried out. Regularization can be done with different approaches, in this project three types are applied; Lasso, Ridge and Elastic-net.   
+For the purpose of dealing with over-fitting, regularization needs to be carried out. Regularization can be done with different approaches, in this project three types are applied; Lasso, Ridge and Elastic net.   
 \subsubsection{Lasso}
 Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
-\newline Lasso minimize: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
+\newline Lasso minimize: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
 Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}. p.19}. Lasso thereby performs the feature selection automatic.   
 \subsubsection{Ridge}
 The ridge model add squared terms of the coefficient as penalty. In opposed to Lasso, Ridge do not force features to be omitted. Ridge minimizes:
-$$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
+$$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
 Like Lasso, the Ridge model add bias in exchange for a decrease in variance, resulting in a better prediction model. 
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
-$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
 \subsection{Optimizing the Hyperparameter}
@@ -159,13 +162,9 @@ From this it should be evident that clear ethical guidelines are required in ord
 
 \newpage
 \section{Litterature}
-
-
 \ Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools}, CRS Press 2017
 
-
 Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}, $2^{nd}$editon, Packt Publishing 2017.
-
 
 Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}, 28(2):3–28, 2014. 
 

@@ -14,10 +14,11 @@
 \contentsline {subsubsection}{\numberline {3.5.2}Selecting Features}{5}{subsubsection.3.5.2}
 \contentsline {section}{\numberline {4}Methods}{5}{section.4}
 \contentsline {subsection}{\numberline {4.1}Supervised Machine Learning}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Regularization}{6}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Lasso}{6}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Ridge}{6}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Elastic-net}{7}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2}Fitting the model}{6}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Regularization}{6}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Lasso}{6}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Ridge}{7}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Elastic-net}{7}{subsubsection.4.2.4}
 \contentsline {subsection}{\numberline {4.3}Optimizing the Hyperparameter}{7}{subsection.4.3}
 \contentsline {section}{\numberline {5}Analysis}{8}{section.5}
 \contentsline {section}{\numberline {6}Results}{8}{section.6}
