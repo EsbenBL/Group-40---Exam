@@ -34,7 +34,6 @@
 \usepackage{dsfont}
 \usepackage{mathtools}
 \usepackage{graphics}
-\usepackage[danish]{babel} 
 \usepackage{graphicx}
 \usepackage{multirow, booktabs}
 \usepackage[final]{pdfpages}
@@ -66,24 +65,25 @@ In considering the legal ramifications of our research and to make sure we adher
 In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled \textcolor{red}{XX and XX.} 
 \paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
 Our data comes from \href{https://www.boliga.dk}{Boliga.dk}, the largest independent online web-portal for real-estate sales in Denmark and has access to unique features such as "liggetid", price-development and access to BBR - the Danish Building and Housing Register \footnote{\href{https://www.boligagruppen.dk}{www.boligagruppen.dk}}. Giving us unique insights into the pricing of real-estate in all 98 municipalities of Denmark. At the time of scraping 65,950 properties were for sale.\newline
-The scraping process was conducted on Friday the 23rd of August 2019. We had advised Boliga of our intent to collect data from their website via our scraper in an effort to identify ourselves and our intent\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network.}} (Shiab 2015). In order to scrape the data of interest we familiarized ourselves with the HTML-structure of Boliga. On the basis of these insights we constructed a code, which were able to scrape every page, containing information pertaining the currently listed real-estates on Boliga. The scraper requested all information available from each individual page, which surmounted to 65,950 URL requests. \newline
+The scraping process was conducted on Friday the 23rd of August 2019. We had advised Boliga of our intent to collect data from their website via our scraper in an effort to identify ourselves and our intent\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network.}}. In order to scrape the data of interest we familiarized ourselves with the HTML-structure of Boliga. On the basis of these insights we constructed a code, which were able to scrape every page, containing information pertaining the currently listed real-estates on Boliga. The scraper requested all information available from each individual page, which surmounted to 1,319 URL requests. \newline
 For each URL, 34 features and the target variable (price) was collected. Table \textcolor{red}{XX} provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
-1. The feature does not act with independent characteristics according to the our research,\newline
+1. The feature does not act with independent characteristics according to the research,\newline
 2. The feature contains insufficient data,\newline
 3. The feature is poorly formatted and cannot efficiently be recreated.
 \paragraph{\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline}
-The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It then constructed an URL, which was then scraped and the json response was then returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
-As Jupyter is bad for running long asynchronous tasks and an estimated running time of 18 hours this procedure was run in Visual Studio.
+\href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns distances from a given address, to conveniences such as supermarkets, hospitals and schools.   
+The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It constructed a URL (65,950 URL request), which was scraped and the json response was returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
+As Jupyter performs poorly at running long asynchronous tasks and estimated a running time of 18 hours this procedure was run in Visual Studio.
 
 \paragraph{Social and economic factors\newline}
 Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
-\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes income, reported crime and level of completed education etc. These are transformed to into ratios, by taking the total population in a given municipality into account.   
+\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes income, reported crime and level of highest completed education etc. These are transformed to into ratios, by taking the total population in a given municipality into account.   
 \subsection{Merging Data}
 
 \subsection{Data Cleaning}
-A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to a bias of overestimation. The total number of excluded housing are approximately 4000.  
+A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
 
-\subsection{Describtive Statistics}
+\subsection{Descriptive Statistics}
 \subsubsection{The Dataset}
 \subsubsection{Selecting Features}
 
@@ -113,24 +113,20 @@ A few of the listed housing, have been for sale for over a decade. These are con
 The objective by applying Machine Learning is to train a model that can predict pricing of housing listed in near future.
 Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output. As well as a classification-model for predicting the interval which the price is included in. 
 \subsection{Fitting the model}
-The potential problems of underfitting and overfitting should be assessed when fitting a model. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalize poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularization}.
+The potential problems of underfitting and overfitting should be assessed when fitting a model. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalize poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularization}. In this project three different types of regularization are applied; Lasso, Ridge and Elastic net.   
 
-\subsubsection{Regularization}
-
-The use of a sizeable amount of features leads to a significant risk of over-fitting the prediction model. 
-For the purpose of dealing with over-fitting, regularization needs to be carried out. Regularization can be done with different approaches, in this project three types are applied; Lasso, Ridge and Elastic net.   
 \subsubsection{Lasso}
-Regularization by Lasso, will penalize complexity of the model by adjustment of parameter estimates. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
-\newline Lasso minimize: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
+Regularization by Lasso, will penalize complexity of the model by the sum of the absolute value of the coefficients. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
+\newline Lasso minimizes: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
 Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics. Journal of Economic Perspectives}. p.19}. Lasso thereby performs the feature selection automatic.   
 \subsubsection{Ridge}
-The ridge model add squared terms of the coefficient as penalty. In opposed to Lasso, Ridge do not force features to be omitted. Ridge minimizes:
-$$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta)^2)+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
-Like Lasso, the Ridge model add bias in exchange for a decrease in variance, resulting in a better prediction model. 
+The ridge model penalizes with the sum of squared coefficients. Opposed to Lasso, Ridge do not force features to be omitted. Ridge minimizes:
+$$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
+The Ridge model add bias in exchange for a decrease in variance, resulting in a better prediction model. 
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
-$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
 \subsection{Optimizing the Hyperparameter}
@@ -140,6 +136,7 @@ We performed this procedure for 12 different values of $\lambda$ spanning betwee
 We both calculated the optimal hyperparameters for a Ridge regression model, a Lasso regression model and an Elastic Net regression model. \textcolor{red}{The following table} shows the performance of the different models, when trained with their optimal hyperparameter and predicting the test data.
 
 \section{Analysis}
+
 
 \section{Results}
 
