@@ -1,16 +1,19 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data description}{}% 2
+\BOOKMARK [1][-]{section.2}{Data description \046 Ethics}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Data sources}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Data construction}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Exclusion of outliers}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Methods}{}% 6
 \BOOKMARK [2][-]{subsection.3.1}{Supervised Machine Learning}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Regularization / Lasso og derved variable selection}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Lars}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.4}{K-fold Cross-Validation}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Analysis}{}% 11
-\BOOKMARK [1][-]{section.5}{Results}{}% 12
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 13
-\BOOKMARK [2][-]{subsection.6.1}{Data critique}{section.6}% 14
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 15
-\BOOKMARK [1][-]{section.8}{Litterature}{}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Regularization}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Lasso}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Ridge}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Elastic-net}{subsection.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.3}{K-fold Cross-Validation}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Analysis}{}% 13
+\BOOKMARK [1][-]{section.5}{Results}{}% 14
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Data critique}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 17
+\BOOKMARK [1][-]{section.8}{Appendix}{}% 18
+\BOOKMARK [1][-]{section.9}{Litterature}{}% 19
