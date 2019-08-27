@@ -7,7 +7,7 @@ import random
 import json
 import tqdm
 
-logfile = 'Hvorlangterder_full2_log.csv'
+logfile = 'Hvorlangterder_total_log.csv'
 connector = scraping_class.Connector(logfile)
 
 df = pd.read_csv('Boliga - Behandling 2 - Befolkningstal.csv')
@@ -22,11 +22,11 @@ def create_url_and_scrape(lat_long):
     tempurl = url + ','.join(poitypes) + coordinates + auth
     #time.sleep(0.3)
     print(1)
-    response = requests.get(tempurl)
+    response, call_id = connector.get(tempurl,'Coordinates_datascience')
     js = response.json()
     data = dict()
-    data['lake'] = js['lake']['routedmeters'] 
-    data['forest'] = js['forest']['routedmeters'] 
+    data['lake'] = js['lake']['routedmeters']
+    data['forest'] = js['forest']['routedmeters']
     data['doctor'] = js['doctor']['routedmeters']
     data['supermarket'] = js['supermarket']['routedmeters']
     data['school'] = js['school']['routedmeters']
@@ -43,4 +43,4 @@ def create_url_and_scrape(lat_long):
     return data
 df['hvorlangt_total'] = df['coordinate'].apply(create_url_and_scrape)
 
-df.to_csv('howlongdf.csv')
+df.to_csv('howlongdf2.csv')
