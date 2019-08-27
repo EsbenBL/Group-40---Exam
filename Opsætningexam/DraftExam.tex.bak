@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
 \onehalfspacing
-\usepackage[danish]{babel}
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{pst-tree}
@@ -18,7 +17,6 @@
 \usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage{times}
-\usepackage{gauss}
 \usepackage{fancyhdr}
 \usepackage[bottom]{footmisc}
 \pagestyle{fancy}
@@ -39,7 +37,8 @@
 \usepackage[final]{pdfpages}
 \usepackage{hyperref}
 \usepackage{xcolor}
-
+\usepackage{booktabs,siunitx}
+\usepackage{float}
 \lhead{}
 \rhead{}
 \chead{}
@@ -85,43 +84,37 @@ Social and economic factors on municipality level is collected from \href{https:
 A few of the listed housing, have been listed for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
 
 \subsection{Descriptive Statistics}
+\begin{table}[h!]
+\begin{center}
+\caption{Key Statistics\label{time}}
 \begin{tabular}{| c | c | c | c | c | c |} 
-
-   & Price & Rooms & $m^2$ & Average Municipal income \\
-   \midrule 
-   Mean & 2,312,798 & 4.21 & 127.82 & 312,957.03 & \\ \hline
-   Std & 2,351,127 & 2.12 & 75.67 & 407,24 & \\ \hline
-   Min & 15,000 & 0 & 0,0 & 0 & \\ \hline
-   25\% & 985,000 & 3 & 82 & 4 & \\ \hline
-   50\% & 1,695,000 & 4 & 123 & 407,24 & \\ \hline
-   75\% & 2,895,000 & 5 & 455 & 449,54 & \\ \hline
-   Max & 85,000,000 & 50 & 503,62 & 461,96 & \\ \hline
-    \bottomrule
+\hline
+   & Price & \, Rooms \ & \ $m^2$ \ & Average Municipal Income \\ \hline
+   Mean & 2,312,798.00 & \ 4.21 \  & \ 127.82 \ & 312,957.03 \\ \hline
+   Std & 2,351,127.00 & 2.12 & 75.67 & 46,095.34 \\ \hline
+   Min & 15,000.00 & 0 & 0 & 257,776 \\ \hline
+   25\% & 985,000.00 & 3 & 82 & 290,973 \\ \hline
+   50\% & 1,695,000.00 & 4 & 123 & 302,153 \\ \hline
+   75\% & 2,895,000.00 & 5 & 167 & 318,745 \\ \hline
+   Max & 85,000,000.00 & 50 & 2,390 & 583,331 \\ \hline
 \end{tabular}
+\end{center}
+\end{table} 
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{Barplot_Estate2.png} 
+  \label{fig:}
+\end{figure}
+
+
+
+
 \subsubsection{The Dataset}
-The merged dataset contains 61.618 observations and 37 features.  
+The merged dataset contains 61.618 observations and 37 features.   The features are of both categorical and continuous measures. 
+
 \subsubsection{Selecting Features}
 
-\begin{tabular}{| c | c | c | c | c | c |} 
-  \toprule
-  \multicolumn{6}{|c|}{Danmark} \\ \hline
-   & \multicolumn{2}{c|}{Sjælland} & \multicolumn{3}{c|}{Ikke Sjælland} \\ \hline
-  Type/Region & Hovedstaden & Sjælland & Syddanmark & Midtjylland & Nordjylland \\
-   \midrule 
-   Villa & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Rækkehus & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Ejerlejlighhed & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Fritidsbolig & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Kolonihave & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Andelsbolig & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Landejendom & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Helårsgrund & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Fritidsgrund & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Villalejlighed & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Lystejendom & 470,67 & 404,95 & 460,93 & 407,24 & \\ 
-    \bottomrule
-\end{tabular}
-\newline
 
 \section{Methods}
 \subsection{Supervised Machine Learning}
@@ -149,9 +142,24 @@ To minimize the mean squared errors of our Lasso and Ridge regression we perform
 We split the data into a test set and a development set, consisting of respectively 20\% and 80\% of the total observations. Subsequently, we use k-fold cross-validation to randomly split the development set into k folds, where k-1 folds are used to train the model. The remaining fold is used to validate the model’s generalizability by calculating the mean squared errors of the trained model’s prediction of the left-out fold\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.191}. This process is repeated k times and each time a new fold is left out for validation. Since we are working with a relatively large dataset we chose to split our data into 5 folds, and computed the average MSE for the 5 iterations. By using the k-fold cross-validation method we relieve ourselves of the concern that the estimation of our model’s performance is simply due to a lucky or unlucky split of the data. \newline
 We performed this procedure for 12 different values of $\lambda$ spanning between \textcolor{red}{$10^(-4) and 10^4$}. We chose the value of $\lambda$ which yields the smallest average MSE over the 5 folds. 
 We both calculated the optimal hyperparameters for a Ridge regression model, a Lasso regression model and an Elastic Net regression model. \textcolor{red}{The following table} shows the performance of the different models, when trained with their optimal hyperparameter and predicting the test data.
-
 \section{Analysis}
 
+\begin{table}[h!]
+\begin{center}
+\caption{Key Statistics\label{time}}
+\begin{tabular}{| c | c | c | c | c | c |} 
+\hline
+   & Price & \, Rooms \ & \ $m^2$ \ & Average Municipal Income \\ \hline
+   Mean & 2,312,798.00 & \ 4.21 \  & \ 127.82 \ & 312,957.03 \\ \hline
+   Std & 2,351,127.00 & 2.12 & 75.67 & 46,095.34 \\ \hline
+   Min & 15,000.00 & 0 & 0 & 257,776 \\ \hline
+   25\% & 985,000.00 & 3 & 82 & 290,973 \\ \hline
+   50\% & 1,695,000.00 & 4 & 123 & 302,153 \\ \hline
+   75\% & 2,895,000.00 & 5 & 167 & 318,745 \\ \hline
+   Max & 85,000,000.00 & 50 & 2,390 & 583,331 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Results}
 
