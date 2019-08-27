@@ -85,29 +85,24 @@ Social and economic factors on municipality level is collected from \href{https:
 A few of the listed housing, have been listed for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
 
 \subsection{Descriptive Statistics}
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |} 
+\hline
+   & Price & Rooms & $m^2$ & Average Municipal income \\ \hline
+   Mean & 2,312,798.00 & 4.21 & 127.82 & 312,957.03 \\ \hline
+   Std & 2,351,127.00 & 2.12 & 75.67 & 46,095.34 \\ \hline
+   Min & 15,000.00 & 0 & 0,0 & 257,776 \\ \hline
+   25\% & 985,000.00 & 3 & 82 & 290,973 \\ \hline
+   50\% & 1,695,000.00 & 4 & 123 & 302,153 \\ \hline
+   75\% & 2,895,000.00 & 5 & 167 & 318,745 \\ \hline
+   Max & 85,000,000.00 & 50 & 2,390 & 583,331 \\ \hline
+\end{tabular}
+\end{center}
+
 \subsubsection{The Dataset}
+The merged dataset contains 61.618 observations and 37 features.  
 \subsubsection{Selecting Features}
 
-\begin{tabular}{| c | c | c | c | c | c |} 
-  \toprule
-  \multicolumn{6}{|c|}{Danmark} \\ \hline
-   & \multicolumn{2}{c|}{Sjælland} & \multicolumn{3}{c|}{Ikke Sjælland} \\ \hline
-  Type/Region & Hovedstaden & Sjælland & Syddanmark & Midtjylland & Nordjylland \\
-   \midrule 
-   Villa & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Rækkehus & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Ejerlejlighhed & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Fritidsbolig & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Kolonihave & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Andelsbolig & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Landejendom & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Helårsgrund & 470,67 & 404,95 & 460,93 & 407,24 & \\ \hline
-   Fritidsgrund & 482,30 & 463,94 & 455,87 & 449,54 & \\ \hline
-   Villalejlighed & 513,36 & 459,67 & 503,62 & 461,96 & \\ \hline
-   Lystejendom & 470,67 & 404,95 & 460,93 & 407,24 & \\ 
-    \bottomrule
-\end{tabular}
-\newline
 
 \section{Methods}
 \subsection{Supervised Machine Learning}
@@ -127,7 +122,7 @@ The Ridge model add bias in exchange for a decrease in variance, resulting in a 
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
-$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right)$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
 \subsection{Optimizing the Hyperparameter}

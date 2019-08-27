@@ -81,10 +81,25 @@ Social and economic factors on municipality level is collected from \href{https:
 \subsection{Merging Data}
 
 \subsection{Data Cleaning}
-A few of the listed housing, have been for sale for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
+
+A few of the listed housing, have been listed for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
 
 \subsection{Descriptive Statistics}
+\begin{tabular}{| c | c | c | c | c | c |} 
+
+   & Price & Rooms & $m^2$ & Average Municipal income \\
+   \midrule 
+   Mean & 2,312,798 & 4.21 & 127.82 & 312,957.03 & \\ \hline
+   Std & 2,351,127 & 2.12 & 75.67 & 407,24 & \\ \hline
+   Min & 15,000 & 0 & 0,0 & 0 & \\ \hline
+   25\% & 985,000 & 3 & 82 & 4 & \\ \hline
+   50\% & 1,695,000 & 4 & 123 & 407,24 & \\ \hline
+   75\% & 2,895,000 & 5 & 455 & 449,54 & \\ \hline
+   Max & 85,000,000 & 50 & 503,62 & 461,96 & \\ \hline
+    \bottomrule
+\end{tabular}
 \subsubsection{The Dataset}
+The merged dataset contains 61.618 observations and 37 features.  
 \subsubsection{Selecting Features}
 
 \begin{tabular}{| c | c | c | c | c | c |} 
@@ -126,7 +141,7 @@ The Ridge model add bias in exchange for a decrease in variance, resulting in a 
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
-$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right) Note: Anderledes i Rashka!$$
+$$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right)$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
 \subsection{Optimizing the Hyperparameter}
