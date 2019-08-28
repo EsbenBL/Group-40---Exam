@@ -17,7 +17,8 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Lasso}{8}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.2}Ridge}{9}{subsubsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.3}Elastic-net}{9}{subsubsection.4.2.3}
-\contentsline {subsection}{\numberline {4.3}Optimizing the Hyperparameter}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Perfomance, Precision \& Recall}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Optimizing the Hyperparameter}{9}{subsection.4.4}
 \contentsline {section}{\numberline {5}Analysis}{10}{section.5}
 \contentsline {section}{\numberline {6}Results}{10}{section.6}
 \contentsline {section}{\numberline {7}Discussion}{10}{section.7}

@@ -51,7 +51,7 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-This report depicts a research performed regarding active Danish real-estate property valuations from 2016-2019. Since 2011, the yearly number of real estate properties sold has slightly increased, with 2017 being the year with most sold properties in 10 years (Danmarks Statistik, 2018).  The price of real estate properties is also rising through 2019 (Danmarks Statistik, 2019). Although this generally depicts a willingness of buyers to pay more for real-estate property, and higher valuations from agents, a closer analysis of current and active valuations contributes with local view of which conditions contribute to the valuation of a real-estate property. \newline
+This report depicts a research performed regarding active Danish real-estate property valuations from 2016-2019. Since 2011, the yearly number of real estate properties sold has slightly increased, with 2017 being the year with most sold properties in 10 years (Danmarks Statistik, 2018).  The price of real estate properties is also rising through 2019 (Danmarks Statistik, 2019). Although this generally depicts a willingness of buyers to pay more for real-estate property, and higher valuations from agents, a closer analysis of current and active valuations add a local view of which conditions contribute to the valuation of a real-estate property. \newline
 \begin{figure}[H]
 \centering
 \caption{}
@@ -60,10 +60,10 @@ This report depicts a research performed regarding active Danish real-estate pro
 
 Figure 1 shows the average square meter price valuation of active offers per municipality in Denmark. The maximum square meter price being approximately 8 times higher in the municipality of Gentofte, than Lolland, the municipality with lowest average square meter price valuations. A tendency visualized in the figure, is that average square meter price valuations are higher in in highly populated municipalities and in suburban areas surrounding Copenhagen. \newline
 
-The valuations included in the research are collected from one of Denmarks largest online real-estate websites named Boliga.dk. The Boliga data contains approximately 66 thousand active offerings with valuations ranging from 15 thousand to 85 million. This research paper intends to analyze real estate price valuations and which effects geo- and sociodemographic criteria affect valuations, using machine learning models. Our research questions is as follows: 
+The valuations included in the research are collected from one of Denmarks largest online real-estate websites named Boliga.dk. The Boliga data contains approximately 66,000 dkk. active offerings with valuations ranging from 15,000 to 85 million dkk. This research paper intends to analyze real estate price valuations and which effects geo- and sociodemographic criteria affect valuations, using machine learning models. Our research questions is as follows: 
 Which features are most relevant for predicting evaluations of real estate properties in Denmark?
 
-The research paper contains a section describing the construction of research data was performed explains the choices of gathering meaningful features for the machine learning model. Also, a section revolving the choice and optimization of machine learning models is included, where the intention is to provide insights on our progress on finding the optimal model. As a result, a preferable machine learning model is chosen with a discussion of its usability. 
+This research paper contains a section describing the construction of research data and assesses the choices made in gathering meaningful features for the machine learning model. Also, a section regarding the choice and optimization of machine learning models is included, where the intention is to provide insights on our progress on finding the optimal model. As a result, a preferable machine learning model is chosen with a discussion of its usability. 
 
 
 \section{Literature Review}
@@ -94,7 +94,7 @@ Categorical: & ForClosure, Type, Municipality, lotSize	, price, rooms, size  \\
 
 \paragraph{\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline}
 \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns distances from a given address, to conveniences such as supermarkets, hospitals and schools.   
-The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga and a list of points of interest. It constructed a URL (65,950 URL request), which was scraped and the json response was returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame.\newline
+The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga. It constructed a URL (65,950 URL request), \textcolor{red}{which was scraped and the json response was returned as a dictionary of distances to the points of interest. The values from each key in the dictionary was then extracted as a new column in a Pandas DataFrame}.\newline
 As Jupyter performs poorly at running long asynchronous tasks and estimated a running time of 18 hours this procedure was run in Visual Studio.
  \vspace*{10px} \newline
 \textit{Features obtained:}\newline
@@ -104,9 +104,10 @@ Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, tr
 \begin{tabular}{c c}
 \qquad \qquad \qquad \qquad &  pharmacy, library, coast, junction \\	
 \end{tabular}\newline 
+
 \paragraph{Social and economic factors\newline}
 Social and economic factors on municipality level is collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
-\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors includes income, reported crime and level of highest completed education etc. These are transformed to into ratios, by taking the total population in a given municipality into account.   
+\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. These factors include income, reported crime, level of highest completed education etc. These are transformed into ratios, by taking the total population in a given municipality into account.   
  \vspace*{5px} \newline
 \begin{tabular}{c c}
 \textit{Features obtained:}: & Relativ Ledighed, Grundskole, Gymnasiale uddannelser \\	
@@ -121,10 +122,10 @@ Social and economic factors on municipality level is collected from \href{https:
 \qquad \qquad \qquad \qquad \quad & Population\_in\_urban\_development  , Socioeconomic\_index \\	
 \end{tabular}\newline 
 \begin{tabular}{c c}
-\qquad \qquad \qquad \qquad \quad & average\_class\_size	expenses\_sport\_and\_other\_cultural\_activities	  \\	
+\qquad \qquad \qquad \qquad \quad & average\_class\_size,	expenses\_sport\_and\_other\_cultural\_activities	  \\	
 \end{tabular}\newline 
 \begin{tabular}{c c}
-\qquad \qquad \qquad \qquad \quad & , expenses\_per\_school\_student	   \\	
+\qquad \qquad \qquad \qquad \quad & expenses\_per\_school\_student	   \\	
 \end{tabular}\newline 
 % 				average_class_size	expenses_sport_and_other_cultural_activities
 \subsection{Merging Data}
@@ -157,7 +158,7 @@ A few of the listed housing, have been listed for over a decade. These are consi
   \label{fig:}
 \end{figure}
 
-
+n.b. 0 
 
 
 \subsubsection{The Dataset}
@@ -171,7 +172,7 @@ The merged dataset contains 61.618 observations and 37 features.   The features 
 \section{Methods}
 \subsection{Supervised Machine Learning}
 The objective by applying Machine Learning is to train a model that can predict pricing of housing listed in near future.
-Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output. As well as a classification-model for predicting the interval which the price is included in. 
+\textcolor{red}{Two types of predictive models will be used for the sake of returning different outputs: Regression-model to return the pricing as a continuous output.}  
 \subsection{Fitting the model}
 The potential problems of underfitting and overfitting should be assessed when fitting a model. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalize poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularization}. In this project three different types of regularization are applied; Lasso, Ridge and Elastic net.   
 
@@ -182,38 +183,43 @@ Another convenient attribute of the Lasso penalty is that some estimates are set
 \subsubsection{Ridge}
 The ridge model penalizes with the sum of squared coefficients. Opposed to Lasso, Ridge do not force features to be omitted. Ridge minimizes:
 $$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
-The Ridge model add bias in exchange for a decrease in variance, resulting in a better prediction model. 
+
 
 \subsubsection{Elastic-net}
 The Elastic net is a combination of Lasso and Ridge. Elastic net minimizes the function: 
 $$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right)$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 Where $\alpha$ denotes the relative mixing between Lasso and Ridge. 
+
+\subsection{Perfomance, Precision \& Recall}
+
 \subsection{Optimizing the Hyperparameter}
 To minimize the mean squared errors of our Lasso and Ridge regression we performed k-fold cross validation to optimize the hyperparameter $\lambda$. 
 We split the data into a test set and a development set, consisting of respectively 20\% and 80\% of the total observations. Subsequently, we use k-fold cross-validation to randomly split the development set into k folds, where k-1 folds are used to train the model. The remaining fold is used to validate the model’s generalizability by calculating the mean squared errors of the trained model’s prediction of the left-out fold\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.191}. This process is repeated k times and each time a new fold is left out for validation. Since we are working with a relatively large dataset we chose to split our data into 5 folds, and computed the average MSE for the 5 iterations. By using the k-fold cross-validation method we relieve ourselves of the concern that the estimation of our model’s performance is simply due to a lucky or unlucky split of the data. \newline
 We performed this procedure for 12 different values of $\lambda$ spanning between \textcolor{red}{$10^(-4) and 10^4$}. We chose the value of $\lambda$ which yields the smallest average MSE over the 5 folds. 
 We both calculated the optimal hyperparameters for a Ridge regression model, a Lasso regression model and an Elastic Net regression model. \textcolor{red}{The following table} shows the performance of the different models, when trained with their optimal hyperparameter and predicting the test data.
+
+
+
 \section{Analysis}
+
+
+
+\section{Results}
 
 \begin{table}[h!]
 \begin{center}
-\caption{Key Statistics\label{time}}
+\caption{Prediction Errors\label{time}}
 \begin{tabular}{| c | c | c | c | c | c |} 
 \hline
-   & Price & \, Rooms \ & \ $m^2$ \ & Average Municipal Income \\ \hline
-   Mean & 2,312,798.00 & \ 4.21 \  & \ 127.82 \ & 312,957.03 \\ \hline
-   Std & 2,351,127.00 & 2.12 & 75.67 & 46,095.34 \\ \hline
-   Min & 15,000.00 & 0 & 0 & 257,776 \\ \hline
-   25\% & 985,000.00 & 3 & 82 & 290,973 \\ \hline
-   50\% & 1,695,000.00 & 4 & 123 & 302,153 \\ \hline
-   75\% & 2,895,000.00 & 5 & 167 & 318,745 \\ \hline
-   Max & 85,000,000.00 & 50 & 2,390 & 583,331 \\ \hline
+   & Lasso & \, Ridge \ & \ Elastic Net \ & OLS \\ \hline
+   MSE & 60,103,955,188.37 & \ 55,667,264,851.14 \  & \ 85,824,334,267.16 \ & 2.848e+28 \\ \hline
+  RMSE & 245,161.08 & 235,939.11 & 292,957.91 & 168,763,945,674,352.3 \\ \hline
+   MAE & 47,126.43 & 43,630.55 & 69,582.56 & 2,637,476,978,906.39 \\ \hline
+
 \end{tabular}
 \end{center}
 \end{table}
-
-\section{Results}
 
 \section{Discussion}
 \subsection{Data critique}
