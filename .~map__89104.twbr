@@ -626,7 +626,7 @@
       <column caption='AVG Commune' datatype='real' name='[Calculation_6270136607289118723]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='{FIXED [Kommune]: AVG([price])}' />
       </column>
-      <column caption='SQM Muni' datatype='real' name='[Calculation_6270136607760629766]' role='measure' type='quantitative'>
+      <column caption='Sqaure meter price / Municipality' datatype='real' name='[Calculation_6270136607760629766]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='{FIXED [Kommune]: AVG([squaremeterPrice])}' />
       </column>
       <column datatype='string' name='[Kommune]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
@@ -679,11 +679,11 @@
     <mapsource name='Tableau' />
   </mapsources>
   <worksheets>
-    <worksheet name='Average Real-estat property valuation per Municipality'>
+    <worksheet name='Average square meter real-estat property valuation per municipality'>
       <layout-options>
         <title>
           <formatted-text>
-            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+            <run fontalignment='1'>Average square meter real-estat property valuation per municipality</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -696,7 +696,7 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.1wig6c91pv9eap19b6hw01hk6him'>
-            <column caption='SQM Muni' datatype='real' name='[Calculation_6270136607760629766]' role='measure' type='quantitative'>
+            <column caption='Sqaure meter price / Municipality' datatype='real' name='[Calculation_6270136607760629766]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='{FIXED [Kommune]: AVG([squaremeterPrice])}' />
             </column>
             <column datatype='string' name='[Kommune]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
@@ -711,6 +711,9 @@
           <aggregation value='true' />
         </view>
         <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1wig6c91pv9eap19b6hw01hk6him].[sum:Calculation_6270136607760629766:qk]' value='c&quot;R&quot;#,##0.00;-&quot;R&quot;#,##0.00' />
+          </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.1wig6c91pv9eap19b6hw01hk6him].[sum:Calculation_6270136607760629766:qk]' reverse='true' type='custom-interpolated'>
               <color-palette custom='true' name='' type='ordered-diverging'>
@@ -739,6 +742,9 @@
                 <color>#65a76d</color>
               </color-palette>
             </encoding>
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-family' value='Times New Roman' />
           </style-rule>
           <style-rule element='legend-title'>
             <format attr='text-align' value='left' />
@@ -944,13 +950,23 @@
   </worksheets>
   <dashboards>
     <dashboard name='Dashboard 1'>
-      <style />
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='font-family' value='Times New Roman' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-family' value='Times New Roman' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-align' value='left' />
+        </style-rule>
+      </style>
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
         <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
           <zone h='98000' id='7' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
-            <zone h='98000' id='5' type='layout-basic' w='84100' x='800' y='1000'>
-              <zone h='98000' id='3' name='Average Real-estat property valuation per Municipality' w='84100' x='800' y='1000'>
+            <zone h='98000' id='5' type='layout-basic' w='77600' x='800' y='1000'>
+              <zone h='98000' id='3' name='Average square meter real-estat property valuation per municipality' w='77600' x='800' y='1000'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -959,8 +975,8 @@
                 </zone-style>
               </zone>
             </zone>
-            <zone fixed-size='143' h='98000' id='6' is-fixed='true' param='vert' type='layout-flow' w='14300' x='84900' y='1000'>
-              <zone fixed-size='338' h='43250' id='8' is-fixed='true' name='Average Real-estat property valuation per Municipality' pane-specification-id='6' param='[federated.1wig6c91pv9eap19b6hw01hk6him].[sum:Calculation_6270136607760629766:qk]' type='color' w='14300' x='84900' y='1000'>
+            <zone fixed-size='208' h='98000' id='6' is-fixed='true' param='vert' type='layout-flow' w='20800' x='78400' y='1000'>
+              <zone fixed-size='145' h='19125' id='8' is-fixed='true' name='Average square meter real-estat property valuation per municipality' pane-specification-id='6' param='[federated.1wig6c91pv9eap19b6hw01hk6him].[sum:Calculation_6270136607760629766:qk]' type='color' w='20800' x='78400' y='1000'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -1027,7 +1043,7 @@
       </cards>
       <simple-id uuid='{CD11ADD6-F7E8-4AB3-98FE-25F6D3F11827}' />
     </window>
-    <window class='worksheet' maximized='true' name='Average Real-estat property valuation per Municipality'>
+    <window class='worksheet' maximized='true' name='Average square meter real-estat property valuation per municipality'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1058,11 +1074,11 @@
     </window>
     <window class='dashboard' name='Dashboard 1'>
       <viewpoints>
-        <viewpoint name='Average Real-estat property valuation per Municipality'>
+        <viewpoint name='Average square meter real-estat property valuation per municipality'>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='8' />
       <simple-id uuid='{8B4690C3-9464-4CF1-82E2-C499A30B193D}' />
     </window>
     <window class='worksheet' name='Sheet 3'>
