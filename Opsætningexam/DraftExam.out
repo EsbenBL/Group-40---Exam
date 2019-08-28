@@ -6,28 +6,31 @@
 \BOOKMARK [2][-]{subsection.3.3}{Log Analysis}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.4}{Merging Data}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.5}{Data Cleaning}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.6}{Descriptive Statistics}{section.3}% 9
-\BOOKMARK [3][-]{subsubsection.3.6.1}{Key Statistics}{subsection.3.6}% 10
-\BOOKMARK [3][-]{subsubsection.3.6.2}{Prices in Municipalities}{subsection.3.6}% 11
-\BOOKMARK [3][-]{subsubsection.3.6.3}{Property Type}{subsection.3.6}% 12
-\BOOKMARK [3][-]{subsubsection.3.6.4}{The Dataset}{subsection.3.6}% 13
-\BOOKMARK [1][-]{section.4}{Methods}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Supervised Machine Learning}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Fitting the model}{section.4}% 16
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Lasso}{subsection.4.2}% 17
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Ridge}{subsection.4.2}% 18
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Elastic-net}{subsection.4.2}% 19
-\BOOKMARK [2][-]{subsection.4.3}{Selecting Features}{section.4}% 20
-\BOOKMARK [2][-]{subsection.4.4}{Optimizing the Hyperparameter}{section.4}% 21
-\BOOKMARK [2][-]{subsection.4.5}{Predictive Performance}{section.4}% 22
-\BOOKMARK [1][-]{section.5}{Analysis}{}% 23
-\BOOKMARK [1][-]{section.6}{Results}{}% 24
-\BOOKMARK [1][-]{section.7}{Discussion}{}% 25
-\BOOKMARK [2][-]{subsection.7.1}{Data critique}{section.7}% 26
-\BOOKMARK [2][-]{subsection.7.2}{Model Limitations and Irrelevancy}{section.7}% 27
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 28
-\BOOKMARK [1][-]{section.9}{An Ethical Overview}{}% 29
-\BOOKMARK [1][-]{section.10}{Litterature}{}% 30
-\BOOKMARK [1][-]{section.11}{Appendixs}{}% 31
-\BOOKMARK [2][-]{subsubsection.11.0.1}{}{section.11}% 32
-\BOOKMARK [3][-]{subsubsection.11.0.2}{}{subsubsection.11.0.1}% 33
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Initial clean-up}{subsection.3.5}% 9
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Ejerlejlighed's lot size}{subsection.3.5}% 10
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Final touch-ups}{subsection.3.5}% 11
+\BOOKMARK [2][-]{subsection.3.6}{Descriptive Statistics}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Key Statistics}{subsection.3.6}% 13
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Prices in Municipalities}{subsection.3.6}% 14
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Property Type}{subsection.3.6}% 15
+\BOOKMARK [3][-]{subsubsection.3.6.4}{The Dataset}{subsection.3.6}% 16
+\BOOKMARK [1][-]{section.4}{Methods}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Supervised Machine Learning}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Fitting the model}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Lasso}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Ridge}{subsection.4.2}% 21
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Elastic-net}{subsection.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Selecting Features}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{Optimizing the Hyperparameter}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.5}{Predictive Performance}{section.4}% 25
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 26
+\BOOKMARK [1][-]{section.6}{Results}{}% 27
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 28
+\BOOKMARK [2][-]{subsection.7.1}{Data critique}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.2}{Model Limitations and Irrelevancy}{section.7}% 30
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 31
+\BOOKMARK [1][-]{section.9}{An Ethical Overview}{}% 32
+\BOOKMARK [1][-]{section.10}{Litterature}{}% 33
+\BOOKMARK [1][-]{section.11}{Appendixs}{}% 34
+\BOOKMARK [2][-]{subsubsection.11.0.1}{}{section.11}% 35
+\BOOKMARK [3][-]{subsubsection.11.0.2}{}{subsubsection.11.0.1}% 36
