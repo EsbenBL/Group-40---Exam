@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  28 AUG 2019 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  28 AUG 2019 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1239,26 +1239,35 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (./DraftExam.aux
 
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `time' multiply defined.
+
+
 LaTeX Warning: Label `time' multiply defined.
 
 )
 \openout1 = `DraftExam.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 48.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1337,7 +1346,7 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 46.
+Package hyperref Info: Link coloring OFF on input line 48.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1347,9 +1356,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count372
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 
 (./DraftExam.out) (./DraftExam.out)
 \@outlinefile=\write4
@@ -1438,44 +1447,44 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/local/texlive/2018/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 48.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 46.
+LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<forside.pdf, id=103, 597.50786pt x 845.04686pt>
+<forside.pdf, id=139, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
-Package pdftex.def Info: forside.pdf  used on input line 47.
+Package pdftex.def Info: forside.pdf  used on input line 49.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
-Package pdftex.def Info: forside.pdf  used on input line 47.
+Package pdftex.def Info: forside.pdf  used on input line 49.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<forside.pdf, id=106, page=1, 597.50786pt x 845.04686pt>
+<forside.pdf, id=142, page=1, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 47.
+Package pdftex.def Info: forside.pdf , page1 used on input line 49.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 47.
+Package pdftex.def Info: forside.pdf , page1 used on input line 49.
 (pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 47.
+Package pdftex.def Info: forside.pdf , page1 used on input line 49.
 (pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 47.
+Package pdftex.def Info: forside.pdf , page1 used on input line 49.
 (pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
-Package pdftex.def Info: forside.pdf , page1 used on input line 47.
+Package pdftex.def Info: forside.pdf , page1 used on input line 49.
 (pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
  [1
 Non-PDF special ignored!
@@ -1499,117 +1508,355 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
  <./forside.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
  (./DraftExam.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-)
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `DraftExam.toc'.
 
- [2{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<123.png, id=189, 415.3116pt x 291.9708pt>
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+<123.png, id=240, 997.7275pt x 760.8425pt>
 File: 123.png Graphic file (type png)
 <use 123.png>
-Package pdftex.def Info: 123.png  used on input line 58.
-(pdftex.def)             Requested size: 415.31058pt x 291.97008pt.
+Package pdftex.def Info: 123.png  used on input line 60.
+(pdftex.def)             Requested size: 399.08392pt x 304.3316pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-[3 <./123.png>]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 73.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 80--94
+Underfull \hbox (badness 10000) in paragraph at lines 56--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--107
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./123.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 109--131
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+<Box1.png, id=321, 491.436pt x 189.3474pt>
+File: Box1.png Graphic file (type png)
+<use Box1.png>
+Package pdftex.def Info: Box1.png  used on input line 197.
+(pdftex.def)             Requested size: 455.24411pt x 175.41228pt.
+<Box2.png, id=322, 404.2302pt x 155.6214pt>
+File: Box2.png Graphic file (type png)
+<use Box2.png>
+Package pdftex.def Info: Box2.png  used on input line 207.
+(pdftex.def)             Requested size: 455.24411pt x 175.26358pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11 <./Box1.png>]
+<bar1.png, id=332, 628.3475pt x 409.53pt>
+File: bar1.png Graphic file (type png)
+<use bar1.png>
+Package pdftex.def Info: bar1.png  used on input line 218.
+(pdftex.def)             Requested size: 455.24411pt x 296.7048pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./Box2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13 <./bar1.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+
+ []
+
+
+Overfull \hbox (32.83154pt too wide) in paragraph at lines 284--291
+ [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Barplot_Estate2.png, id=224, 789.95125pt x 500.87125pt>
-File: Barplot_Estate2.png Graphic file (type png)
-<use Barplot_Estate2.png>
-Package pdftex.def Info: Barplot_Estate2.png  used on input line 157.
-(pdftex.def)             Requested size: 455.24411pt x 288.64835pt.
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
-[7 <./Barplot_Estate2.png>] [8]
-Overfull \hbox (32.83154pt too wide) in paragraph at lines 213--221
- [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+
  []
 
-[9] [10] [11] [12]
-Overfull \hbox (90.77383pt too wide) in paragraph at lines 250--251
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+
+Overfull \hbox (90.77383pt too wide) in paragraph at lines 337--338
 \T1/ptm/m/it/12 tion & So-cial Sci-ence Re-search \T1/ptm/m/n/12 [On-line]: []e
 c.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-
  []
 
 
-Overfull \hbox (74.98131pt too wide) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Overfull \hbox (74.98131pt too wide) in paragraph at lines 339--340
 []\T1/ptm/m/n/12 https://ec.europa.eu/research/participants/data/ref/h2020/othe
 r/hi/h2020_ethics-soc-science-humanities_en.pdf[]
  []
 
 
-Overfull \hbox (5.91246pt too wide) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+
+Overfull \hbox (5.91246pt too wide) in paragraph at lines 341--342
 \T1/ptm/m/n/12 52-56 [On-line]: []http://www.unz.com/print/Encounter-1969mar-00
 052[] [Ac-cessed on 25/08/2019] 
  []
 
 
-Overfull \hbox (26.63339pt too wide) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Overfull \hbox (26.63339pt too wide) in paragraph at lines 349--350
 []\T1/ptm/m/n/12 Vox.com (2018) \T1/ptm/m/it/12 The Cam-bridge An-a-lyt-ica Fac
 e-book scan-dal \T1/ptm/m/n/12 [On-line]: [][[]Ac-cessed on 26/08/2019] 
  []
 
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 373.
+
+
+Overfull \hbox (92.5989pt too wide) in paragraph at lines 374--376
+\T1/ptm/m/n/12 municipality, lot-Size, un-em-ploy-ment, To-tal_reported_crime, 
+So-cioe-co-nomic_index, ex-penses_per_school_student,
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
  (./DraftExam.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package rerunfilecheck Info: File `DraftExam.out' has not changed.
+(rerunfilecheck)             Checksum: 04F207076E21CC2FD24FCD2BBD8CA88D;2097.
 
-
-Package rerunfilecheck Warning: File `DraftExam.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `DraftExam.out':
-(rerunfilecheck)             Before: 3A4A57E20B651F302AB57FD50554566D;1489
-(rerunfilecheck)             After:  CFC644BE8DB209A8C23CCF413CFE272E;1572.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33297 strings out of 492649
- 641997 string characters out of 6129622
- 723773 words of memory out of 5000000
- 36625 multiletter control sequences out of 15000+600000
- 561724 words of font info for 63 fonts, out of 8000000 for 9000
+ 33360 strings out of 492649
+ 642744 string characters out of 6129622
+ 720773 words of memory out of 5000000
+ 36647 multiletter control sequences out of 15000+600000
+ 566142 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,18n,77p,10378b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,18n,78p,10378b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1620,10 +1867,10 @@ e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
 018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on DraftExam.pdf (13 pages, 487195 bytes).
+Output written on DraftExam.pdf (22 pages, 746348 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 426 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
