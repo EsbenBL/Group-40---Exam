@@ -294,22 +294,35 @@ $$ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y_i}|$$
 \section{Analysis}
 A number of features are excluded before training the model. The exclusion was determined, quite simply, by investigation of the correlation between the complete set of features and the valuation price. A list of the excluded features are found in appendix 11.0.1. The model used for ML are found in appendix 11.0.2.  
 
-The initial 10-fold cross-validation to obtain the optimal values of the hyperparameters in each regularization yields.
+The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularization yields. 
 \begin{table}[h!]
 \begin{center}
-\caption{Optimal hyperparameters\label{time}}
-\begin{tabular}{ c  c  c } 
-   $\lambda_{Lasso}$ & $\lambda_{Ridge}$ &  $\lambda_{Elastic Net}$ \\ \hline
-   1 & 1 & 1 \\ \hline
+\caption{Optimal hyperparameters, two degrees polynomial features\label{time}}
+\begin{tabular}{ c | c  c  c } 
+  & $\lambda_{Lasso}$ & $\lambda_{Ridge}$ &  $\lambda_{Elastic Net}$ \\ \hline
+2 degrees  & 372.76 & 26.83 & 1 \\ \hline
+3 degrees  & 2310.13 & 432.88 & 1
 \end{tabular}
 \end{center}
 \end{table} 
-The prediction-error of each model  
 
 
-\begin{table}[h!]
+The prediction-errors of each model, with two and three degrees of polynomial features respectively, are printed below:
+\begin{table}[H]
 \begin{center}
-\caption{Prediction Errors\label{time}}
+\caption{Prediction Errors, two degrees of polynomial features \label{time}}
+\begin{tabular}{| c | c | c | c | c | c |} 
+\hline
+   & Lasso & \, Ridge \ & \ Elastic Net \ & OLS \\ \hline
+   MSE & 59,081,597,331.11 & \ 62,416,553,466.45 \  & \ 1 \ & 64,297,245,726.80 \\ \hline
+  RMSE & 243,067.06 & 249,833.05 & 1 & 253,569.02 \\ \hline
+   MAE & 47,660.52 & 51,306.19 & 1 & 52,035.52 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[H]
+\begin{center}
+\caption{Prediction Errors, three degrees of polynomial features\label{time}}
 \begin{tabular}{| c | c | c | c | c | c |} 
 \hline
    & Lasso & \, Ridge \ & \ Elastic Net \ & OLS \\ \hline
@@ -320,6 +333,12 @@ The prediction-error of each model
 \end{center}
 \end{table}
 
+\begin{figure}[H]
+\centering
+\caption{}
+\includegraphics[scale=1]{ValCurveRidge3deg.png}
+%\source{}
+\end{figure}
 
 
 \section{Results}
