@@ -1,38 +1,36 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Literature Review}{}% 2
-\BOOKMARK [1][-]{section.3}{Data Description \046 Ethics}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Ethical Considerations in the Current Research Project}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Data Scraping Process}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Analysis of Scraping Logs}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.4}{Merging Data}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.5}{Data Cleaning}{section.3}% 8
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Initial clean-up}{subsection.3.5}% 9
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Ejerlejlighed's lot size}{subsection.3.5}% 10
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Final touch-ups}{subsection.3.5}% 11
-\BOOKMARK [2][-]{subsection.3.6}{Descriptive Statistics}{section.3}% 12
-\BOOKMARK [3][-]{subsubsection.3.6.1}{Key Statistics}{subsection.3.6}% 13
-\BOOKMARK [3][-]{subsubsection.3.6.2}{Prices in Municipalities}{subsection.3.6}% 14
-\BOOKMARK [3][-]{subsubsection.3.6.3}{Property Type}{subsection.3.6}% 15
-\BOOKMARK [3][-]{subsubsection.3.6.4}{The Dataset}{subsection.3.6}% 16
-\BOOKMARK [1][-]{section.4}{Methods}{}% 17
-\BOOKMARK [2][-]{subsection.4.1}{Supervised Machine Learning}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.2}{Fitting the model}{section.4}% 19
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Lasso}{subsection.4.2}% 20
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Ridge}{subsection.4.2}% 21
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Elastic-net}{subsection.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.3}{Selecting Features}{section.4}% 23
-\BOOKMARK [2][-]{subsection.4.4}{Optimising the Hyperparameter}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.5}{Predictive Performance}{section.4}% 25
-\BOOKMARK [1][-]{section.5}{Analysis}{}% 26
-\BOOKMARK [1][-]{section.6}{Results}{}% 27
-\BOOKMARK [1][-]{section.7}{Discussion}{}% 28
-\BOOKMARK [2][-]{subsection.7.1}{No grit search}{section.7}% 29
-\BOOKMARK [2][-]{subsection.7.2}{Data critique}{section.7}% 30
-\BOOKMARK [2][-]{subsection.7.3}{Model Limitations}{section.7}% 31
-\BOOKMARK [2][-]{subsection.7.4}{Model Selection}{section.7}% 32
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 33
-\BOOKMARK [1][-]{section.9}{An Ethical Overview}{}% 34
-\BOOKMARK [1][-]{section.10}{Litterature}{}% 35
-\BOOKMARK [1][-]{section.11}{Appendix}{}% 36
-\BOOKMARK [2][-]{subsubsection.11.0.1}{}{section.11}% 37
-\BOOKMARK [3][-]{subsubsection.11.0.2}{}{subsubsection.11.0.1}% 38
+\BOOKMARK [2][-]{subsection.2.1}{On Big Data \046 Machine Learning}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{An Ethical Overview}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Data Description \046 Ethics}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Ethical Considerations in the Current Research Project}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Data Scraping Process}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Analysis of Scraping Logs}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{Merging Data}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.5}{Data Cleaning}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Initial clean-up}{subsection.3.5}% 11
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Ejerlejlighed's lot size}{subsection.3.5}% 12
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Final touches}{subsection.3.5}% 13
+\BOOKMARK [2][-]{subsection.3.6}{Descriptive Statistics}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Key Statistics}{subsection.3.6}% 15
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Prices in Municipalities}{subsection.3.6}% 16
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Property Type}{subsection.3.6}% 17
+\BOOKMARK [1][-]{section.4}{Methods}{}% 18
+\BOOKMARK [2][-]{subsection.4.1}{Fitting the model}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.1}{LASSO}{subsection.4.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.2}{RIDGE}{subsection.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Selecting Features}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Optimising the Hyperparameter}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{Predictive Performance}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 25
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{No Grid Search or One-to-many}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.2}{Best Subset Feature Selection}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.3}{Data critique}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.4}{Model Limitations}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.5}{Model Selection}{section.6}% 31
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 32
+\BOOKMARK [1][-]{section.8}{Litterature}{}% 33
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 34
+\BOOKMARK [2][-]{subsubsection.9.0.1}{}{section.9}% 35
+\BOOKMARK [3][-]{subsubsection.9.0.2}{}{subsubsection.9.0.1}% 36
