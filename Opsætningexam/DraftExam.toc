@@ -6,19 +6,20 @@
 \contentsline {subsection}{\numberline {3.2}Data Scraping Process}{7}{subsection.3.2}
 \contentsline {paragraph}{\href {https://www.boliga.dk}{Boliga}\newline }{7}{section*.4}
 \contentsline {paragraph}{\href {https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline }{8}{section*.5}
-\contentsline {paragraph}{Socioeconomic Factors\newline }{8}{section*.6}
-\contentsline {subsection}{\numberline {3.3}Analysis of Scraping Logs}{8}{subsection.3.3}
-\contentsline {paragraph}{Response Code\newline }{9}{section*.7}
-\contentsline {paragraph}{Error Codes\newline }{9}{section*.9}
-\contentsline {paragraph}{Server Response Times\newline }{10}{section*.11}
-\contentsline {paragraph}{Response Sizes\newline }{10}{section*.13}
-\contentsline {paragraph}{Assesment of the Scraping Logs\newline }{11}{section*.16}
-\contentsline {paragraph}{Critique of Logs Using Scraping Class\newline }{11}{section*.17}
+\contentsline {paragraph}{DAWA\newline }{8}{section*.6}
+\contentsline {paragraph}{Socioeconomic Factors\newline }{8}{section*.7}
+\contentsline {subsection}{\numberline {3.3}Analysis of Scraping Logs}{9}{subsection.3.3}
+\contentsline {paragraph}{Response Code\newline }{9}{section*.8}
+\contentsline {paragraph}{Error Codes\newline }{9}{section*.10}
+\contentsline {paragraph}{Server Response Times\newline }{10}{section*.12}
+\contentsline {paragraph}{Response Sizes\newline }{10}{section*.14}
+\contentsline {paragraph}{Assesment of the Scraping Logs\newline }{11}{section*.17}
+\contentsline {paragraph}{Critique of Logs Using Scraping Class\newline }{11}{section*.18}
 \contentsline {subsection}{\numberline {3.4}Merging Data}{12}{subsection.3.4}
-\contentsline {paragraph}{Boliga.dk\newline }{12}{section*.18}
-\contentsline {paragraph}{DAWA\newline }{12}{section*.19}
-\contentsline {paragraph}{Danmarks Statistik, Danish Police \& Social og Indenrigsministeriet\newline }{12}{section*.20}
-\contentsline {paragraph}{Hvorlangterder.dk\newline }{13}{section*.21}
+\contentsline {paragraph}{Boliga.dk\newline }{12}{section*.19}
+\contentsline {paragraph}{DAWA\newline }{12}{section*.20}
+\contentsline {paragraph}{Danmarks Statistik, Danish Police \& Social og Indenrigsministeriet\newline }{12}{section*.21}
+\contentsline {paragraph}{Hvorlangterder.dk\newline }{13}{section*.22}
 \contentsline {subsection}{\numberline {3.5}Data Cleaning}{13}{subsection.3.5}
 \contentsline {subsubsection}{\numberline {3.5.1}Initial clean-up}{13}{subsubsection.3.5.1}
 \contentsline {subsubsection}{\numberline {3.5.2}Ejerlejlighed's lot size}{14}{subsubsection.3.5.2}
@@ -27,7 +28,7 @@
 \contentsline {subsubsection}{\numberline {3.6.1}Key Statistics}{14}{subsubsection.3.6.1}
 \contentsline {subsubsection}{\numberline {3.6.2}Prices in Municipalities}{15}{subsubsection.3.6.2}
 \contentsline {subsubsection}{\numberline {3.6.3}Property Type}{16}{subsubsection.3.6.3}
-\contentsline {subsubsection}{\numberline {3.6.4}The Dataset}{16}{subsubsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.4}The Dataset}{17}{subsubsection.3.6.4}
 \contentsline {section}{\numberline {4}Methods}{17}{section.4}
 \contentsline {subsection}{\numberline {4.1}Supervised Machine Learning}{17}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Fitting the model}{17}{subsection.4.2}
@@ -38,8 +39,8 @@
 \contentsline {subsection}{\numberline {4.4}Optimizing the Hyperparameter}{18}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Predictive Performance}{19}{subsection.4.5}
 \contentsline {section}{\numberline {5}Analysis}{19}{section.5}
-\contentsline {paragraph}{Learning Curve}{20}{section*.28}
-\contentsline {paragraph}{Validation Curve}{21}{section*.30}
+\contentsline {paragraph}{Learning Curve}{20}{section*.29}
+\contentsline {paragraph}{Validation Curve}{21}{section*.31}
 \contentsline {section}{\numberline {6}Results}{23}{section.6}
 \contentsline {section}{\numberline {7}Discussion}{23}{section.7}
 \contentsline {subsection}{\numberline {7.1}No grit search}{23}{subsection.7.1}
