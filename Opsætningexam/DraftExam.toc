@@ -36,7 +36,8 @@
 \contentsline {section}{\numberline {7}Discussion}{19}{section.7}
 \contentsline {subsection}{\numberline {7.1}Data critique}{19}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Model Limitations}{19}{subsection.7.2}
-\contentsline {section}{\numberline {8}Conclusion}{19}{section.8}
+\contentsline {subsection}{\numberline {7.3}Model Selection}{19}{subsection.7.3}
+\contentsline {section}{\numberline {8}Conclusion}{20}{section.8}
 \contentsline {section}{\numberline {9}An Ethical Overview}{20}{section.9}
 \contentsline {section}{\numberline {10}Litterature}{22}{section.10}
 \contentsline {section}{\numberline {11}Appendixs}{24}{section.11}

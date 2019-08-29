@@ -310,28 +310,22 @@ The initial 5-fold cross-validation to obtain the optimal values of the hyperpar
 The prediction-errors of each model, with two and three degrees of polynomial features respectively, are printed below:
 \begin{table}[H]
 \begin{center}
-\caption{Prediction Errors, two degrees of polynomial features \label{time}}
+\caption{Prediction Errors. \label{time}}
 \begin{tabular}{| c | c | c | c | c | c |} 
 \hline
-   & Lasso & \, Ridge \ & \ Elastic Net \ & OLS \\ \hline
-   MSE & 59,081,597,331.11 & \ 62,416,553,466.45 \  & \ 1 \ & 64,297,245,726.80 \\ \hline
-  RMSE & 243,067.06 & 249,833.05 & 1 & 253,569.02 \\ \hline
-   MAE & 47,660.52 & 51,306.19 & 1 & 52,035.52 \\ \hline
+   & \ MSE \ & \, RMSE \ & \ MAE \ \\ \hline
+   Lasso 2-deg & 59,081,597,331.11 & \ 243,067.06 \  & \ 47,660.52 \ \\ 
+  Ridge 2-deg & 62,416,553,466.45 & 249,833.05 & 51,306.19  \\ 
+  Elastic net 2-deg & 1 & 1 & 1  \\ 
+  OLS 2-deg & 64,297,245,726.80 & 253,569.02 & 52,035.52  \\ \hline 
+  Lasso 3-deg & 60,103,955,188.37 & 245,161.08 & 47,126.43  \\ 
+  Ridge 3-deg & 55,667,264,851.14 & 235,939.11 & 43,630.55  \\ 
+  Elastic Net 3-deg & 1 & 1 & 1  \\
+  OLS 3-deg & 2.848e+28 & 168,763,945,674,352.3 & 2,637,476,978,906.39  \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
-\begin{table}[H]
-\begin{center}
-\caption{Prediction Errors, three degrees of polynomial features\label{time}}
-\begin{tabular}{| c | c | c | c | c | c |} 
-\hline
-   & Lasso & \, Ridge \ & \ Elastic Net \ & OLS \\ \hline
-   MSE & 60,103,955,188.37 & \ 55,667,264,851.14 \  & \ 85,824,334,267.16 \ & 2.848e+28 \\ \hline
-  RMSE & 245,161.08 & 235,939.11 & 292,957.91 & 168,763,945,674,352.3 \\ \hline
-   MAE & 47,126.43 & 43,630.55 & 69,582.56 & 2,637,476,978,906.39 \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
+The Ridge model with three degrees of polynomial features are selected as the best performing model. Both according to MAE  
 
 \begin{figure}[H]
 \centering
@@ -365,6 +359,9 @@ Geographical boundaries could have been limited way more, resulting in easier in
 If one intended to predict valuations country-wide more realistic, a model for each municipality could have been more satisfactory. Resulting in 98 separate models. The evident downside of this approach being the prospect of limitations in available data (some municipalities has very few listings).     
 Another approach could have been to group cities which share characteristics. Ex. The three biggest cities, the provinces, the islands, the country-side towns.    
 
+\subsection{Model Selection}
+Instead of only assessing the different models by MAE and RMSE.
+The Information criteria of the respective models could have been introduced. Which could have altered the selection of preferred model. Both AIC and BIC, would likely have suggested Lasso, with 2-degrees of polynomial features, as preferred model. As both measurement are increasing in numbers of estimated parameters. 
 
 \section{Conclusion}
 In this assignment, we have used machine learning to train a model to predict valuation prices of real estate in Denmark. We did this by scraping Boliga.dk for all of their active houses for sale and combining this with municipal data on income, education, schools and urbanization. Additionally, we also scraped data from hvorlangterder.dk which calculates the distance from an address, to different every-day commodities such as hospitals, schools and shopping. 
@@ -421,7 +418,9 @@ Lazer, David and Jason Radford (2017) \textit{Data ex Machina. Introduction to B
 
 Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Applied Econometric Approach}. Journal of Economic Perspectives, vol. 31 (2): 87-106. \newline
 
-Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete}. Wired, 16-07 [Online] \href{https://www.wired.com/2008/06/pb-theory/}{www.wired.com/2008/06/pb-theory/} [Accessed on 27/08/2019]
+Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete}. Wired, 16-07 [Online] \href{https://www.wired.com/2008/06/pb-theory/}{www.wired.com/2008/06/pb-theory/} [Accessed on 27/08/2019]\newline
+
+Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}. Available at \href{http://kt.ijs.si/theses/phd_aleksandar_peckov.pdf}{kt.ijs.si/theses/phd\_aleksandar\_peckov.pdf}. Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012
 
 %Varian, Hal R. (2014) Big Data: New Tricks for Econometrics. Journal of Economic Perspectives. Vol. 28, April: 3-27 \newline
 
@@ -431,14 +430,16 @@ Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scie
 Excluded Features:\newline
 municipality, lotSize, unemployment, Total\_reported\_crime, Socioeconomic\_index, expenses\_per\_school\_student, expenses\_sport\_and\_other\_cultural\_activities, forest\_distance, coast\_distance, isForeclosure, owners\_expense
 \subsubsection{}
-The model used for prediction
-$$ \hat{Y_i}=\alpha+\hat{\beta}^T\textbf{X}_i+\hat{\epsilon_i}$$
-$$\textbf{X}_i=\begin{bmatrix}
+The model used for prediction: 
+$$ \hat{Y_i}=\beta_0+\sum_{i=1}^n\hat{\beta_i}\textbf{T}_i+\hat{\epsilon_i},\quad T_i=\prod_{j=i}^mX_j^{d_i,j}
+\quad\footnote{Peckov, Aleksandar. \textit{A Machine Learning Approach To Polynomial Regression} p. 9}$$
+\small{$m$ being total number of features, $d_i,j$ denoting degree of polynomial features. 
+$$\textbf{X}_j=\begin{bmatrix}
            basementSize \\
            buildYear \\
            rooms \\
            size \\
-           primarySchool\_educ \\
+           primary\_school\_educ \\
            high\_school\_educ \\
            vocational\_educ \\
            SHE \\
