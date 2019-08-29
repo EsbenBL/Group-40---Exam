@@ -53,7 +53,7 @@
 \tableofcontents
 \newpage
 \section{Introduction}
-This report depictss a research performed regarding active Danish real-estate property valuations from 2016-2019. Since 2011, the yearly number of real estate properties sold has slightly increased, with 2017 being the year with most sold properties in 10 years \href{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979}{(Danmarks Statistik, 2018)}.  The price of real estate properties is also rising through 2019 \href{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=28741}{(Danmarks Statistik, 2019)}. Although this generally depicts a willingness of buyers to pay more for real-estate property, and higher valuations from agents, a closer analysis of current and active valuations add a local view of which conditions contribute to the valuation of a real-estate property. \newline
+This report depicts a research performed regarding active Danish real-estate property valuations from 2016-2019. Since 2011, the yearly number of real estate properties sold has slightly increased, with 2017 being the year with most sold properties in 10 years \href{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979}{(Danmarks Statistik, 2018)}.  The price of real estate properties is also rising through 2019 \href{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=28741}{(Danmarks Statistik, 2019)}. Although this generally depicts a willingness of buyers to pay more for real-estate property, and higher valuations from agents, a closer analysis of current and active valuations add a local view of which conditions contribute to the valuation of a real-estate property. \newline
 \newcommand{\source}[1]{\caption*{Source: {#1}} }\begin{figure}[H]
 \centering
 \caption{}
@@ -324,7 +324,10 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 \end{tabular}
 \end{center}
 \end{table}
-The Ridge model with three degrees of polynomial features are selected as the best performing model. In regard to MAE as well as MSE.\newline
+Since our efforts are aimed at predicting the valuation of a given real-estate, we want to penalize the size of the error the MSE-score is a better indicator for our model's performance as opposed to the mean absolute error (MAE). Since MSE squares the error terms, it gives a relatively high weight to large errors, which is desirable for our current aim. 
+
+From table XX it is evident that the machine learning model with two degrees of polynomial features performs best with a regularization by LASSO as it has the lowest measures of difference between the predicted price and the true price, with a MSE of 5.91E+10, whilst the model with 3 degrees of polynomial features regularized by ridge regression performs even better with a MSE 5.57E+10. Therefore, we chose this model as the final model from which we will conduct the rest of the analysis with. \newline
+
 We examine the validation curve, figure \textcolor{red}{XX}, of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 
 \paragraph{Learning Curve}
@@ -353,7 +356,7 @@ The dotted line approximately represents the optimized value of lambda from our 
 
 \textcolor{red}{Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data.} 
 The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
-Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, \textcolor{red}{this would not seem to make for more less variance}. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
+Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem effect the variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
 
 
@@ -369,6 +372,8 @@ In conclusion, it would seem that we have found the hyperparameter which yields 
 
 
 \section{Discussion}
+\subsection{No grit search}
+
 \subsection{Data critique}
 Another interesting prediction which could have been done using the same methods, would have been to predict selling prices. This could have been done simply by scraping data on sold housing instead. This could be of more value for private agents, whose main interest should be the selling price of their housing. %This approach would undoubtedly get a greater data basis.  needs to add time series trends 
 \newline 

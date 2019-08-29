@@ -324,7 +324,10 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 \end{tabular}
 \end{center}
 \end{table}
-The Ridge model with three degrees of polynomial features are selected as the best performing model. In regard to MAE as well as MSE.\newline
+Since our efforts are aimed at predicting the valuation of a given real-estate, we want to penalize the size of the error the MSE-score is a better indicator for our model's performance as opposed to the mean absolute error (MAE). Since MSE squares the error terms, it gives a relatively high weight to large errors, which is desirable for our current aim. 
+
+From table XX it is evident that the machine learning model with two degrees of polynomial features performs best with a regularization by LASSO as it has the lowest measures of difference between the predicted price and the true price, with a MSE of 5.91E+10, whilst the model with 3 degrees of polynomial features regularized by ridge regression performs even better with a MSE 5.57E+10. Therefore, we chose this model as the final model from which we will conduct the rest of the analysis with. \newline
+
 We examine the validation curve, figure \textcolor{red}{XX}, of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 
 \paragraph{Learning Curve}

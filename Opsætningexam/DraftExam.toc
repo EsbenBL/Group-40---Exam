@@ -34,14 +34,15 @@
 \contentsline {section}{\numberline {5}Analysis}{17}{section.5}
 \contentsline {paragraph}{Learning Curve}{18}{section*.17}
 \contentsline {paragraph}{Validation Curve}{19}{section*.19}
-\contentsline {section}{\numberline {6}Results}{20}{section.6}
-\contentsline {section}{\numberline {7}Discussion}{20}{section.7}
-\contentsline {subsection}{\numberline {7.1}Data critique}{20}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Model Limitations}{21}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Model Selection}{21}{subsection.7.3}
-\contentsline {section}{\numberline {8}Conclusion}{21}{section.8}
+\contentsline {section}{\numberline {6}Results}{21}{section.6}
+\contentsline {section}{\numberline {7}Discussion}{21}{section.7}
+\contentsline {subsection}{\numberline {7.1}No grit search}{21}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Data critique}{21}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Model Limitations}{21}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Model Selection}{22}{subsection.7.4}
+\contentsline {section}{\numberline {8}Conclusion}{22}{section.8}
 \contentsline {section}{\numberline {9}An Ethical Overview}{22}{section.9}
-\contentsline {section}{\numberline {10}Litterature}{24}{section.10}
-\contentsline {section}{\numberline {11}Appendixs}{26}{section.11}
-\contentsline {subsubsection}{\numberline {11.0.1}}{26}{subsubsection.11.0.1}
-\contentsline {subsubsection}{\numberline {11.0.2}}{26}{subsubsection.11.0.2}
+\contentsline {section}{\numberline {10}Litterature}{25}{section.10}
+\contentsline {section}{\numberline {11}Appendixs}{27}{section.11}
+\contentsline {subsubsection}{\numberline {11.0.1}}{27}{subsubsection.11.0.1}
+\contentsline {subsubsection}{\numberline {11.0.2}}{27}{subsubsection.11.0.2}
