@@ -68,7 +68,7 @@ Figure 1 shows the average square meter price valuation of active offers per mun
 
 The valuations included in the research are collected from one of Denmarks largest online real estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from DKK 15,000 to DKK 85 million. This research paper intends to analyse real estate price valuations and which geo- and sociodemographic criteria affect valuations, using machine learning models. Our research question is as follows: 
 \begin{center}
- \textit{Which features are most relevant for predicting valuations of real estate properties in Denmark?}
+ \textit{Can geographic and sociodemographic features be utilized to predict real-estate property valuations in Denmark?}
 \end{center}
 This research paper contains a section describing the construction of research data and assesses the choices made in gathering meaningful features for the dataset. Also, a section regarding the choice and optimization of machine learning models is included, where the intention is to provide insights on our progress of finding the optimal model. As a result, the best performing model is chosen with a discussion of its usability. 
 
@@ -79,15 +79,16 @@ Historically, big data has been a term reserved for data that was unable to be p
 In the analysis of big data it is often useful to employ machine learning as it can identify and predict various non-linear relationships in big data sets, that otherwise would remain hidden. Data scientists' have for the most part optimised the predictive capabilities of the algorithm applied, and as a consequence they have often ignored or trivialised machine learning's potential in causal modelling\footnote{Varian. Hal R. \textit{Big data: New tricks for econometrics}}.\newline
 The technical and theoretical challenges faced by big data and machine learning research are important to consider, when employing the tools they provide. One of the major discussions revolve around machine learning's predictive capabilities. Chris Anderson\footnote{Anderson, Chris. (2008), \textit{The end of theory: The data deluge makes the scientific method obsolete}} argues that since the computing power and the scale of data has increased exponentially, our reliance on scientific models could become obsolete. Instead of focusing on the theoretical implications of observations, scientists should, according to Anderson, focus on the statistical outputs: In the age of big data, correlation perhaps should supersede causality and consequently social data scientists should not try to develop coherent models or unified theories to explain a social phenomenon.\newline
 However, many social data scientists argue against this point of view. Justin Grimmer\footnote{Grimmer, Justin (2015) \textit{We are all social scientists now: how big data, machine learning, and causal inference work together}} claims, that correlations extracted from big data cannot stand alone. Large quantities of data is not sufficient to make scientifically valid causal inferences. It requires a rigorous research design and clear theoretical assumptions, in order to yield scientifically accurate estimates. Indeed the social sciences greatest contribution to big data research, comes from the organised framework provided by rigorously tested theory\footnote{Einav, Liran and Jonathan Levin (2014) \textit{Economics in the age of big data}}.\newline
-The contribution from the social sciences to machine learning help create new methods that will be able to utilise the strengths of machine learning to help solve causal inference problems within the framework of a well defined theory\footnote{Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawal et al. (eds) \textit{The Economics of Artificial Intelligence: An Agenda}}. These new approaches could help define what variables to manipulate and how to properly use machine learning within the framework of theoretical assumptions. Ultimately, big data and machine learning could increase the scope of the social scientist's field, not only by delivering new data and methods, but by helping the social scientist to focus on new questions\footnote{Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Applied Econometric Approach}}.
+The contribution from the social sciences to machine learning help create new methods that will be able to utilise the strengths of machine learning to help solve causal inference problems within the framework of a well defined theory\footnote{Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawal et al. (eds) \textit{The Economics of Artificial Intelligence: An Agenda}}. These new approaches could help define what variables to manipulate and how to properly use machine learning within the framework of theoretical assumptions. Ultimately, big data and machine learning could increase the scope of the social scientist's field, not only by delivering new data and methods, but by helping the social scientist to focus on new questions and avenues of research\footnote{Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Applied Econometric Approach}}.
 
-\subsection{An Ethical Overview}
+\subsection{Ethical Concerns in a Petabyte Age}
 The ethical principles of social research are anchored in the fundamental human rights, which are broadly formulated in the UN Declaration of Human Rights. Additional policies and declarations that codify principles of research ethics and the ethical treatment of research participants include the Nuremberg Code, the Helsinki Declaration, the Belmont Report, and the Menlo Report\footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.}}\, \footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}}. These codes and addendums originate mostly in the biomedical field, though they encompass the central principles applied to all human research, which have led some academics to call for a Hippocratic oath for data scientists to safeguard against powerful new technologies under development in laboratories and tech firms\footnote{Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}}\, \footnote{Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.}}. This discussion is nothing new however, as a tentative reformulation of the Hippocratic oath was introduced by Karl Popper\footnote{Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}}, wherein he stressed the importance of professional responsibility, a critical mind, and an overriding loyalty towards the betterment of mankind.\newline
 Matthew Salganik offer four principles deduced from the Belmont and Menlo Report that should guide the ethical deliberations of the researcher: 1) the respect for persons, that is individuals should be treated as autonomous and if circumstances require it individuals should be entitled to additional protections. 2) Beneficence stresses the importance of doing no harm and to maximise the possible benefits and minimising any potential harms. 3) The principle of justice touches upon the importance of the distribution of burdens and benefits of the social scientist's research. This principle stress that is should not be a single stratum of society that bears the costs of the research while another stratum benefits. 4) The fourth and final principle is the respect for law and public interest, according to Salganik, the principle consists of two distinct elements, that is compliance to relevant laws and legal contracts and transparency-based accountability. It is worth noting that Popper’s tentative Hippocratic oath mirrors the first three principles put forth by Salganik, stressing the importance of the ethical conduct of the researcher.\newline
-The need for rigid ethical standards within computational social science was made apparent by the Cambridge Analytica Scandal that broke on the 17th of March 2018. Where Steve Bannon could reveal that between 2013 and 2015 Cambridge Analytica had exploited a loophole in Facebook’s API which allowed the company to harvest profile data from 87 million Facebook users, without the user’s permission and use the harvested data to construct a massive targeted marketing database based on the user’s likes and interests\footnote{Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]}. Other examples of misuse of data acquired from Facebook include the Harvard-run experiment, where students' data was used to create new knowledge about how social networks form and how these networks and their actors' behavior co-evolve, and the emotional contagion experiment from 2012, where approximately 700,000 users were involved in a research experiment to examine the extent to which a person's emotions are affected by the emotions of the people they interact with (Salganik. 2018).\newline
+The need for rigid ethical standards within computational social science was made apparent by the Cambridge Analytica Scandal that broke on the $17^{th}$ of March 2018. Where Steve Bannon could reveal that between 2013 and 2015 Cambridge Analytica had exploited a loophole in Facebook’s API which allowed the company to harvest profile data from 87 million Facebook users, without the user’s permission and use the harvested data to construct a massive targeted marketing database based on the user’s likes and interests\footnote{Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]}. Other examples of misuse of data acquired from Facebook include the Harvard-run experiment, where students' data was used to create new knowledge about how social networks form and how these networks and their actors' behavior co-evolve, and the emotional contagion experiment from 2012, where approximately 700,000 users were involved in a research experiment to examine the extent to which a person's emotions are affected by the emotions of the people they interact with (Salganik. 2018).\newline
 From this it should be evident that clear ethical guidelines are required in order to protect the user's privacy from tech-savvy companies. To this end, the European Parliament introduced the General Data Protection Regulation (GDPR). With its seven overarching principles the GDPR seeks to formalise the procedures involved in the data processing and storing of sensitive and private information (CDRC\footnote{Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]:}). These principles include and expand upon the principles found in the Belmont and Menlo Report. The most important consideration, however, must be that even a dataset comprising tens of thousands of observations involve human beings who must be protected from adverse side-effects of the social research. There is considerable evidence that point to the fact that even in anonymised data sets it can be possible to backtrack an individual's identity. A researcher must therefore be mindful of the mosaic effect if the dataset combines large amount of data from various sources (European Commission 2018).
 
 \section{Data Description \& Ethics}
+In the following sections we will consider the ethical ramifications of our inquiry. We will focus our efforts on the contractual obligations laid down by Boliga's Terms \& Conditions and the more general ethical considerations a social scientist should consider before conducting research. Following this, will be a brief description of our data both how it was collected and cleaned, but also its content will be examined.
 
 \subsection{Ethical Considerations in the Current Research Project}
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's website were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymise the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
@@ -125,6 +126,7 @@ Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, tr
 \end{tabular}
 
 \paragraph{DAWA\newline}
+\href{https://dawa.aws.dk/}{Denmark's Addresses Web API}\footnote{red. Danmarks Adressers Web API} (DAWA) is an API containing data regarding Danish addresses. DAWA will be used to collect information about the municipality that each address is located in. This data will be used to merge the socio-demographic data collected from various sources (see below) with the data scraped from Boliga.
 
 \paragraph{Socioeconomic Factors\newline}
 Socioeconomic factors on municipality level was collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
@@ -173,7 +175,7 @@ Figure plots error codes received throughout the duration of the scrapings. Boli
 To understand the errors, a closer manual analysis of the log was performed on requests receiving errors. The errors occurred in random intervals and were subsequently followed by another request to an identical URL. Therefore, we assessed that these errors were due to connection problems or server traffic. Since the errors were corrected by a following request, it should not affect the research.
 
 \paragraph{Server Response Times\newline}
-An indicator of poor data quality is varying response times from the server being scraped. \textcolor{red}{Figure XC} plots changes in response times for the duration of the web scrapings. The three data sources all resulted in few variations of response time. Unusual response times has been assessed within the logs, to be caused by either a slow server connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned results and the website results was performed, without notice of significant corruptions in the data utilised in the research.
+An indicator of poor data quality is varying response times from the server being scraped. Figure 4 plots changes in response times for the duration of the web scrapings. The three data sources all resulted in few variations of response time. Unusual response times has been assessed within the logs, to be caused by either a slow server connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned results and the website results was performed, without notice of significant corruptions in the data utilised in the research.
 \begin{figure}[H]
   \centering
    \caption{}
@@ -182,7 +184,7 @@ An indicator of poor data quality is varying response times from the server bein
 \end{figure}
 
 \paragraph{Response Sizes\newline}
-To validate the response quality, an assessment of the response size was performed. \textcolor{red}{Figure XD} plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeably large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in consistent response sizes, and therefore needed no further investigation. 
+To validate the response quality, an assessment of the response size was performed. Figure 5 plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeably large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in consistent response sizes, and therefore needed no further investigation. 
 \begin{figure}[H]
   \centering
    \caption{}
@@ -196,7 +198,7 @@ Examining the distribution of sample sizes in figure XE, the Boliga and DAWA res
    \includegraphics[width=\linewidth]{5log.png} 
   \label{fig:}
 \end{figure}
-\textcolor{red}{Figure XE depicts that the hvorlangerder response sizes were a bit left skewed, while Figure XD} shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. Firstly, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes was performed without discovering flaws. The response sizes from hvorlangterder are found to vary in nature, which may explain the difference.  
+Figure 6 depicts that the hvorlangerder response sizes were a bit left skewed, while Figure 5 shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. Firstly, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes was performed without discovering flaws. The response sizes from hvorlangterder are found to vary in nature, which may explain the difference.  
 
 \paragraph{Assessment of the Scraping Logs\newline}
 The individual analysis of the scraping logs showed minor suspicious traits which were assessed manually through the output or logs. The most noticeable analysis being differences in response sizes and response times from the hvorlangterder scrape. This scrape consumed large amounts of time and computing power, as every single observation from the Boliga data, had to be input for requesting a response. In an extensive research, these problems could be handled by gaining direct access to the website instead of scraping and would benefit from running on a server with greater computing power. The results of the data collection were evaluated to be satisfying, and not corrupting the results of our research, as fairly reasonable explanations for noticeable dissimilarities within the logs were found. 
@@ -259,10 +261,10 @@ Total\tablefootnote{The total is the count of how many rows were dropped. Some r
 
 \end{center}
 \end{table}
-\subsubsection{Ejerlejlighed's lot size}
+\subsubsection{Apartment Lot Size}
 Inspecting our data we found that out of 8,028 apartments, 1,176 had a lot size. These listings included the apartment complex' common area, whereas the rest did not. To overcome this discrepancy we chose to set all non-zero values to zero, as not to confuse our model with an inconsistent feature (Raschka \& Mirjalili 2017).
 
-\subsubsection{Final touches}
+\subsubsection{Final Touches}
 After merging the housing info with the demographic data and the distances from hvorlangterder.dk, we removed a single duplicate and deleted all columns not relevant for our analysis. After the clean-up of the data we were left with a dataset consisting of 61,618  observations, 37 features and 1 target variable. The features are of both categorical and continuous measures
 
 \subsection{Descriptive Statistics}
@@ -292,7 +294,7 @@ It is worth noting, that there is quite a big difference between the lowest aver
 \begin{figure}[H]
   \centering
    \caption{}
-   \includegraphics[width=\linewidth]{Box1.png} 
+   \includegraphics[scale=0.5]{Box1.png} 
   \label{fig:}
 \end{figure}
 The boxplot illustrates that the distribution is heavily left-skewed, where some municipalities has a sizebly higher average income than the rest of the Danish municipalities. 
@@ -302,7 +304,7 @@ We plot the average square meter valuation price in the different municipalities
 \begin{figure}[H]
   \centering
    \caption{}
-   \includegraphics[width=\linewidth]{Box2.png} 
+   \includegraphics[scale=0.5]{Box2.png} 
   \label{fig:}
 \end{figure}
 It becomes apparent that the distribution is quite right-skewed and that there are a few municipalities who’s price per square meter is much higher than the rest of the municipalities. Recalling the geoplot in figure 1, these expensive outliers are heavily concentrated around- and north of Copenhagen. 
@@ -313,7 +315,7 @@ Another worthwhile consideration is that we have included all types of propertie
 \begin{figure}[H]
   \centering
    \caption{}
-   \includegraphics[width=\linewidth]{bar1.png} 
+   \includegraphics[scale=0.5]{bar1.png} 
   \label{fig:}
 \end{figure}
 It is interesting to note that the most expensive properties are apartments as opposed to houses. This is not especially surprising though, as it is a well-established trend that real estate prices in major cities are skyrocketing. Refraining from delving deeper into a discussion of global urbanization, we retain the fact that property type does have an apparently significant effect on average valuation. We will include the ‘type’ feature in our impending model training to control for this effect. 
@@ -322,23 +324,26 @@ It is interesting to note that the most expensive properties are apartments as o
 \section{Methods}
 The objective of applying Machine Learning(ML) is to train a model that is able to make predictions on never seen data. By feeding a model labelled data as well as data samples, ML will define the algorithms that performs best predictions\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p. 3}. This project implements a ML regression prediction model.
 \subsection{Fitting the model}
-The potential problems of underfitting and overfitting should be assessed when fitting a model to data. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalise poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularization}. In this project two different types of regularization are applied; LASSO and RIDGE.
+The potential problems of underfitting and overfitting should be assessed when fitting a model to data. A model is underfitted if it hardly captures the variation of the sample data. It is then said that the model has \textit{high bias}. A model is overfitted, when it is overly sensitive to the idiosyncrasy of the sample data and captures the variation in too great detail. This problem often comes with the introduction of a sizeable number of features. Overfit models are said to have \textit{high variance}\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.73}. In both cases, the model will generalise poorly. A key step in defining a decent model in machine learning is to find an optimal bias-variance-balance, by tuning the complexity of one’s model. This is done through \textit{regularisation}. In this project two different types of regularisation are applied; LASSO and RIDGE.
 
 \subsubsection{LASSO}
-Regularization by LASSO, will penalise complexity of the model by the sum of the absolute value of the coefficients. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
+Regularisation by LASSO, will penalise complexity of the model by the sum of the absolute value of the coefficients. This penalty will make the model less complex and more appropriate for prediction.  \footnote{Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools} p. 173}\, \footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}
 \newline LASSO minimises: $$L_{LASSO}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
 Another convenient attribute of the LASSO penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives. p.19}. LASSO thereby performs feature selection automaticly.   
 \subsubsection{RIDGE}
 Opposed to LASSO, RIDGE does not force features to be omitted. Instead RIDGE penalises the magnitude of the coefficients. RIDGE minimises:
 $$L_{RIDGE}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
 
+\subsubsection{Polynomial Features}
+Regression models assume linear relationships as standard. One way to account for violations of this assumption, is by utilising polynomial terms within the regression. These polynomial terms create extensive polynomial combinations between the features, fitting the model more precisely to the given data\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 334}. Polynomial may cause overfitting of the model, generating poor predictions on new data.
+
 \subsection{Selecting Features}
-In case regularization is not sufficient to cope with the overfitting of the model, exclusion of features is a viable approach. With the number of scraped features in this project taking into consideration, A recurring overfitting of the model would be likely. As a consequence a deliberate exclusion of features of interest are necessary.    
+In case regularisation is not sufficient to cope with the overfitting of the model, exclusion of features is a viable approach. With the number of scraped features in this project taking into consideration, A recurring overfitting of the model would be likely. As a consequence a deliberate exclusion of features of interest are necessary.    
 
 \subsection{Optimising the Hyperparameter}
 To minimise the mean squared errors of our LASSO and RIDGE regression we performed k-fold cross validation to optimise the hyperparameter $\lambda$. 
 We split the data into a test set and a development set, consisting of respectively 20\% and 80\% of the total observations. Subsequently, we use k-fold cross-validation to randomly split the development set into k folds, where k-1 folds are used to train the model. The remaining fold is used to validate the model’s generalizability by calculating the mean squared errors of the trained model’s prediction of the left-out fold\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.191}. This process is repeated k times and each time a new fold is left out for validation. Since we are working with a relatively large dataset we chose to split our data into 5 folds, and computed the average MSE for the 5 iterations. By using the k-fold cross-validation method we minimise the concern that the estimation of our model’s performance is simply due to a lucky or unlucky split of the data. \newline
-We performed this procedure for different values of $\lambda$. We chose the value of $\lambda$ which yielded the smallest average MSE over the 5 folds. 
+We performed this procedure for different values of $\lambda$. Initially we tested greatly different values of $\lambda$ to prevent convergence issues. On subsequent iterations the value-span was narrowed down. We eventually chose the value of $\lambda$ which yielded the smallest average MSE over the 5 folds. 
 We both calculated the optimal hyperparameters for a RIDGE regression model and a LASSO regression model.
 
 \subsection{Predictive Performance}
@@ -349,9 +354,17 @@ $$ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y_i}|$$
 
 
 \section{Analysis}
-A number of features are excluded before training the model. The exclusion is determined, quite simply, by investigation of the correlation between the complete set of features and the target variable. A list of the excluded features is found in appendix 11.0.1. The model used for ML is found in appendix 11.0.2.  
+A number of features are excluded before training the model. The exclusion is determined, quite simply, by investigation of the correlation between the complete set of features and the target variable, shown in figure 10.
+\begin{figure}[H]
+\centering
+\caption{}
+\includegraphics[scale=0.6]{Corrplot.png}
+%\source{}
+\end{figure}
 
-The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularization yields. 
+  A list of the excluded features is found in appendix 11.0.1. The model used for ML is found in appendix 11.0.2.  
+
+The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularisation yields. 
 \begin{table}[h!]
 \begin{center}
 \caption{Optimal hyperparameters, two degrees polynomial features\label{time}}
@@ -409,16 +422,21 @@ We examine the validation curve of the model to see whether we have found a good
 The dotted line approximately represents the optimised value of lambda from our previously conducted k-fold cross-validation. 
 
 
-The curves suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller $\lambda$, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfitted our model. 
+The curves suggest that we have found the optimal degree of regularisation with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller $\lambda$, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfitted our model. 
 Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimise this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem to effect the variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection without omitting theoretically warranted features. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 To sum up it would seem that we have found the hyperparameter which yields the optimal bias-variance trade-off. We can thus conclude that we have optimised our model under the given resources. 
 
 \section{Discussion}
-\subsection{No Grid Search or One-to-many}
+\subsection{Alternative Regularisation}
+As an alternative method of regularisation, we could also have used a regularisation regression called Elastic Net. It is a mix of both Lasso and Ridge regressions, and minimizes\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 332}:
 $$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right)$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 
+Note that an Elastic Net regression contains 2 hyperparameters, which also makes it additionally difficult to compute and optimize for big datasets like ours. Optimizing the hyperparameters can be done through Grid Search which is a computationally demanding method. We did attempt this method on a subsample of our data, which caused our kernel to crash. With a smaller dataset or with a stronger computer, the performance of an optimized Elastic Net regression should have been taking into account when deciding on a model. As we did not find a lucrative way to optimize the model, we have not included it. 
+
+
 \subsection{Best Subset Feature Selection}
+The current feature selection consisted of selecting features based on their individual correlation to the target. Although providing a satisfying performance, the feature selection could be executed better. The optimal approach to our feature selection, would be applying a Best Subset Selection approach. The Best Subset Selection takes all variable combinations into consideration of the given model and selects the best performing model. Although this approach would provide the best feature combination, the process is highly time consuming \footnote{Gareth, J., Witten, D., Tibshirani, R., \& Hastie, T. (2017). Linear Model Selection and Regularisation. In J. Gareth, D. Witten, R. Tibshirani, \& T. Hastie, \textit{An Introduction to Statistical Learning}, p. 207}
 \subsection{Data critique}
 An interesting prediction which could have been done using the same methods, would have been to predict selling prices. This could have been done simply by scraping data on sold housing. This could be of more value for private agents, whose main interest would be the actual selling price instead of the valuation. \newline 
 In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potentially important factors can not be acquired. For example the view from the listed housing will for sure be of great impact of the valuation price. Another factor of interest could have been an evaluation of the condition of the housing. Unfortunately the statement of property\footnote{red. Tilstandsrapport} are not publicly accessible. \newline
@@ -441,7 +459,7 @@ In this assignment, we have used machine learning to train a model to predict va
 We have explained how we carried out our gathering of data, how we have structured the data and how we cleaned it. \newline
 We performed descriptive statistics to gain a better acquaintance with the data. 
 We conducted feature selection by assessing the correlation between the different features and the target variable, which in our assignment has been the valuation price. 
-We trained both a LASSO- and a RIDGE regression model and compared their performances with the performance of a standard linear regression. Through k-fold cross-validation, we estimated the optimised hyperparameters for both regularization models. We found that the RIDGE regression with three polynomial features performed best, at predicting out of sample data with the performance measure being the smallest mean square error. When predicting the test data the model had a MSE of 5.566e+10 with a optimised hyperparameter $\lambda$=432.88 which we found to be a decent performance. 
+We trained both a LASSO- and a RIDGE regression model and compared their performances with the performance of a standard linear regression. Through k-fold cross-validation, we estimated the optimised hyperparameters for both regularisation models. We found that the RIDGE regression with three polynomial features performed best, at predicting out of sample data with the performance measure being the smallest mean square error. When predicting the test data the model had a MSE of 5.566e+10 with a optimised hyperparameter $\lambda$=432.88 which we found to be a decent performance. 
 We have assessed the final model and examined to which degree we have managed to find a good bias-variance-balance for our model and concluded that our model suffers from a degree of overfitting. This was done by examining the validation- and learning curve of our final model. Additionally we addressed possibilities of further optimising the model.  \newline
 Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. 
 
@@ -490,6 +508,12 @@ Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scie
 Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}. Available at \href{http://kt.ijs.si/theses/phd_aleksandar_peckov.pdf}{kt.ijs.si/theses/phd\_aleksandar\_peckov.pdf}. Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012. [Accessed on 29/08/2019]
 
 (https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html). [Accessed on 29/08/2019]\newline
+
+Gareth, J., Witten, D., Tibshirani, R., \& Hastie, T. (2017). Linear Model Selection and Regularization. In J. Gareth, D. Witten, R. Tibshirani, \& T. Hastie, \textit{An Introduction to Statistical Learning} (pp. 205-262). New York City: Springer.
+
+
+
+
 
 https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979 [Accessed 27/08/2019]\newline
 
