@@ -292,7 +292,7 @@ $$ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y_i}|$$
 
 
 \section{Analysis}
-A number of features are excluded before training the model. The exclusion was determined, quite simply, by investigation of the correlation between the complete set of features and the valuation price. A list of the excluded features are found in appendix 11.0.1. The model used for ML are found in appendix 11.0.2.  
+A number of features are excluded before training the model. The exclusion was determined, quite simply, by investigation of the correlation between the complete set of features and the target variable. A list of the excluded features are found in appendix 11.0.1. The model used for ML are found in appendix 11.0.2.  
 
 The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularization yields. 
 \begin{table}[h!]
@@ -376,7 +376,7 @@ Another approach could have been to group cities which share characteristics. Ex
 
 \subsection{Model Selection}
 Instead of only assessing the different models by MAE and RMSE.
-The Information criteria of the respective models could have been introduced. Which could have altered the selection of preferred model. Both AIC and BIC, would likely have suggested Lasso, with 2-degrees of polynomial features, as preferred model. As both measurement are increasing in numbers of estimated parameters. 
+The Information criteria of the respective models could have been introduced. Which could have altered the selection of preferred model. Both AIC and BIC, would likely have suggested Lasso, with 2-degrees of polynomial features, as preferred model. As both measurement are increasing in numbers of estimated parameters\footnote{Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}}. 
 
 \section{Conclusion}
 In this assignment, we have used machine learning to train a model to predict valuation prices of real estate in Denmark. We did this by scraping Boliga.dk for all of their active houses for sale and combining this with municipal data on income, education, schools and urbanization. Additionally, we also scraped data from hvorlangterder.dk which calculates the distance from an address, to different every-day commodities such as hospitals, schools and shopping. 
