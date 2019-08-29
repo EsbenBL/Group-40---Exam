@@ -63,7 +63,7 @@ This report depicts a research performed regarding active Danish real-estate pro
 
 Figure 1 shows the average square meter price valuation of active offers per municipality in Denmark. The maximum square meter price being approximately 8 times higher in the municipality of Gentofte, than Lolland, the municipality with lowest average square meter price valuations. A tendency visualized in the figure, is that average square meter price valuations are higher in in highly populated municipalities and in suburban areas surrounding Copenhagen. \newline
 
-The valuations included in the research are collected from one of Denmarks largest online real-estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from 15,000 to 85 mil.dkk. This research paper intends to analyze real estate price valuations and which effects geo- and sociodemographic criteria affect valuations, using machine learning models. Our research questions is as follows: 
+The valuations included in the research are collected from one of Denmarks largest online real-estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from 15,000 to 85 million. DKK. This research paper intends to analyze real estate price valuations and which effects geo- and sociodemographic criteria affect valuations, using machine learning models. Our research questions is as follows: 
 \begin{center}
  \textit{Which features are most relevant for predicting evaluations of real estate properties in Denmark?}
 \end{center}
@@ -73,7 +73,7 @@ This research paper contains a section describing the construction of research d
 Within data social science there exist widely differing definitions of big data and machine learning. This section seeks to clarify the use of these terms within the scope of this paper.
 \paragraph{On big data \& machine learning\newline}
 Historically, big data has been a term reserved for data that was unable to be processed by extant software. However, recent increases in computational power has enabled data processing of hitherto unheard of quantities of data\footnote{Lazer, David and Jason Radford (2017) \textit{Data ex Machina. Introduction to Big Data}. Annual Review of Sociology}. Today, big data is no longer too cumbersome to analyse. Matthew Salganik\footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.}} instead mentions ten typical characteristics of big data. Salganik's tentative definition suggests that big data is not as single entity, but includes many different types of systems. Among the most important features of Salganik's definition of big data is that the data has a high frequency of observations and is continuously being generated. Since the data is always-on it is also drifting, meaning that the structure and population it represents is ever-changing. It is therefore important to understand that big data is not a naturally occurring system, but driven by the engineered purpose of the system. This algorithmic confounding forces the scientist to be careful regarding any observed human behaviour that is extracted from a single digital system.\newline
-In the analysis of big data it is often useful to employ machine learning as it can identify and predict various nonlinear relationships in big data sets, that otherwise would remain hidden. Data scientists' have for the most part optimised the predictive capabilities of the algorithm applied, and as a consequence they have often ignored or trivialised machine learning's potential in causal modelling\footnote{Varian. Hal R. \textit{Big data: New tricks for econometrics}}.\newline
+In the analysis of big data it is often useful to employ machine learning as it can identify and predict various non-linear relationships in big data sets, that otherwise would remain hidden. Data scientists' have for the most part optimised the predictive capabilities of the algorithm applied, and as a consequence they have often ignored or trivialised machine learning's potential in causal modelling\footnote{Varian. Hal R. \textit{Big data: New tricks for econometrics}}.\newline
 The technical and theoretical challenges faced by big data and machine learning research are important to consider, when employing the tools they provide. One of the major discussions revolve around machine learning's predictive capabilities. Chris Anderson\footnote{Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete}} (2008) argues that since the computing power and the scale of data has increased exponentially, our reliance of scientific models could become obsolete. Instead of focusing on the theoretical implications of observations, scientists should, according to Anderson, focus on the statistical outputs: In the age of big data, correlation perhaps should supersede causality and consequently social data scientists should not try to develop coherent models or unified theories to explain a social phenomenon.\newline
 However, many social data scientists argue against this point of view. Justin Grimmer\footnote{Grimmer, Justin (2015) \textit{We are all social scientists now: how big data, machine learning, and causal inference work together}} claims, that correlations extracted from big data cannot stand alone. Large quantities of data is not sufficient to make scientifically valid causal inferences. It requires a rigorous research design and clear theoretical assumptions, in order to yield scientifically accurate estimates. Indeed social sciences greatest contribution to big data research, comes from the organized framework provided by rigorously tested theory\footnote{Einav, Liran and Jonathan Levin (2014) \textit{Economics in the age of big data}}.\newline
 The contribution from the social sciences to machine learning help create new methods that will be able to utilize the strengths of machine learning to help solve causal inference problems within the framework of a well defined theory\footnote{Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawal et al. (eds) \textit{The Economics of Artificial Intelligence: An Agenda}}. These new approaches could help define what variables to manipulate and how to properly use machine learning within the framework of theoretical assumptions. Ultimately, big data and machine learning could increase the scope of the social scientist's field, not only by delivering new data and methods, but by helping the social scientist to focus on new questions\footnote{Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Applied Econometric Approach}}.
@@ -264,7 +264,7 @@ Regularization by Lasso, will penalize complexity of the model by the sum of the
 \newline Lasso minimizes: $$L_{Lasso}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}|\hat{\beta_j}|\right) \qquad s.t \quad \lambda \geq 0 $$
 Another convenient attribute of the Lasso penalty is that some estimates are set equal to zero and thereby produce sparse models\footnote{Hal R. Varian. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives. p.19}. Lasso thereby performs the feature selection automatic.   
 \subsubsection{Ridge}
-The ridge model penalizes with the sum of squared coefficients. Opposed to Lasso, Ridge do not force features to be omitted. Instead Ridge penalizes the parameter estimates and decreases them towards zero. Ridge minimizes:
+The ridge model penalizes with the sum of squared coefficients. Opposed to Lasso, Ridge do not force features to be omitted. Instead Ridge penalizes the magnitude of the coefficients. Ridge minimizes:
 $$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda\sum_{j=1}^{p}\hat{\beta_j}^2\right) \qquad s.t \quad \lambda \geq 0 $$ 
 
 
@@ -306,7 +306,6 @@ The initial 5-fold cross-validation to obtain the optimal values of the hyperpar
 \end{center}
 \end{table} 
 
-
 The prediction-errors of each model, with two and three degrees of polynomial features respectively, are printed below:
 \begin{table}[H]
 \begin{center}
@@ -325,15 +324,23 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 \end{tabular}
 \end{center}
 \end{table}
-The Ridge model with three degrees of polynomial features are selected as the best performing model. Both according to MAE  
+The Ridge model with three degrees of polynomial features are selected as the best performing model. In regard to MAE as well as MSE.\newline
+We examine the validation curve, figure \textcolor{red}{XX}, of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 
 \begin{figure}[H]
 \centering
 \caption{}
-\includegraphics[scale=1]{ValCurveRidge3deg.png}
+\includegraphics[scale=0.6]{ValCurveRidge3deg.png}
 %\source{}
 \end{figure}
+The dotted line approximately represents the optimized value of lambda from our previously conducted k-fold cross-validation. 
 
+Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55·10^10$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
+The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
+Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem to make for more less variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
+In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
+
+The learning-curve is depicted in figure \textcolor{red}{XX}
 
 \section{Results}
 \begin{figure}[H]
@@ -350,7 +357,7 @@ Another interesting prediction which could have been done using the same methods
 \newline 
 In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potential important factors can not be acquired. For an example the view from the listed housing will for sure be of great impact of the valuation price. Another factor of interest could have been a evaluation of the condition of the housing, unfortunately the statement of property\footnote{red. Tilstandsrapport} are not publicly accessible. \newline
 The prediction of the cooperative housing valuation %\footnote{http://housingpeople.dk/en/housing-guide/housing-types/cooperative-andelsbolig/},
-are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. Like debt - which deflate the valuation accordingly.
+are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
 
 \subsection{Model Limitations}
 The necessity to exclude municipality dummies as regressors in the prediction models. Leaves the model to only separate municipalities by the socio-economic factors, which are subject to low variance. This makes distinction between municipality a lot more difficult as well as uncertain.   
@@ -373,6 +380,7 @@ We trained both a Lasso- and a Ridge regression model and compared their perform
 We have assessed to which degree we have managed to find a good bias-variance-balance for our model and concluded that our model suffers from a degree of overfitting. This was done by examining the validation curve of our final model.
 
 Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. 
+
 
 \section{An Ethical Overview}
 The ethical principles of social research are anchored in the fundamental human rights, which are broadly formulated in the UN Declaration of Human Rights. Additional policies and declarations that codify principles of research ethics and the ethical treatment of research participants include the Nuremberg Code, the Helsinki Declaration, the Belmont Report, and the Menlo Report\footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.}}\, \footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}}. These codes and addendums originate mostly in the biomedical field, though they encompass the central principles applied to all human research, which have led some academics to call for a Hippocratic oath for data scientists to safeguard against powerful new technologies under development in laboratories and tech firms\footnote{Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}}\, \footnote{Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.}}. This discussion is nothing new however, as a tentative reformulation of the Hippocratic oath was introduced by Karl Popper\footnote{Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}}, wherein he stressed the importance of professional responsibility, a critical mind, and an overriding loyalty towards the betterment of mankind.\newline
@@ -431,9 +439,9 @@ Excluded Features:\newline
 municipality, lotSize, unemployment, Total\_reported\_crime, Socioeconomic\_index, expenses\_per\_school\_student, expenses\_sport\_and\_other\_cultural\_activities, forest\_distance, coast\_distance, isForeclosure, owners\_expense
 \subsubsection{}
 The model used for prediction: 
-$$ \hat{Y_i}=\beta_0+\sum_{i=1}^n\hat{\beta_i}\textbf{T}_i+\hat{\epsilon_i},\quad T_i=\prod_{j=i}^mX_j^{d_i,j}
-\quad\footnote{Peckov, Aleksandar. \textit{A Machine Learning Approach To Polynomial Regression} p. 9}$$
-\small{$m$ being total number of features, $d_i,j$ denoting degree of polynomial features. 
+$$ \hat{Y_i}=\hat{\beta_0}+\sum_{i=1}^p\hat{\beta_i}\textbf{T}_i+\hat{\epsilon_i},\quad T_i=\prod_{j=i}^pX_j^{d_i,j}
+\quad\footnote{Peckov, Aleksandar. \textit{A Machine Learning Approach To Polynomial Regression} p. 6-9}$$
+\small{$p$ being total number of features, $d_i,j$ denoting degree of polynomial features. 
 $$\textbf{X}_j=\begin{bmatrix}
            basementSize \\
            buildYear \\
