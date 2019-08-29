@@ -140,7 +140,7 @@ Socioeconomic factors on municipality level was collected from \href{https://sta
 \normalsize
 \subsection{Analysis of Scraping Logs}
 Three datasets were obtained through web scraping from Boliga.dk, Hvorlangterder.dk and DAWA.dk. This section will analyze the logs created in the scraping process, with the intention of providing evidence of the data quality. The analysis the scraping logs was done according to Snorres demand on analyzing logs. 
-\paragraph{Response Code}
+\paragraph{Response Code\newline}
 When parsing data from websites, the goal is to receive a response code ‘200’, expressing a successful request. \textcolor{red}{Fig XA} displays response codes for the duration of the web scrapings. Every single request received a response code 200. Further evaluation of the response codes was not necessary.
 \begin{figure}[H]
   \centering
@@ -149,7 +149,7 @@ When parsing data from websites, the goal is to receive a response code ‘200�
   \label{fig:}
 \end{figure}
 
-\paragraph{Error Codes}
+\paragraph{Error Codes\newline}
 \textcolor{red}{Figure XB} plots errors codes received throughout the duration of the scrapings. Boliga and DAWA received no errors, while hvorlangterder received a total of 80 errors. The error code returns the same response in all 80 cases: \small{\textbf{('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))}}
 \begin{figure}[H]
   \centering
@@ -159,7 +159,7 @@ When parsing data from websites, the goal is to receive a response code ‘200�
 \end{figure}
 To understand the errors, a closer manual analysis of the log was performed on requests receiving errors. The errors occur in random intervals and are subsequently followed by another request to an identical URL. Therefore, we assessed that these errors were due to connection problems or server traffic. Since the errors were corrected by a following request, we assessed it would not affect the research.
 
-\paragraph{Server Response Times}
+\paragraph{Server Response Times\newline}
 An indicator of poor data quality is varying the response times from the server being scraped. \textcolor{red}{Figure XC} plots changes in response times for the duration of the web scrapings. The 3 data sources all resulted in few variations of response times.  Responses times differing from usual within the logs, have been assessed to be caused by two either a slow server time or connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned result and the webpage result was performed, without the notice of significant corruptions in the data to be utilized in the research.
 \begin{figure}[H]
   \centering
@@ -168,7 +168,7 @@ An indicator of poor data quality is varying the response times from the server 
   \label{fig:}
 \end{figure}
 
-\paragraph{Response Sizes}
+\paragraph{Response Sizes\newline}
 To validate the response quality, an assessment of the response size was performed. \textcolor{red}{Figure XD} plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeable large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in indifferent response sizes, and therefore needed no further investigation. 
 \begin{figure}[H]
   \centering
@@ -185,10 +185,10 @@ With a further analysis the distribution of sample sizes in figure XE, the Bolig
 \end{figure}
 \textcolor{red}{Figure XE depicts that the hvorlangerder response sizes are a bit left scewed, while Figure XD} shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. First, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes were performed without discovering flaws. The response sizes from hvorlangterder are found to vary by nature, which may explain the difference.  
 
-\paragraph{Assesment of the Scraping Logs}
+\paragraph{Assesment of the Scraping Logs\newline}
 The individual analyses of the scraping logs showed minor suspicious traits which were assessed manually through the output or logs. The most concerning analysis being difference in response sizes and response times from the hvorlangterder scrape. This scrape consumed large amounts of time and computing power, as every single observation from the Boliga data, had to be input for requesting a response. In an extensive research, these problems could be handled by gaining direct access to the website instead of scraping and would benefit by running on a server with greater computing power. The results of the data collection were evaluated to be satisfying, and not corrupting the results of our research, as fairly reasonable explanations for noticeable dissimilarities within the logs were found. 
 
-\paragraph{Critique of Logs Using Scraping Class}
+\paragraph{Critique of Logs Using Scraping Class\newline}
 In the process of analyzing the scraping logs, minor flaws from the scraping library named ‘scraping\_class’ were detected. The returned columns ‘t’ and ‘delta\_t’ contained non-generic formats of epoch time. This was fixed by applying string manipulation and datetime conversions. 
 
 \subsection{Merging Data}

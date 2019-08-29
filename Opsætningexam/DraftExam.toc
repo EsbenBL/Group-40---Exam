@@ -8,12 +8,12 @@
 \contentsline {paragraph}{\href {https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline }{8}{section*.5}
 \contentsline {paragraph}{Socioeconomic Factors\newline }{8}{section*.6}
 \contentsline {subsection}{\numberline {3.3}Analysis of Scraping Logs}{8}{subsection.3.3}
-\contentsline {paragraph}{Response Code}{9}{section*.7}
-\contentsline {paragraph}{Error Codes}{9}{section*.9}
-\contentsline {paragraph}{Server Response Times}{10}{section*.11}
-\contentsline {paragraph}{Response Sizes}{10}{section*.13}
-\contentsline {paragraph}{Assesment of the Scraping Logs}{11}{section*.16}
-\contentsline {paragraph}{Critique of Logs Using Scraping Class}{11}{section*.17}
+\contentsline {paragraph}{Response Code\newline }{9}{section*.7}
+\contentsline {paragraph}{Error Codes\newline }{9}{section*.9}
+\contentsline {paragraph}{Server Response Times\newline }{10}{section*.11}
+\contentsline {paragraph}{Response Sizes\newline }{10}{section*.13}
+\contentsline {paragraph}{Assesment of the Scraping Logs\newline }{11}{section*.16}
+\contentsline {paragraph}{Critique of Logs Using Scraping Class\newline }{11}{section*.17}
 \contentsline {subsection}{\numberline {3.4}Merging Data}{12}{subsection.3.4}
 \contentsline {paragraph}{Boliga.dk\newline }{12}{section*.18}
 \contentsline {paragraph}{DAWA\newline }{12}{section*.19}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  29 AUG 2019 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  29 AUG 2019 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1546,7 +1546,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-<123.png, id=265, 997.7275pt x 760.8425pt>
+<123.png, id=266, 997.7275pt x 760.8425pt>
 File: 123.png Graphic file (type png)
 <use 123.png>
 Package pdftex.def Info: 123.png  used on input line 60.
@@ -1599,19 +1599,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-<1log.png, id=334, 1005.7575pt x 293.095pt>
+<1log.png, id=335, 1005.7575pt x 293.095pt>
 File: 1log.png Graphic file (type png)
 <use 1log.png>
 Package pdftex.def Info: 1log.png  used on input line 148.
 (pdftex.def)             Requested size: 455.24411pt x 132.66522pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 153.
-<2log.png, id=335, 1001.7425pt x 296.60812pt>
+<2log.png, id=336, 1001.7425pt x 296.60812pt>
 File: 2log.png Graphic file (type png)
 <use 2log.png>
 Package pdftex.def Info: 2log.png  used on input line 157.
 (pdftex.def)             Requested size: 455.24411pt x 134.79396pt.
-<3log.png, id=336, 996.22188pt x 296.60812pt>
+<3log.png, id=337, 996.22188pt x 296.60812pt>
 File: 3log.png Graphic file (type png)
 <use 3log.png>
 Package pdftex.def Info: 3log.png  used on input line 167.
@@ -1624,12 +1624,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <./1log.png> <./2log.png>]
-<4log.png, id=347, 999.735pt x 293.095pt>
+<4log.png, id=348, 999.735pt x 293.095pt>
 File: 4log.png Graphic file (type png)
 <use 4log.png>
 Package pdftex.def Info: 4log.png  used on input line 176.
 (pdftex.def)             Requested size: 455.24411pt x 133.46576pt.
-<5log.png, id=348, 1003.75pt x 293.095pt>
+<5log.png, id=349, 1003.75pt x 293.095pt>
 File: 5log.png Graphic file (type png)
 <use 5log.png>
 Package pdftex.def Info: 5log.png  used on input line 183.
@@ -1663,7 +1663,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-<Box1.png, id=384, 491.436pt x 189.3474pt>
+<Box1.png, id=385, 491.436pt x 189.3474pt>
 File: Box1.png Graphic file (type png)
 <use Box1.png>
 Package pdftex.def Info: Box1.png  used on input line 277.
@@ -1676,12 +1676,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-<Box2.png, id=393, 404.2302pt x 155.6214pt>
+<Box2.png, id=394, 404.2302pt x 155.6214pt>
 File: Box2.png Graphic file (type png)
 <use Box2.png>
 Package pdftex.def Info: Box2.png  used on input line 287.
 (pdftex.def)             Requested size: 455.24411pt x 175.26358pt.
-<bar1.png, id=394, 628.3475pt x 409.53pt>
+<bar1.png, id=395, 628.3475pt x 409.53pt>
 File: bar1.png Graphic file (type png)
 <use bar1.png>
 Package pdftex.def Info: bar1.png  used on input line 298.
@@ -1734,7 +1734,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-<Learncurvridge.png, id=442, 639.38875pt x 273.02pt>
+<Learncurvridge.png, id=443, 639.38875pt x 273.02pt>
 File: Learncurvridge.png Graphic file (type png)
 <use Learncurvridge.png>
 Package pdftex.def Info: Learncurvridge.png  used on input line 390.
@@ -1746,7 +1746,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-<ValCurveRidge3deg.png, id=452, 580.1675pt x 394.47375pt>
+<ValCurveRidge3deg.png, id=453, 580.1675pt x 394.47375pt>
 File: ValCurveRidge3deg.png Graphic file (type png)
 <use ValCurveRidge3deg.png>
 Package pdftex.def Info: ValCurveRidge3deg.png  used on input line 403.
@@ -1989,10 +1989,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on DraftExam.pdf (28 pages, 1806307 bytes).
+Output written on DraftExam.pdf (28 pages, 1806249 bytes).
 PDF statistics:
- 597 PDF objects out of 1000 (max. 8388607)
- 508 compressed objects within 6 object streams
+ 598 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
  132 named destinations out of 1000 (max. 500000)
  392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
