@@ -14,28 +14,31 @@
 \contentsline {paragraph}{Danmarks Statistik, Danish Police \& Social og Indenrigsministeriet\newline }{9}{section*.9}
 \contentsline {paragraph}{Hvorlangterder.dk\newline }{10}{section*.10}
 \contentsline {subsection}{\numberline {3.5}Data Cleaning}{10}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Descriptive Statistics}{10}{subsection.3.6}
-\contentsline {subsubsection}{\numberline {3.6.1}Key Statistics}{10}{subsubsection.3.6.1}
-\contentsline {subsubsection}{\numberline {3.6.2}Prices in Municipalities}{12}{subsubsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.3}Property Type}{12}{subsubsection.3.6.3}
-\contentsline {subsubsection}{\numberline {3.6.4}The Dataset}{13}{subsubsection.3.6.4}
-\contentsline {section}{\numberline {4}Methods}{13}{section.4}
-\contentsline {subsection}{\numberline {4.1}Supervised Machine Learning}{13}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Fitting the model}{14}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Lasso}{14}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Ridge}{14}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Elastic-net}{15}{subsubsection.4.2.3}
-\contentsline {subsection}{\numberline {4.3}Selecting Features}{15}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Optimizing the Hyperparameter}{15}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Predictive Performance}{16}{subsection.4.5}
-\contentsline {section}{\numberline {5}Analysis}{16}{section.5}
-\contentsline {section}{\numberline {6}Results}{16}{section.6}
-\contentsline {section}{\numberline {7}Discussion}{17}{section.7}
-\contentsline {subsection}{\numberline {7.1}Data critique}{17}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Model Limitations and Irrelevancy}{17}{subsection.7.2}
-\contentsline {section}{\numberline {8}Conclusion}{18}{section.8}
-\contentsline {section}{\numberline {9}An Ethical Overview}{18}{section.9}
-\contentsline {section}{\numberline {10}Litterature}{20}{section.10}
-\contentsline {section}{\numberline {11}Appendixs}{22}{section.11}
-\contentsline {subsubsection}{\numberline {11.0.1}}{22}{subsubsection.11.0.1}
-\contentsline {subsubsection}{\numberline {11.0.2}}{22}{subsubsection.11.0.2}
+\contentsline {subsubsection}{\numberline {3.5.1}Initial clean-up}{10}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Ejerlejlighed's lot size}{11}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Final touch-ups}{11}{subsubsection.3.5.3}
+\contentsline {subsection}{\numberline {3.6}Descriptive Statistics}{11}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Key Statistics}{11}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Prices in Municipalities}{13}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Property Type}{13}{subsubsection.3.6.3}
+\contentsline {subsubsection}{\numberline {3.6.4}The Dataset}{14}{subsubsection.3.6.4}
+\contentsline {section}{\numberline {4}Methods}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Supervised Machine Learning}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Fitting the model}{15}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Lasso}{15}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Ridge}{15}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Elastic-net}{16}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Selecting Features}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Optimizing the Hyperparameter}{16}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Predictive Performance}{17}{subsection.4.5}
+\contentsline {section}{\numberline {5}Analysis}{17}{section.5}
+\contentsline {section}{\numberline {6}Results}{17}{section.6}
+\contentsline {section}{\numberline {7}Discussion}{18}{section.7}
+\contentsline {subsection}{\numberline {7.1}Data critique}{18}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Model Limitations and Irrelevancy}{18}{subsection.7.2}
+\contentsline {section}{\numberline {8}Conclusion}{19}{section.8}
+\contentsline {section}{\numberline {9}An Ethical Overview}{19}{section.9}
+\contentsline {section}{\numberline {10}Litterature}{21}{section.10}
+\contentsline {section}{\numberline {11}Appendixs}{23}{section.11}
+\contentsline {subsubsection}{\numberline {11.0.1}}{23}{subsubsection.11.0.1}
+\contentsline {subsubsection}{\numberline {11.0.2}}{23}{subsubsection.11.0.2}

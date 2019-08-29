@@ -166,8 +166,37 @@ The Danish Police datasets contained totals for different categories of crimes r
 The hvorlangterder scrape provided location specific features, taking an input of Latitude and Longitude coordinates. The scraping function, which was created for returning location-based features, created a column for the row specific values. Therefore, a merge operation was not necessary, but could alternatively have been managed with a one-to-one inner-merge id. As few coordinates regarding apartment properties are repetitive, these are not suitable for merging upon. 
 
 \subsection{Data Cleaning}
+The scraping of Boliga left us with 65,950 observations. However, big data is often dirty and requires tidying before it can be used in any meaningful statistical context (Salganik 2018). In the following sections we describe our data cleaning efforts. 
+\subsubsection{Initial clean-up}
+The initial clean-up sorted out rows that contained an illogical value. Here we focused our efforts on the removing any and all observations that contained a municipality code of 0. Additionally, we chose to exclude any real estate valued below 100 DKK, while these listings existed on Boliga's website, they were all listings, where the seller wanted  to sell to the highest bidder. We excluded these listings on the basis that they were unrealistically priced compared to the property's real market value.\newline
+Boliga subdivides its listings into ten real-estate types. We chose to exclude the typification "other", as there were only 17 houses listed in the category - too few for training our machine learning model. Furthermore, we also removed any listing without coordinates as these were vital for the scraping process on hvorlangerder.dk.\newline
+We dropped all observations with an unreasonably high "liggetid", as we saw these instances to not  represent reasonable pricing or demand. We have thus set an arbitrary limit of 3 years (1,095 days), and omitted any observations that has been on the market for longer than that. This results in the omission of approximately 5\% of our dataset. The highest mean "liggetid" on a municipal level was roughly 600 days, so as not to discriminate against the observations from the municipalities with a longer average 'sales time' we set the cut-off somewhat higher than the highest mean. Another option was to set the limit according to each municipality's mean, a solution that was a bit more time consuming, and would have yielded approximately the same result, hence we opted not to do it.
+In figure XX the number of rows dropped at each step of the cleaning can be perused.
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline 
+Feature & \emph{n} \\
+\hline 
+Municipality code & 231 \\ 
+\hline 
+Price & 11 \\ 
+\hline 
+Coordinates & 275 \\ 
+\hline 
+Type & 17 \\ 
+\hline 
+Liggetid & 3,940\\
+\hline 
+Total\footnote{"The total is the count of how many rows were dropped. Some rows were missing multiple features.} & 4,332\\
+\hline
+\end{tabular} 
+\end{center}
 
-A few of the listed housing, have been listed for over a decade. These are considered outliers, which are overly priced considering their characteristics. The outliers are excluded, because they would otherwise only contribute to further bias of overestimation. The total number of excluded housing are approximately 4000.  
+\subsubsection{Ejerlejlighed's lot size}
+Inspecting our data we found that from 8,028 apartments 1,176 of these had a lot size. These listings included the apartment complex' common area, whereas the rest did not. To overcome this discrepancy we chose to set all non-zero values to zero, as not to confuse our model with an inconsistent feature (Raschka \& Mirjalili 2017).
+
+\subsubsection{Final touch-ups}
+After merging the housing info with the demographic data and the distances from hvorlangterder.dk, we removed a single duplicate and deleted all columns not relevant for our analysis. After the clean-up of the data we were left with a dataset consisting of 61,618  observations and 37 features and 1 target variable. 
 
 \subsection{Descriptive Statistics}
 In this section, we will examine the more apparent patterns of our collected data. This is done to familiarize ourselves with the data, before we commence on the analysis.
@@ -375,8 +404,8 @@ Excluded Features:\newline
 municipality, lotSize, unemployment, Total\_reported\_crime, Socioeconomic\_index, expenses\_per\_school\_student, expenses\_sport\_and\_other\_cultural\_activities, forest\_distance, coast\_distance, isForeclosure, owners\_expense
 \subsubsection{}
 The model used for prediction
-$$ \hat{Y_i}=\hat{\beta_i}\textbf{X}_i+\hat{\epsilon_i}$$
-$$\textbf{X}_i^T=\begin{bmatrix}
+$$ \hat{Y_i}=\alpha+\hat{\beta}^T\textbf{X}_i+\hat{\epsilon_i}$$
+$$\textbf{X}_i=\begin{bmatrix}
            basementSize \\
            buildYear \\
            rooms \\

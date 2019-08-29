@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  28 AUG 2019 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  28 AUG 2019 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1456,7 +1456,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<forside.pdf, id=139, 597.50786pt x 845.04686pt>
+<forside.pdf, id=151, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
 Package pdftex.def Info: forside.pdf  used on input line 49.
@@ -1465,7 +1465,7 @@ File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
 Package pdftex.def Info: forside.pdf  used on input line 49.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<forside.pdf, id=142, page=1, 597.50786pt x 845.04686pt>
+<forside.pdf, id=154, page=1, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
 Package pdftex.def Info: forside.pdf , page1 used on input line 49.
@@ -1531,7 +1531,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-<123.png, id=240, 997.7275pt x 760.8425pt>
+<123.png, id=255, 997.7275pt x 760.8425pt>
 File: 123.png Graphic file (type png)
 <use 123.png>
 Package pdftex.def Info: 123.png  used on input line 60.
@@ -1598,15 +1598,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-<Box1.png, id=321, 491.436pt x 189.3474pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+<Box1.png, id=342, 491.436pt x 189.3474pt>
 File: Box1.png Graphic file (type png)
 <use Box1.png>
-Package pdftex.def Info: Box1.png  used on input line 197.
+Package pdftex.def Info: Box1.png  used on input line 226.
 (pdftex.def)             Requested size: 455.24411pt x 175.41228pt.
-<Box2.png, id=322, 404.2302pt x 155.6214pt>
+<Box2.png, id=343, 404.2302pt x 155.6214pt>
 File: Box2.png Graphic file (type png)
 <use Box2.png>
-Package pdftex.def Info: Box2.png  used on input line 207.
+Package pdftex.def Info: Box2.png  used on input line 236.
 (pdftex.def)             Requested size: 455.24411pt x 175.26358pt.
 
 
@@ -1615,11 +1622,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./Box1.png>]
-<bar1.png, id=332, 628.3475pt x 409.53pt>
+[12 <./Box1.png>]
+<bar1.png, id=353, 628.3475pt x 409.53pt>
 File: bar1.png Graphic file (type png)
 <use bar1.png>
-Package pdftex.def Info: bar1.png  used on input line 218.
+Package pdftex.def Info: bar1.png  used on input line 247.
 (pdftex.def)             Requested size: 455.24411pt x 296.7048pt.
 
 
@@ -1628,8 +1635,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./Box2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+[13 <./Box2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
@@ -1639,14 +1646,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./bar1.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
+[14 <./bar1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1654,18 +1654,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
-
- []
-
-
-Overfull \hbox (32.83154pt too wide) in paragraph at lines 284--291
- [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1673,6 +1661,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+
+ []
+
+
+Overfull \hbox (32.83154pt too wide) in paragraph at lines 313--320
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1694,89 +1694,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
-
- []
-
-
-Overfull \hbox (90.77383pt too wide) in paragraph at lines 337--338
-\T1/ptm/m/it/12 tion & So-cial Sci-ence Re-search \T1/ptm/m/n/12 [On-line]: []e
-c.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
-
- []
-
-
-Overfull \hbox (74.98131pt too wide) in paragraph at lines 339--340
-[]\T1/ptm/m/n/12 https://ec.europa.eu/research/participants/data/ref/h2020/othe
-r/hi/h2020_ethics-soc-science-humanities_en.pdf[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-
-Overfull \hbox (5.91246pt too wide) in paragraph at lines 341--342
-\T1/ptm/m/n/12 52-56 [On-line]: []http://www.unz.com/print/Encounter-1969mar-00
-052[] [Ac-cessed on 25/08/2019] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-
-Overfull \hbox (26.63339pt too wide) in paragraph at lines 349--350
-[]\T1/ptm/m/n/12 Vox.com (2018) \T1/ptm/m/it/12 The Cam-bridge An-a-lyt-ica Fac
-e-book scan-dal \T1/ptm/m/n/12 [On-line]: [][[]Ac-cessed on 26/08/2019] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1784,32 +1701,86 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Overfull \hbox (90.77383pt too wide) in paragraph at lines 366--367
+\T1/ptm/m/it/12 tion & So-cial Sci-ence Re-search \T1/ptm/m/n/12 [On-line]: []e
+c.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Overfull \hbox (74.98131pt too wide) in paragraph at lines 368--369
+[]\T1/ptm/m/n/12 https://ec.europa.eu/research/participants/data/ref/h2020/othe
+r/hi/h2020_ethics-soc-science-humanities_en.pdf[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Overfull \hbox (5.91246pt too wide) in paragraph at lines 370--371
+\T1/ptm/m/n/12 52-56 [On-line]: []http://www.unz.com/print/Encounter-1969mar-00
+052[] [Ac-cessed on 25/08/2019] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+
+Overfull \hbox (26.63339pt too wide) in paragraph at lines 378--379
+[]\T1/ptm/m/n/12 Vox.com (2018) \T1/ptm/m/it/12 The Cam-bridge An-a-lyt-ica Fac
+e-book scan-dal \T1/ptm/m/n/12 [On-line]: [][[]Ac-cessed on 26/08/2019] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
@@ -1820,12 +1791,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 373.
+(hyperref)                than one, level fixed on input line 402.
 
 
-Overfull \hbox (92.5989pt too wide) in paragraph at lines 374--376
+Overfull \hbox (92.5989pt too wide) in paragraph at lines 403--405
 \T1/ptm/m/n/12 municipality, lot-Size, un-em-ploy-ment, To-tal_reported_crime, 
 So-cioe-co-nomic_index, ex-penses_per_school_student,
  []
@@ -1836,41 +1843,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
  (./DraftExam.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `DraftExam.out' has not changed.
-(rerunfilecheck)             Checksum: 04F207076E21CC2FD24FCD2BBD8CA88D;2097.
+(rerunfilecheck)             Checksum: B48ED81A40FCA69FE7AE12C8D3738F5A;2332.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33360 strings out of 492649
- 642744 string characters out of 6129622
+ 33368 strings out of 492649
+ 642883 string characters out of 6129622
  720773 words of memory out of 5000000
- 36647 multiletter control sequences out of 15000+600000
+ 36650 multiletter control sequences out of 15000+600000
  566142 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,78p,10378b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on DraftExam.pdf (22 pages, 746348 bytes).
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on DraftExam.pdf (23 pages, 749640 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 
