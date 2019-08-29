@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  29 AUG 2019 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  29 AUG 2019 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,7 +1489,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<forside.pdf, id=155, 597.50786pt x 845.04686pt>
+<forside.pdf, id=151, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
 Package pdftex.def Info: forside.pdf  used on input line 52.
@@ -1498,7 +1498,7 @@ File: forside.pdf Graphic file (type pdf)
 <use forside.pdf>
 Package pdftex.def Info: forside.pdf  used on input line 52.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<forside.pdf, id=158, page=1, 597.50786pt x 845.04686pt>
+<forside.pdf, id=154, page=1, 597.50786pt x 845.04686pt>
 File: forside.pdf Graphic file (type pdf)
 <use forside.pdf, page 1>
 Package pdftex.def Info: forside.pdf , page1 used on input line 52.
@@ -1564,11 +1564,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-<123.png, id=260, 997.7275pt x 760.8425pt>
+<123.png, id=255, 989.6975pt x 756.8275pt>
 File: 123.png Graphic file (type png)
 <use 123.png>
 Package pdftex.def Info: 123.png  used on input line 63.
-(pdftex.def)             Requested size: 399.08392pt x 304.3316pt.
+(pdftex.def)             Requested size: 395.87198pt x 302.72563pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
@@ -1624,14 +1624,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-<1log.png, id=345, 1005.7575pt x 293.095pt>
+<1log.png, id=340, 1005.7575pt x 293.095pt>
 File: 1log.png Graphic file (type png)
 <use 1log.png>
 Package pdftex.def Info: 1log.png  used on input line 160.
 (pdftex.def)             Requested size: 455.24411pt x 132.66522pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
-<2log.png, id=346, 1001.7425pt x 296.60812pt>
+<2log.png, id=341, 1001.7425pt x 296.60812pt>
 File: 2log.png Graphic file (type png)
 <use 2log.png>
 Package pdftex.def Info: 2log.png  used on input line 170.
@@ -1644,12 +1644,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10 <./1log.png>]
-<3log.png, id=357, 996.22188pt x 296.60812pt>
+<3log.png, id=352, 996.22188pt x 296.60812pt>
 File: 3log.png Graphic file (type png)
 <use 3log.png>
 Package pdftex.def Info: 3log.png  used on input line 180.
 (pdftex.def)             Requested size: 455.24411pt x 135.54074pt.
-<4log.png, id=358, 999.735pt x 293.095pt>
+<4log.png, id=353, 999.735pt x 293.095pt>
 File: 4log.png Graphic file (type png)
 <use 4log.png>
 Package pdftex.def Info: 4log.png  used on input line 189.
@@ -1662,7 +1662,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./2log.png> <./3log.png>]
-<5log.png, id=368, 1003.75pt x 293.095pt>
+<5log.png, id=363, 1003.75pt x 293.095pt>
 File: 5log.png Graphic file (type png)
 <use 5log.png>
 Package pdftex.def Info: 5log.png  used on input line 196.
@@ -1699,7 +1699,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-<Box1.png, id=405, 939.51pt x 361.35pt>
+<Box1.png, id=400, 939.51pt x 361.35pt>
 File: Box1.png Graphic file (type png)
 <use Box1.png>
 Package pdftex.def Info: Box1.png  used on input line 295.
@@ -1712,7 +1712,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-<Box2.png, id=413, 939.51pt x 361.35pt>
+<Box2.png, id=408, 939.51pt x 361.35pt>
 File: Box2.png Graphic file (type png)
 <use Box2.png>
 Package pdftex.def Info: Box2.png  used on input line 305.
@@ -1725,7 +1725,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17 <./Box1.png> <./Box2.png>]
-<bar1.png, id=422, 867.24pt x 578.16pt>
+<bar1.png, id=417, 867.24pt x 578.16pt>
 File: bar1.png Graphic file (type png)
 <use bar1.png>
 Package pdftex.def Info: bar1.png  used on input line 316.
@@ -1745,7 +1745,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
@@ -1756,7 +1756,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
@@ -1767,15 +1767,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
-<Learncurvridge.png, id=462, 639.38875pt x 273.02pt>
+<Learncurvridge.png, id=457, 639.38875pt x 273.02pt>
 File: Learncurvridge.png Graphic file (type png)
 <use Learncurvridge.png>
-Package pdftex.def Info: Learncurvridge.png  used on input line 395.
+Package pdftex.def Info: Learncurvridge.png  used on input line 393.
 (pdftex.def)             Requested size: 383.6362pt x 163.81326pt.
-<ValCurveRidge3deg.png, id=465, 580.1675pt x 394.47375pt>
+<ValCurveRidge3deg.png, id=460, 580.1675pt x 394.47375pt>
 File: ValCurveRidge3deg.png Graphic file (type png)
 <use ValCurveRidge3deg.png>
-Package pdftex.def Info: ValCurveRidge3deg.png  used on input line 408.
+Package pdftex.def Info: ValCurveRidge3deg.png  used on input line 406.
 (pdftex.def)             Requested size: 348.10316pt x 236.68607pt.
 
 
@@ -1981,7 +1981,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 532.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 532.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 532.
 Package rerunfilecheck Info: File `DraftExam.out' has not changed.
-(rerunfilecheck)             Checksum: D77E3B023C5B4F245268CCA5ACDD1EAB;2455.
+(rerunfilecheck)             Checksum: F2027F20944A2CA1C1956C21D16442C5;2378.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1992,10 +1992,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 506 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33605 strings out of 492649
- 646600 string characters out of 6129622
+ 33603 strings out of 492649
+ 646570 string characters out of 6129622
  729942 words of memory out of 5000000
- 36829 multiletter control sequences out of 15000+600000
+ 36828 multiletter control sequences out of 15000+600000
  584450 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,78p,10378b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2011,10 +2011,10 @@ al/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on DraftExam.pdf (28 pages, 1760882 bytes).
+Output written on DraftExam.pdf (28 pages, 1762413 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 506 compressed objects within 6 object streams
- 132 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
 

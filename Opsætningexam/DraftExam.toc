@@ -30,13 +30,12 @@
 \contentsline {subsubsection}{\numberline {3.6.2}Prices in Municipalities}{17}{subsubsection.3.6.2}
 \contentsline {subsubsection}{\numberline {3.6.3}Property Type}{18}{subsubsection.3.6.3}
 \contentsline {section}{\numberline {4}Methods}{19}{section.4}
-\contentsline {subsection}{\numberline {4.1}Supervised Machine Learning}{19}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Fitting the model}{19}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}LASSO}{19}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}RIDGE}{20}{subsubsection.4.2.2}
-\contentsline {subsection}{\numberline {4.3}Selecting Features}{20}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Optimising the Hyperparameter}{20}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Predictive Performance}{20}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.1}Fitting the model}{19}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}LASSO}{19}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}RIDGE}{20}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Selecting Features}{20}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Optimising the Hyperparameter}{20}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Predictive Performance}{20}{subsection.4.4}
 \contentsline {section}{\numberline {5}Analysis}{21}{section.5}
 \contentsline {paragraph}{Learning Curve\newline }{22}{section*.29}
 \contentsline {paragraph}{Validation Curve\newline }{22}{section*.31}
@@ -45,7 +44,7 @@
 \contentsline {subsection}{\numberline {6.2}Best Subset Feature Selection}{24}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Data critique}{24}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Model Limitations}{24}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Model Selection}{24}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.5}Model Selection}{25}{subsection.6.5}
 \contentsline {section}{\numberline {7}Conclusion}{25}{section.7}
 \contentsline {section}{\numberline {8}Litterature}{26}{section.8}
 \contentsline {section}{\numberline {9}Appendix}{28}{section.9}

@@ -16,22 +16,21 @@
 \BOOKMARK [3][-]{subsubsection.3.6.2}{Prices in Municipalities}{subsection.3.6}% 16
 \BOOKMARK [3][-]{subsubsection.3.6.3}{Property Type}{subsection.3.6}% 17
 \BOOKMARK [1][-]{section.4}{Methods}{}% 18
-\BOOKMARK [2][-]{subsection.4.1}{Supervised Machine Learning}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.2}{Fitting the model}{section.4}% 20
-\BOOKMARK [3][-]{subsubsection.4.2.1}{LASSO}{subsection.4.2}% 21
-\BOOKMARK [3][-]{subsubsection.4.2.2}{RIDGE}{subsection.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.3}{Selecting Features}{section.4}% 23
-\BOOKMARK [2][-]{subsection.4.4}{Optimising the Hyperparameter}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.5}{Predictive Performance}{section.4}% 25
-\BOOKMARK [1][-]{section.5}{Analysis}{}% 26
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 27
-\BOOKMARK [2][-]{subsection.6.1}{No Grid Search or One-to-many}{section.6}% 28
-\BOOKMARK [2][-]{subsection.6.2}{Best Subset Feature Selection}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.3}{Data critique}{section.6}% 30
-\BOOKMARK [2][-]{subsection.6.4}{Model Limitations}{section.6}% 31
-\BOOKMARK [2][-]{subsection.6.5}{Model Selection}{section.6}% 32
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 33
-\BOOKMARK [1][-]{section.8}{Litterature}{}% 34
-\BOOKMARK [1][-]{section.9}{Appendix}{}% 35
-\BOOKMARK [2][-]{subsubsection.9.0.1}{}{section.9}% 36
-\BOOKMARK [3][-]{subsubsection.9.0.2}{}{subsubsection.9.0.1}% 37
+\BOOKMARK [2][-]{subsection.4.1}{Fitting the model}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.1}{LASSO}{subsection.4.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.2}{RIDGE}{subsection.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Selecting Features}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Optimising the Hyperparameter}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{Predictive Performance}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 25
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{No Grid Search or One-to-many}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.2}{Best Subset Feature Selection}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.3}{Data critique}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.4}{Model Limitations}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.5}{Model Selection}{section.6}% 31
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 32
+\BOOKMARK [1][-]{section.8}{Litterature}{}% 33
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 34
+\BOOKMARK [2][-]{subsubsection.9.0.1}{}{section.9}% 35
+\BOOKMARK [3][-]{subsubsection.9.0.2}{}{subsubsection.9.0.1}% 36
