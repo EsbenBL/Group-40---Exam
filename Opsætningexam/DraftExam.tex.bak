@@ -83,7 +83,7 @@ The contribution from the social sciences to machine learning help create new me
 \subsection{Ethical Considerations in the Current Research Project}
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} ethical guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's web-page were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymize the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
 No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, sometimes, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.} p.303} Adhering to this, more complex  understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
-In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page (see appendix XX). Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
+In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page \textcolor{red}{(see appendix XX)}. Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
 \subsection{Data Scraping Process}
 In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled \textcolor{red}{XX and XX.} 
 \paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
@@ -325,7 +325,7 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 \end{center}
 \end{table}
 The Ridge model with three degrees of polynomial features are selected as the best performing model. In regard to MAE as well as MSE.\newline
-We examine the validation curve of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
+We examine the validation curve, figure \textcolor{red}{XX}, of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 
 \begin{figure}[H]
 \centering
@@ -335,10 +335,18 @@ We examine the validation curve of the model to examine whether we have found a 
 \end{figure}
 The dotted line approximately represents the optimized value of lambda from our previously conducted k-fold cross-validation. 
 
-Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55·10^10$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
+Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
 The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
 Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem to make for more less variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
+
+The learning-curve is depicted in figure \textcolor{red}{XX}
+\begin{figure}[H]
+\centering
+\caption{}
+\includegraphics[scale=0.6]{Learncurvridge.png}
+%\source{}
+\end{figure}
 
 
 
@@ -357,7 +365,7 @@ Another interesting prediction which could have been done using the same methods
 \newline 
 In a prediction-model like this it is near impossible to evade some form of omitted variable bias. A significant amount of potential important factors can not be acquired. For an example the view from the listed housing will for sure be of great impact of the valuation price. Another factor of interest could have been a evaluation of the condition of the housing, unfortunately the statement of property\footnote{red. Tilstandsrapport} are not publicly accessible. \newline
 The prediction of the cooperative housing valuation %\footnote{http://housingpeople.dk/en/housing-guide/housing-types/cooperative-andelsbolig/},
-are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. Like debt - which deflate the valuation accordingly.
+are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. 
 
 \subsection{Model Limitations}
 The necessity to exclude municipality dummies as regressors in the prediction models. Leaves the model to only separate municipalities by the socio-economic factors, which are subject to low variance. This makes distinction between municipality a lot more difficult as well as uncertain.   

@@ -33,11 +33,11 @@
 \contentsline {subsection}{\numberline {4.5}Predictive Performance}{17}{subsection.4.5}
 \contentsline {section}{\numberline {5}Analysis}{17}{section.5}
 \contentsline {section}{\numberline {6}Results}{19}{section.6}
-\contentsline {section}{\numberline {7}Discussion}{19}{section.7}
-\contentsline {subsection}{\numberline {7.1}Data critique}{19}{subsection.7.1}
+\contentsline {section}{\numberline {7}Discussion}{20}{section.7}
+\contentsline {subsection}{\numberline {7.1}Data critique}{20}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Model Limitations}{20}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Model Selection}{20}{subsection.7.3}
-\contentsline {section}{\numberline {8}Conclusion}{20}{section.8}
+\contentsline {section}{\numberline {8}Conclusion}{21}{section.8}
 \contentsline {section}{\numberline {9}An Ethical Overview}{21}{section.9}
 \contentsline {section}{\numberline {10}Litterature}{23}{section.10}
 \contentsline {section}{\numberline {11}Appendixs}{25}{section.11}

@@ -83,7 +83,7 @@ The contribution from the social sciences to machine learning help create new me
 \subsection{Ethical Considerations in the Current Research Project}
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} ethical guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's web-page were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymize the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
 No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, sometimes, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.} p.303} Adhering to this, more complex  understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
-In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page (see appendix XX). Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
+In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function, which causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page \textcolor{red}{(see appendix XX)}. Furthermore, Boliga prohibits the use of automated scrapers and bots, which we did not do, as our scraping was done in a specified time-frame and we did not automate the procedure to be done on multiple occasions.
 \subsection{Data Scraping Process}
 In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled \textcolor{red}{XX and XX.} 
 \paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
@@ -292,7 +292,7 @@ $$ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y_i}|$$
 
 
 \section{Analysis}
-A number of features are excluded before training the model. The exclusion was determined, quite simply, by investigation of the correlation between the complete set of features and the valuation price. A list of the excluded features are found in appendix 11.0.1. The model used for ML are found in appendix 11.0.2.  
+A number of features are excluded before training the model. The exclusion was determined, quite simply, by investigation of the correlation between the complete set of features and the target variable. A list of the excluded features are found in appendix 11.0.1. The model used for ML are found in appendix 11.0.2.  
 
 The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularization yields. 
 \begin{table}[h!]
@@ -335,12 +335,20 @@ We examine the validation curve, figure \textcolor{red}{XX}, of the model to exa
 \end{figure}
 The dotted line approximately represents the optimized value of lambda from our previously conducted k-fold cross-validation. 
 
-Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55·10^10$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
+Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
 The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
 Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem to make for more less variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
 
 The learning-curve is depicted in figure \textcolor{red}{XX}
+\begin{figure}[H]
+\centering
+\caption{}
+\includegraphics[scale=0.6]{Learncurvridge.png}
+%\source{}
+\end{figure}
+
+
 
 \section{Results}
 \begin{figure}[H]
@@ -368,7 +376,7 @@ Another approach could have been to group cities which share characteristics. Ex
 
 \subsection{Model Selection}
 Instead of only assessing the different models by MAE and RMSE.
-The Information criteria of the respective models could have been introduced. Which could have altered the selection of preferred model. Both AIC and BIC, would likely have suggested Lasso, with 2-degrees of polynomial features, as preferred model. As both measurement are increasing in numbers of estimated parameters. 
+The Information criteria of the respective models could have been introduced. Which could have altered the selection of preferred model. Both AIC and BIC, would likely have suggested Lasso, with 2-degrees of polynomial features, as preferred model. As both measurement are increasing in numbers of estimated parameters\footnote{Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}}. 
 
 \section{Conclusion}
 In this assignment, we have used machine learning to train a model to predict valuation prices of real estate in Denmark. We did this by scraping Boliga.dk for all of their active houses for sale and combining this with municipal data on income, education, schools and urbanization. Additionally, we also scraped data from hvorlangterder.dk which calculates the distance from an address, to different every-day commodities such as hospitals, schools and shopping. 
