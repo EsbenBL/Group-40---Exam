@@ -24,15 +24,17 @@
 \BOOKMARK [2][-]{subsection.4.3}{Optimising the Hyperparameter}{section.4}% 24
 \BOOKMARK [2][-]{subsection.4.4}{Predictive Performance}{section.4}% 25
 \BOOKMARK [1][-]{section.5}{Analysis}{}% 26
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 27
-\BOOKMARK [2][-]{subsection.6.1}{Alternative Regularisation}{section.6}% 28
-\BOOKMARK [2][-]{subsection.6.2}{Best Subset Feature Selection}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.3}{Data Critique}{section.6}% 30
-\BOOKMARK [2][-]{subsection.6.4}{Model Limitations}{section.6}% 31
-\BOOKMARK [2][-]{subsection.6.5}{Model Selection}{section.6}% 32
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 33
-\BOOKMARK [1][-]{section.8}{Litterature}{}% 34
-\BOOKMARK [1][-]{section.9}{Appendix}{}% 35
-\BOOKMARK [2][-]{subsubsection.9.0.1}{}{section.9}% 36
-\BOOKMARK [3][-]{subsubsection.9.0.2}{}{subsubsection.9.0.1}% 37
-\BOOKMARK [3][-]{subsubsection.9.0.3}{}{subsubsection.9.0.1}% 38
+\BOOKMARK [2][-]{subsection.5.1}{Learning Curve}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.2}{Validation Curve}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 29
+\BOOKMARK [2][-]{subsection.6.1}{Alternative Regularisation}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.2}{Best Subset Feature Selection}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.3}{Data Critique}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.4}{Model Limitations}{section.6}% 33
+\BOOKMARK [2][-]{subsection.6.5}{Model Selection}{section.6}% 34
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 35
+\BOOKMARK [1][-]{section.8}{Litterature}{}% 36
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 37
+\BOOKMARK [2][-]{subsubsection.9.0.1}{}{section.9}% 38
+\BOOKMARK [3][-]{subsubsection.9.0.2}{}{subsubsection.9.0.1}% 39
+\BOOKMARK [3][-]{subsubsection.9.0.3}{}{subsubsection.9.0.1}% 40

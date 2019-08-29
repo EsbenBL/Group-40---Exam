@@ -92,7 +92,7 @@ In the following sections we will consider the ethical ramifications of our inqu
 \subsection{Ethical Considerations in the Current Research Project}
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comission's\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's website were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymise the scraped data, only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
 Informed consent has not been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age.} p.303} Adhering to this more complex understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism}}. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
-In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function. This causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page (see Jupyter). 
+In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function. This causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page. See attached Jupyter notebooks. 
 \subsection{Data Scraping Process}
 In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks. 
 \paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
@@ -399,10 +399,9 @@ From table 4 it is evident that the model with 3 degrees of polynomial features 
 \includegraphics[scale=0.4]{predictactual.png}
 %\source{}
 \end{figure}
-We are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. Therefore, we chose this model as the final model from which we will conduct the rest of the analysis with. In the following section further assessment of the model will be conducted  \newline
+We are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. Therefore, we chose this model as the final model from which we will conduct the rest of the analysis with. In the following section further assessment of the model will be conducted.
 
-
-\paragraph{Learning Curve\newline}
+\subsection{Learning Curve}
 We examine the learning curve of the model to assert whether the model suffers from immediate over- or underfitting problems and whether these would be remedied by collecting more data\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 196}
 The following plot illustrates the learning curve of our model:
 \begin{figure}[H]
@@ -413,10 +412,10 @@ The following plot illustrates the learning curve of our model:
 \end{figure}
 The plotted curves represent the average performance of the validation- and training sets, while the width of the plotted curves expresses the 95\%-confidence interval of the performance.  
 The performance on the validation set is very inconsistent and varies a lot. Nonetheless, it seems as if the gap is decreasing between the performances of the training- and validation sets as the sample size increases. 
-At around 33,000 observations the validation curve drastically decreases and both curves flatten out. Though the confidence interval of the validation performance is still noteworthy, it also improves dramatically when the sample gets sufficiently high. Just before 40,000 observations, the confidence interval of the validation curve actually drops below the train curve, which should not be possible. We have not found a meaningful explanation aside from noise or chance \footnote{\href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html}{jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html}} 
+At around 33,000 observations the validation curve drastically decreases and both curves flatten out. Though the confidence interval of the validation performance is still noteworthy, it also improves dramatically when the sample gets sufficiently high. Just before 40,000 observations, the confidence interval of the validation curve actually drops below the train curve, which should not be possible. We have not found a meaningful explanation aside from noise or chance \footnote{\href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html?fbclid=IwAR22jhu2nrTY3eJME4VTuTSLXNKqNMmPzlwU4-IJ8VvEMIsLy05-IqgQdsI}{Van der Plas, Jake. (2016)}} 
 All in all, the learning curve would indicate that the performance of the model will not benefit from additional training data. 
 
-\paragraph{Validation Curve\newline}
+\subsection{Validation Curve}
 We examine the validation curve of the model to see whether we have found a good bias-variance trade-off with our optimised hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 \begin{figure}[H]
 \centering
@@ -465,7 +464,7 @@ We performed descriptive statistics to gain a better acquaintance with the data.
 We conducted feature selection by assessing the correlation between the different features and the target variable, which in our research has been the valuation price. 
 We trained both a LASSO- and a RIDGE regression model and compared their performances with the performance of a standard linear regression. Through k-fold cross-validation, we estimated the optimised hyperparameters for both regularisation models. We found that the RIDGE regression with three polynomial features performed best, at predicting out-of-sample data with the performance measure being the smallest mean square error. When predicting the test data the model had a MSE of 5.566e+10 with a optimised hyperparameter $\lambda$=432.88 which we found to be a decent performance. 
 We have assessed the final model and examined to which degree we have managed to find a good bias-variance trade-off for our model and concluded that our model suffers from a degree of overfitting. This was done by examining the validation- and learning curve of our final model. Additionally we addressed possibilities of further optimising the model.  \newline
-Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. In conclusion, we found that sociodemographical and geographical features can be utilised to a satisfactory degree in predicting real estate valuations in Denmark
+Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. \newline In conclusion, we found that sociodemographical and geographical features can be utilised to a satisfactory degree in predicting real estate valuations in Denmark
 
 \newpage
 \section{Litterature}
@@ -475,8 +474,9 @@ Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawa
 
 Consumer Data Research Center, UK [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \href{https://www.cdrc.ac.uk/wp-content/uploads/2018/05/6-GDPR-and-social-science-research-full-document-1.pdf}{https://www.cdrc.ac.uk} [Accessed on 27/08/2019]
 
-DST (2019) \url{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979} [Accessed 27/08/2019]
+Boligagruppen.dk (2019) \textit{Om boliga gruppen} [Online]: \url{www.boligagruppen.dk}: [Accessed on 27/08/2019]
 
+DST (2019) \url{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979} [Accessed 27/08/2019]
 
 DST (2019) \url{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=28741} [Accessed 27/08/2019]
 
@@ -489,8 +489,6 @@ Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; (2017) \text
 Gareth, J., Witten, D., Tibshirani, R., \& Hastie, T. (2017) \textit{Linear Model Selection and Regularization.} In J. Gareth, D.Witten, R. Tibshirani, \& T. Hastie, \textit{An Introduction to Statistical Learning}(pp. 205-262). New York City: Springer.
 
 Grimmer, Justin (2015) \textit{We are all social scientists now: how big data, machine learning, and causal inference work together.} PS: Political Science \& Politics, vol. 48, January: 80-83.
-
-Jake Van der Plas (2016)\textit{Python Data Science Handbook} available at: \href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html?fbclid=IwAR22jhu2nrTY3eJME4VTuTSLXNKqNMmPzlwU4-IJ8VvEMIsLy05-IqgQdsI}{GitHub} [Accessed on 29/08/2019]
 
 Lazer, David and Jason Radford (2017) D\textit{ata ex Machina. Introduction to Big Data}. Annual Review of Sociology, vol. 43, August.
 
@@ -513,10 +511,9 @@ Sample, Ian (2019, Fri 16 Aug 2019) \textit{Maths and tech specialists need Hipp
 Shiab, Nael (2015) O\textit{n the Ethics of Web Scraping and Data Journalism}. Global Investigative Journalism Network. [Online]: \href{gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}{gijn.org}: [Accessed on 27/08/2019]
 Varian. Hal R. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives, 28(2):3–28, 2014.
 
+Van der Plas, Jake. (2016)\textit{Python Data Science Handbook} available at: \href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html?fbclid=IwAR22jhu2nrTY3eJME4VTuTSLXNKqNMmPzlwU4-IJ8VvEMIsLy05-IqgQdsI}{GitHub} [Accessed on 29/08/2019]
+
 Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]: \href{https://www.vox.com/2018/4/10/17207394/cambridge-analytica-facebook-zuckerberg-trump-privacy-scandal}{vox.com} [Accessed on 26/08/2019] 
-
-Boligagruppen.dk (2019) \textit{Om boliga gruppen} [Online]: \url{www.boligagruppen.dk}: [Accessed on 27/08/2019]
-
 
 \newpage
 \section{Appendix}

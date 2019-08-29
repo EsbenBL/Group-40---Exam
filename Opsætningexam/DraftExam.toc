@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {4.3}Optimising the Hyperparameter}{21}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Predictive Performance}{21}{subsection.4.4}
 \contentsline {section}{\numberline {5}Analysis}{22}{section.5}
-\contentsline {paragraph}{Learning Curve\newline }{24}{section*.31}
-\contentsline {paragraph}{Validation Curve\newline }{24}{section*.33}
+\contentsline {subsection}{\numberline {5.1}Learning Curve}{24}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Validation Curve}{24}{subsection.5.2}
 \contentsline {section}{\numberline {6}Discussion}{26}{section.6}
 \contentsline {subsection}{\numberline {6.1}Alternative Regularisation}{26}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Best Subset Feature Selection}{26}{subsection.6.2}

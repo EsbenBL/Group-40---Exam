@@ -208,8 +208,7 @@ The individual analysis of the scraping logs showed minor suspicious traits whic
 In the process of analysing the scraping logs, minor flaws from the scraping library named ‘scraping\_class’ were detected. The returned columns ‘t’ and ‘delta\_t’ contained non-generic formats of epoch time. This was fixed by applying string manipulation and datetime conversions. 
 
 \subsection{Merging Data}
-Pandas objects can be combined in different ways according to the nature of the features in the dataset. Relational database style operations are based on linking keys together, thereby maintaining the relationship between the combined datasets\footnote{McKinney, W. (2018). \textit{Data Wrangling: Join, Combine and Reshape}. p. 231 }.
-
+Pandas objects can be combined in different ways according to the nature of the features in the dataset. Relational database style operations are based on linking keys together, thereby maintaining the relationship between the combined datasets\footnote{McKinney, W. (2018). \textit{Data Wrangling: Join, Combine and Reshape}. p. 231 }.\newline
 The data collection and scraping process provided a total of 15 Datasets from Boliga, hvorlangterder, DAWA, the Danish Police, Social- \& Indenrigsministeriet and Danmarks Statistik. This section will describe how each dataset was merged, using pandas relational database styled merge and join operations. 
 
 \paragraph{Boliga.dk\newline}
@@ -470,57 +469,55 @@ Finally, we have discussed the results of our analysis. We have critically asses
 
 \newpage
 \section{Litterature}
-\ Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools}, CRS Press 2017 \newline
+Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete.} Wired, 16-07 [Online] \url{www.wired.com/2008/06/pb-theory/} [Accessed on 27/08/2019]
 
-Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}, $2^{nd}$editon, Packt Publishing 2017. \newline
+Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawal et al. (eds) \textit{The Economics of Artificial Intelligence: An Agenda} (2019) Chicago: University of Chicago Press.
 
-Varian. Hal R. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives, 28(2):3–28, 2014. \newline
+Consumer Data Research Center, UK [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \href{https://www.cdrc.ac.uk/wp-content/uploads/2018/05/6-GDPR-and-social-science-research-full-document-1.pdf}{https://www.cdrc.ac.uk} [Accessed on 27/08/2019]
 
-Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \newline\href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020} [Accessed on 25/08/2019]\newline
-
-European Commission (2018). \textit{Ethics in Social Sciences and the Humanities} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities} [Accessed on 25/08/2019] \newline
-
-Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}. Encounter, March 1969, pp. 52-56 [Online]: \href{http://www.unz.com/print/Encounter-1969mar-00052}{http://www.unz.com/print/Encounter-1969mar-00052} [Accessed on 25/08/2019]\newline
-
-Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}. Science, November 1999: Vol. 286, Issue 5444, pp. 1475 [Online]: \href{https://science.sciencemag.org/content/286/5444/1475.full}{https://science.sciencemag.org/content/286/5444/1475.full} [Accessed on 25/08/2019] DOI: 10.1126/science.286.5444.1475 \newline
- 
-Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age.} Princeton, NJ: Princeton University Press.\newline
-
-Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic Oath, says academic.} The Guardian [Online]: \href{https://www.theguardian.com/science/2019/aug/16/mathematicians-need-doctor-style-hippocratic-oath-says-academic-hannah-fry} [Accessed on 25/08/2019]\newline
-
-Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]: \href{https://www.vox.com/2018/4/10/17207394/cambridge-analytica-facebook-zuckerberg-trump-privacy-scandal} [Accessed on 26/08/2019] \newline
- 
-Boligagruppen.dk (2019) \textit{Om boliga gruppen} [Online]: \href{https://www.boligagruppen.dk}{www.boligagruppen.dk}: [Accessed on 27/08/2019] \newline
-
-Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism. Global Investigative Journalism Network.} [Online]: \href{https://gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}{gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}: [Accessed on 27/08/2019] \newline
-
-McKinney, W. (2018). 'Data Wrangling: Join, Combine and Reshape'. In W. McKinney, \textit{Python for Data Analysis}. Sebastopol: O'Reilly Media Inc. \newline
-
-Athey, Susan (2018) 'The Impact of Machine Learning on Economics' in Ajay Agrawal et al. (eds) \textit{The Economics of Artificial Intelligence: An Agenda} (2019). Chicago: University of Chicago Press. \newline
-
-Einav, Liran and Jonathan Levin (2014) \textit{Economics in the age of big data}. Science, vol. 346, November. \newline
-
-Grimmer, Justin (2015) \textit{We are all social scientists now: how big data, machine learning, and causal inference work together}. PS: Political Science \& Politics, vol. 48, January: 80-83. \newline
-
-Lazer, David and Jason Radford (2017) \textit{Data ex Machina. Introduction to Big Data. Annual Review of Sociology}, vol. 43, August. \newline
-
-Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Applied Econometric Approach}. Journal of Economic Perspectives, vol. 31 (2): 87-106. \newline
-
-Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete}. Wired, 16-07 [Online] \href{https://www.wired.com/2008/06/pb-theory/}{www.wired.com/2008/06/pb-theory/} [Accessed on 27/08/2019]\newline
-
-Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}. Available at \href{http://kt.ijs.si/theses/phd_aleksandar_peckov.pdf}{kt.ijs.si/theses/phd\_aleksandar\_peckov.pdf}. Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012. [Accessed on 29/08/2019]
-
-(https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html). [Accessed on 29/08/2019]\newline
-
-Gareth, J., Witten, D., Tibshirani, R., \& Hastie, T. (2017). Linear Model Selection and Regularization. In J. Gareth, D. Witten, R. Tibshirani, \& T. Hastie, \textit{An Introduction to Statistical Learning} (pp. 205-262). New York City: Springer.
+DST (2019) \url{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979} [Accessed 27/08/2019]
 
 
+DST (2019) \url{https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=28741} [Accessed 27/08/2019]
+
+Einav, Liran and Jonathan Levin (2014) \textit{Economics in the age of big data.} Science, vol. 346, November.
+
+European Commission (2018) \textit{Ethics in Social Sciences and the Humanities}[Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-sciencehumanities_en.pdf}{https://ec.europa.eu/}[Accessed on 25/08/2019]
+
+Foster, Ian; Rayid Ghani Ron S. Jarmin, Frauke Kreuter, Julia Lane; (2017) \textit{Big Data in Social Sciences, A Practical Guide to Methods and Tools}, CRS Press 
+
+Gareth, J., Witten, D., Tibshirani, R., \& Hastie, T. (2017) \textit{Linear Model Selection and Regularization.} In J. Gareth, D.Witten, R. Tibshirani, \& T. Hastie, \textit{An Introduction to Statistical Learning}(pp. 205-262). New York City: Springer.
+
+Grimmer, Justin (2015) \textit{We are all social scientists now: how big data, machine learning, and causal inference work together.} PS: Political Science \& Politics, vol. 48, January: 80-83.
+
+Jake Van der Plas (2016)\textit{Python Data Science Handbook} available at: \href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html?fbclid=IwAR22jhu2nrTY3eJME4VTuTSLXNKqNMmPzlwU4-IJ8VvEMIsLy05-IqgQdsI}{GitHub} [Accessed on 29/08/2019]
+
+Lazer, David and Jason Radford (2017) D\textit{ata ex Machina. Introduction to Big Data}. Annual Review of Sociology, vol. 43, August.
+
+McKinney, W. (2018) ’Data Wrangling: Join, Combine and Reshape’. In W. McKinney, \textit{Python for Data Analysis}. Sebastopol: O’Reilly Media Inc.
+
+Mullainathan, Sendhil, and Jann Spiess (2017)\textit{ Machine Learning: An Applied Econometric Approach.} Journal of Economic Perspectives, vol. 31 (2): 87-106.
+
+Peckov, Aleksandar. (2012) \textit{A Machine Learning Approach To Polynomial Regression.} Available at \url{kt.ijs.si/theses/phd_aleksandar_peckov.pdf} Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012. [Accessed on 29/08/2019]
+
+Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}. Encounter, March 1969, pp. 52-56 [Online]: \href{http://www.unz.com/print/Encounter-1969mar-00052}{unz.com} [Accessed on 25/08/2019]
+
+Rashka, Sebastian; Mirjalli, Vahid; (2017) \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} 2ndediton, Packt Publishing
+
+Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}. Science, November 1999: Vol. 286, Issue 5444, pp. 1475 [Online]: \url{https://science.sciencemag.org/content/286/5444/1475.full} [Accessed on 25/08/2019] DOI: 10.1126/science.286.5444.1475
+
+Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age}. Princeton, NJ: Princeton University Press.
+
+Sample, Ian (2019, Fri 16 Aug 2019) \textit{Maths and tech specialists need Hippocratic oath, says academic.} The Guardian [Online]: \href{https://www.theguardian.com/science/2019/aug/16/mathematicians-need-doctor-style-hippocratic-oath-says-academic-hannah-fry}{www.theguardian.com} [Accessed on 25/08/2019]
+
+Shiab, Nael (2015) O\textit{n the Ethics of Web Scraping and Data Journalism}. Global Investigative Journalism Network. [Online]: \href{gijn.org/2015/08/12/on-the-ethics-of-web-scraping-and-data-journalism/}{gijn.org}: [Accessed on 27/08/2019]
+Varian. Hal R. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives, 28(2):3–28, 2014.
+
+Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]: \href{https://www.vox.com/2018/4/10/17207394/cambridge-analytica-facebook-zuckerberg-trump-privacy-scandal}{vox.com} [Accessed on 26/08/2019] 
+
+Boligagruppen.dk (2019) \textit{Om boliga gruppen} [Online]: \url{www.boligagruppen.dk}: [Accessed on 27/08/2019]
 
 
-
-https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=27979 [Accessed 27/08/2019]\newline
-
-https://www.dst.dk/da/Statistik/nyt/NytHtml?cid=28741 [Accessed 27/08/2019]\newline
 \newpage
 \section{Appendix}
 \subsubsection{}
