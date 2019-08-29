@@ -99,7 +99,7 @@ In the following paragraphs our scraping efforts will be described. The scrapers
 \paragraph{\href{https://www.boliga.dk}{Boliga}\newline}
 Our data comes from \href{https://www.boliga.dk}{Boliga.dk}, the largest independent online web-portal for real estate sales in Denmark and has access to unique features such as days-for-sale, price-development and access to BBR - the Danish Building and Housing Register \footnote{\href{https://www.boligagruppen.dk}{www.boligagruppen.dk}}. This gives unique insight into the pricing of real estate in all 98 municipalities of Denmark. 65,950 properties were for sale at the time of scraping.\newline
 The scraping process was conducted on Friday the $23^{rd}$ of August 2019. In order to scrape the data of interest we familiarised ourselves with the network-structure of Boliga. On the basis of these insights we constructed a code which was able to scrape every page, containing information on the currently listed real estates on Boliga. The scraper requested all information available from each individual page, which surmounted to 1,319 URL requests. \newline
-For each listed property, 34 features and the target variable (price) was collected. Appendix \textcolor{red}{XX} provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
+For each listed property, 34 features and the target variable (price) was collected. Appendix 9.0.3 provides an overview of the features with a short description, and whether the feature has been dropped or saved for later usage. There are three reasons for a feature to be dropped:\newline
 1. The feature does not act with independent characteristics according to the research,\newline
 2. The feature contains insufficient data,\newline
 3. The feature is poorly formatted and cannot efficiently be recreated. \newline
@@ -119,14 +119,16 @@ As Jupyter performs poorly when running long asynchronous tasks and the estimate
  \vspace*{10px} \newline
 \textit{Features obtained:}\newline
 \begin{tabular}{c c}
-Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, train \\	
+Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, train, bus\_stop \\	
 \end{tabular}\newline 
 \begin{tabular}{c c}
-\qquad \qquad \qquad \qquad & metro, pharmacy, library, coast, junction \\	
+\qquad \qquad \qquad \qquad & metro, pharmacy, library, coast, junction, s-train, airport \\	
 \end{tabular}
 
+              
+
 \paragraph{DAWA\newline}
-\href{https://dawa.aws.dk/}{Denmark's Addresses Web API}\footnote{red. Danmarks Adressers Web API} (DAWA) is an API containing data regarding Danish addresses. DAWA will be used to collect information about the municipality that each address is located in. This data will be used to merge the socio-demographic data collected from various sources (see below) with the data scraped from Boliga.
+\href{https://dawa.aws.dk/}{Denmark's Addresses Web API}\footnote{red. Danmarks Adressers Web API} (DAWA) is an API containing data regarding Danish addresses. DAWA will be used to collect information about the municipality that each address is located in. This data will be used to merge the sociodemographic data collected from various sources (see below) with the data scraped from Boliga.
 
 \paragraph{Sociodemographic Factors\newline}
 Sociodemographic factors on municipality level was collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
@@ -311,7 +313,7 @@ It becomes apparent that the distribution is quite right-skewed and that there a
 The distribution looks similar to that of figure 7, though we cannot declare any correlation between average municipal income and average municipal price per square meter. Nonetheless, it becomes apparent that the valuation price of property is highly discriminated by municipal factors. The scope of this research paper is exactly to examine these factors and attempt to use these to valuate an unseen, out-of-sample property. 
 
 \subsubsection{Property Type}
-Another worthwhile consideration is that we have included all types of properties. It would be reasonable to assume that there is an average difference in valuation pricing depending on the type of property. Figure 4 displays the median valuation price for each type:
+Another worthwhile consideration is that we have included all types of properties. It would be reasonable to assume that there is an average difference in valuation pricing depending on the type of property. Figure 9 displays the median valuation price for each type:
 \begin{figure}[H]
   \centering
    \caption{}
@@ -361,7 +363,7 @@ A number of features are excluded before training the model. The exclusion is de
 %\source{}
 \end{figure}
 
-A list of the excluded features is found in appendix 11.0.1. The model used for ML is found in appendix 11.0.2.  
+A list of the excluded features is found in appendix 9.0.1. The model used for ML is found in appendix 9.0.2.  
 The initial 5-fold cross-validation to obtain the optimal values of the hyperparameters in each regularisation yields: 
 \begin{table}[H]
 \begin{center}
@@ -390,8 +392,7 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 \end{tabular}
 \end{center}
 \end{table}
-Since our efforts are aimed at predicting the valuation of a out-of-sample real estate property, we want to penalise the size of the error. Hence, the MSE-score is a better indicator for our model's performance as opposed to the mean absolute error (MAE). Since MSE squares the error terms, it gives a relatively high weight to large errors, which is desirable for our current aim. 
-
+Since our efforts are aimed at predicting the valuation of a out-of-sample real estate property, we want to penalise the size of the error. Hence, the MSE-score is a better indicator for our model's performance as opposed to the mean absolute error (MAE). Since MSE squares the error terms, it gives a relatively high weight to large errors, which is desirable for our current aim. \newline
 From table 4 it is evident that the model with 3 degrees of polynomial features regularised by RIDGE regression performs best. Figure 11 shows a plot of the predicted values of our model against the actual values of the test data. 
 
 \begin{figure}[H]
@@ -466,7 +467,7 @@ We performed descriptive statistics to gain a better acquaintance with the data.
 We conducted feature selection by assessing the correlation between the different features and the target variable, which in our research has been the valuation price. 
 We trained both a LASSO- and a RIDGE regression model and compared their performances with the performance of a standard linear regression. Through k-fold cross-validation, we estimated the optimised hyperparameters for both regularisation models. We found that the RIDGE regression with three polynomial features performed best, at predicting out-of-sample data with the performance measure being the smallest mean square error. When predicting the test data the model had a MSE of 5.566e+10 with a optimised hyperparameter $\lambda$=432.88 which we found to be a decent performance. 
 We have assessed the final model and examined to which degree we have managed to find a good bias-variance trade-off for our model and concluded that our model suffers from a degree of overfitting. This was done by examining the validation- and learning curve of our final model. Additionally we addressed possibilities of further optimising the model.  \newline
-Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. 
+Finally, we have discussed the results of our analysis. We have critically assessed the boundaries of our research and drawn up potential possibilities for improvement. In conclusion, we found that sociodemographical and geographical features can be utilised to a satisfactory degree in predicting real estate valuations in Denmark
 
 \newpage
 \section{Litterature}
@@ -476,15 +477,15 @@ Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Lea
 
 Varian. Hal R. \textit{Big data: New tricks for econometrics}. Journal of Economic Perspectives, 28(2):3–28, 2014. \newline
 
-Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities\_en.pdf} [Accessed on 25/08/2019]\newline
+Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]: \newline\href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020} [Accessed on 25/08/2019]\newline
 
-European Commission (2018). \textit{Ethics in Social Sciences and the Humanities} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities\_en.pdf} [Accessed on 25/08/2019] \newline
+European Commission (2018). \textit{Ethics in Social Sciences and the Humanities} [Online]: \href{https://ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020_ethics-soc-science-humanities_en.pdf}{ec.europa.eu/research/participants/data/ref/h2020/other/hi/h2020\_ethics-soc-science-humanities} [Accessed on 25/08/2019] \newline
 
 Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}. Encounter, March 1969, pp. 52-56 [Online]: \href{http://www.unz.com/print/Encounter-1969mar-00052}{http://www.unz.com/print/Encounter-1969mar-00052} [Accessed on 25/08/2019]\newline
 
 Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}. Science, November 1999: Vol. 286, Issue 5444, pp. 1475 [Online]: \href{https://science.sciencemag.org/content/286/5444/1475.full}{https://science.sciencemag.org/content/286/5444/1475.full} [Accessed on 25/08/2019] DOI: 10.1126/science.286.5444.1475 \newline
  
-Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.} Princeton, NJ: Princeton University Press.\newline
+Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age.} Princeton, NJ: Princeton University Press.\newline
 
 Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic Oath, says academic.} The Guardian [Online]: \href{https://www.theguardian.com/science/2019/aug/16/mathematicians-need-doctor-style-hippocratic-oath-says-academic-hannah-fry} [Accessed on 25/08/2019]\newline
 
@@ -557,6 +558,84 @@ $$\textbf{X}_j=\begin{bmatrix}
            library\_distance \\
          \end{bmatrix}$$
 \newpage
-\subsubsection{t}         
+\subsubsection{}  
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Feature} & \textbf{Description} & \textbf{Dropped} \\ 
+\hline 
+agentDisplayName & Real estate Agent Name & True \\ 
+\hline 
+agentRegId & Real-estate Agent ID & True \\ 
+\hline 
+area & Area of country (11 areas) & True \\ 
+\hline 
+basementSize & Square meters of basement & False \\ 
+\hline 
+buildYear & Year of house built & False \\ 
+\hline 
+city & City Name & False \\ 
+\hline 
+createdDate & Day of offer creation & True \\ 
+\hline 
+daysForSale & Scraping date - createdDate & False \\ 
+\hline 
+domainId & Description unknown & True \\ 
+\hline 
+energyClass & Energy scale - not sufficiently formated & True \\ 
+\hline 
+exp & Property expenses & False \\ 
+\hline 
+floor & Entrance floor & False \\ 
+\hline 
+groupKey & Key for same buildings & True \\ 
+\hline 
+guid & Link & True \\ 
+\hline 
+id & Unique identifier & True \\ 
+\hline 
+images & Image format dictionary & True \\ 
+\hline 
+inWatchlist & In profile's watchlist & True \\ 
+\hline 
+isActive & If the offer is active on webpage (all are active)
+ & True \\ 
+\hline 
+isForeclosure & The house is being foreclosed & True \\ 
+\hline 
+isPremiumAgent & An agent ranking & True \\ 
+\hline 
+latitude & Latitude of address & False \\ 
+\hline 
+longitude & Longitude of adress & False \\ 
+\hline 
+lotSize & Size of total property & False \\ 
+\hline 
+municipality & Municipality code & False \\ 
+\hline 
+net & Description unknown & True \\ 
+\hline 
+openHouse & Boolean. True if future open house date exists & True \\ 
+\hline 
+price & Total price (Target) & False \\ 
+\hline 
+priceChangePercentTotal & Price change since first valuation & True \\ 
+\hline 
+propertyType & Property type category & False \\ 
+\hline 
+rooms & No. of rooms & False \\ 
+\hline 
+selfsale & Bool if property sold without agen & True \\ 
+\hline 
+size & Size of residential property & False \\ 
+\hline 
+squaremeterPrice & Price/size & True \\ 
+\hline 
+street & Street name & True \\ 
+\hline 
+views & No. of views on website & True \\ 
+\hline 
+zipCode & Zipcode (Post nr.) & True \\ 
+\hline 
+\end{tabular}       
          
 \end{document}
