@@ -40,6 +40,9 @@
 \usepackage{booktabs,siunitx}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\usepackage{tablefootnote}
 \lhead{}
 \rhead{}
 \chead{Social Data Science, Summer 2019.}
@@ -63,7 +66,7 @@ This report depicts a research performed regarding active Danish real estate pro
 
 Figure 1 shows the average square meter price valuation of active offers per municipality in Denmark. The maximum square meter price being approximately 8 times higher in the municipality of Gentofte, than Lolland, the municipality with the lowest average square meter price valuations. A tendency visualised in the figure, is that average square meter price valuations are higher in highly populated municipalities and in suburban areas surrounding Copenhagen. \newline
 
-The valuations included in the research are collected from one of Denmarks largest online real estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from DKK. 15,000 to DKK. 85 million. This research paper intends to analyse real estate price valuations and which geo- and sociodemographic criteria affect valuations, using machine learning models. Our research question is as follows: 
+The valuations included in the research are collected from one of Denmarks largest online real estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from DKK 15,000 to DKK 85 million. This research paper intends to analyse real estate price valuations and which geo- and sociodemographic criteria affect valuations, using machine learning models. Our research question is as follows: 
 \begin{center}
  \textit{Which features are most relevant for predicting valuations of real estate properties in Denmark?}
 \end{center}
@@ -119,7 +122,7 @@ Distances to: & lake, forest, doctor, supermarket,	school, daycare, hospital, tr
 
 \paragraph{Socioeconomic Factors\newline}
 Socioeconomic factors on municipality level was collected from \href{https://statistik.politi.dk/QvAJAXZfc/opendoc.htm?document=QlikApplication%2F2999_Public\%2FPublic_IndsatsResultater.qvw}{statistik.politi.dk} and  
-\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. The factors include income, reported crime, level of highest completed education etc. These are transformed into ratios, by taking the total population in a given municipality into account.   
+\href{https://www.dst.dk/da/Statistik/emner/befolkning-og-valg}{Danmarks Statistik} respectively. The factors include income, reported crime, level of highest completed education, etc. These were transformed into ratios, by taking the total population in a given municipality into account.   
  \vspace*{5px} \newline
 \begin{tabular}{c c}
 \textit{Features obtained:}: & unemployment\_relative, primary\_school\_educ, high\_school\_educ \\	
@@ -142,9 +145,9 @@ Socioeconomic factors on municipality level was collected from \href{https://sta
 \footnotesize{\textit{All educational features are a measure of highest completed education. Furthermore SHE, MHE, LHE are abbreviations of short-, medium- and long-cycle higher education}}. 
 \normalsize
 \subsection{Analysis of Scraping Logs}
-Three datasets were obtained through web scraping from Boliga.dk, Hvorlangterder.dk and DAWA.dk. This section will analyse the logs created in the scraping process, with the intention of providing evidence of the data quality. The analysis the scraping logs was done according to Snorres demand on analyzing logs. 
+Three datasets were obtained through web scraping from Boliga.dk, Hvorlangterder.dk and DAWA.dk. This section will analyse the logs created in the scraping process, with the intention of ensuring the data quality.
 \paragraph{Response Code\newline}
-When parsing data from websites, the goal is to receive a response code ‘200’, expressing a successful request. \textcolor{red}{Fig XA} displays response codes for the duration of the web scrapings. Every single request received a response code 200. Further evaluation of the response codes was not necessary.
+When parsing data from websites, the goal is to receive a response code ‘200’, expressing a successful request. \textcolor{red}{Fig XA} displays response codes for the duration of the web scrapings. Every request received a response code 200, making further evaluation of the response codes redundant.
 \begin{figure}[H]
   \centering
    \caption{}
@@ -153,17 +156,18 @@ When parsing data from websites, the goal is to receive a response code ‘200�
 \end{figure}
 
 \paragraph{Error Codes\newline}
-\textcolor{red}{Figure XB} plots errors codes received throughout the duration of the scrapings. Boliga and DAWA received no errors, while hvorlangterder received a total of 80 errors. The error code returns the same response in all 80 cases: \small{\textbf{('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))}}
+\textcolor{red}{Figure XB} plots error codes received throughout the duration of the scrapings. Boliga and DAWA received no errors, while hvorlangterder received a total of 80 errors. The error code returned the same response in all 80 cases: \small{\textbf{('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))}}
+\normalsize
 \begin{figure}[H]
   \centering
    \caption{}
    \includegraphics[width=\linewidth]{2log.png} 
   \label{fig:}
 \end{figure}
-To understand the errors, a closer manual analysis of the log was performed on requests receiving errors. The errors occur in random intervals and are subsequently followed by another request to an identical URL. Therefore, we assessed that these errors were due to connection problems or server traffic. Since the errors were corrected by a following request, we assessed it would not affect the research.
+To understand the errors, a closer manual analysis of the log was performed on requests receiving errors. The errors occurred in random intervals and were subsequently followed by another request to an identical URL. Therefore, we assessed that these errors were due to connection problems or server traffic. Since the errors were corrected by a following request, it should not affect the research.
 
 \paragraph{Server Response Times\newline}
-An indicator of poor data quality is varying the response times from the server being scraped. \textcolor{red}{Figure XC} plots changes in response times for the duration of the web scrapings. The 3 data sources all resulted in few variations of response times.  Responses times differing from usual within the logs, have been assessed to be caused by two either a slow server time or connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned result and the webpage result was performed, without the notice of significant corruptions in the data to be utilised in the research.
+An indicator of poor data quality is varying response times from the server being scraped. \textcolor{red}{Figure XC} plots changes in response times for the duration of the web scrapings. The three data sources all resulted in few variations of response time. Unusual response times has been assessed within the logs, to be caused by either a slow server connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned results and the webpage results was performed, without notice of significant corruptions in the data utilised in the research.
 \begin{figure}[H]
   \centering
    \caption{}
@@ -172,30 +176,30 @@ An indicator of poor data quality is varying the response times from the server 
 \end{figure}
 
 \paragraph{Response Sizes\newline}
-To validate the response quality, an assessment of the response size was performed. \textcolor{red}{Figure XD} plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeable large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in indifferent response sizes, and therefore needed no further investigation. 
+To validate the response quality, an assessment of the response size was performed. \textcolor{red}{Figure XD} plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeably large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in consistent response sizes, and therefore needed no further investigation. 
 \begin{figure}[H]
   \centering
    \caption{}
    \includegraphics[width=\linewidth]{4log.png} 
   \label{fig:}
 \end{figure}
-With a further analysis the distribution of sample sizes in figure XE, the Boliga and DAWA response sizes seem to be close to normally distributed, except for two single cases of large sample sizes in the Boliga log. By manually assessing the returned output of the Boliga scrape, these two requests were found to return a larger amount of data than usual. The two requests were made to two pages, where few properties contain nested dictionary attributes approximately 59 times larger than the average size of dictionaries within the ‘image’ data column. These dictionaries are image descriptions, and are not utilised within this research. These larger responses were deemed as not polluting the results of the research.
+Examining the distribution of sample sizes in figure XE, the Boliga and DAWA response sizes seem to be close to normally distributed, except for two single cases of large sample sizes in the Boliga log. By manually assessing the returned output of the Boliga scrape, these two requests were found to return a larger amount of data than usual. The requests were made to two pages, where a few properties contained nested dictionary attributes approximately 59 times larger than the average size of dictionaries within the ‘image’ data column. These dictionaries were image descriptions, and were not utilised within this research. These larger responses were deemed as not polluting the results of the research.
 \begin{figure}[H]
   \centering
    \caption{}
    \includegraphics[width=\linewidth]{5log.png} 
   \label{fig:}
 \end{figure}
-\textcolor{red}{Figure XE depicts that the hvorlangerder response sizes are a bit left scewed, while Figure XD} shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. First, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes were performed without discovering flaws. The response sizes from hvorlangterder are found to vary by nature, which may explain the difference.  
+\textcolor{red}{Figure XE depicts that the hvorlangerder response sizes were a bit left skewed, while Figure XD} shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. Firstly, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes was performed without discovering flaws. The response sizes from hvorlangterder are found to vary in nature, which may explain the difference.  
 
-\paragraph{Assesment of the Scraping Logs\newline}
-The individual analyses of the scraping logs showed minor suspicious traits which were assessed manually through the output or logs. The most concerning analysis being difference in response sizes and response times from the hvorlangterder scrape. This scrape consumed large amounts of time and computing power, as every single observation from the Boliga data, had to be input for requesting a response. In an extensive research, these problems could be handled by gaining direct access to the website instead of scraping and would benefit by running on a server with greater computing power. The results of the data collection were evaluated to be satisfying, and not corrupting the results of our research, as fairly reasonable explanations for noticeable dissimilarities within the logs were found. 
+\paragraph{Assessment of the Scraping Logs\newline}
+The individual analysis of the scraping logs showed minor suspicious traits which were assessed manually through the output or logs. The most noticeable analysis being differences in response sizes and response times from the hvorlangterder scrape. This scrape consumed large amounts of time and computing power, as every single observation from the Boliga data, had to be input for requesting a response. In an extensive research, these problems could be handled by gaining direct access to the website instead of scraping and would benefit from running on a server with greater computing power. The results of the data collection were evaluated to be satisfying, and not corrupting the results of our research, as fairly reasonable explanations for noticeable dissimilarities within the logs were found. 
 
 \paragraph{Critique of Logs Using Scraping Class\newline}
-In the process of analyzing the scraping logs, minor flaws from the scraping library named ‘scraping\_class’ were detected. The returned columns ‘t’ and ‘delta\_t’ contained non-generic formats of epoch time. This was fixed by applying string manipulation and datetime conversions. 
+In the process of analysing the scraping logs, minor flaws from the scraping library named ‘scraping\_class’ were detected. The returned columns ‘t’ and ‘delta\_t’ contained non-generic formats of epoch time. This was fixed by applying string manipulation and datetime conversions. 
 
 \subsection{Merging Data}
-Pandas objects can be combined in different ways according to the nature of features in the dataset. Relational database style operations are based on linking keys together, thereby maintaining the relationship between the combined datasets\footnote{McKinney, W. (2018). \textit{Data Wrangling: Join, Combine and Reshape}. p. 231 }
+Pandas objects can be combined in different ways according to the nature of the features in the dataset. Relational database style operations are based on linking keys together, thereby maintaining the relationship between the combined datasets\footnote{McKinney, W. (2018). \textit{Data Wrangling: Join, Combine and Reshape}. p. 231 }.
 
 The data collection and scraping process provided a total of 15 Datasets from Boliga, Hvorlangterder, DAWA, the Danish Police, Social- \& Indenrigsministeriet and Danmarks Statistik. This section will describe how each dataset was merged, using pandas relational database styled merge and join operations. 
 
@@ -206,30 +210,32 @@ An evaluation of the Boliga datasets features and their ability to support furth
 
 -	Municipality: a numeric code for municipalities in Denmark
 
-The Boliga dataset acts as a master dataset and was joined or merged upon throughout the process, and acts as the “left” of all operations. The Longitude and Latitude features serve as specific coordinates for valued properties but are in few cases repetitive regarding different apartments from the same complex. The municipality code was used for translation purposes between the master dataset and other datasets.  
+The Boliga dataset acted as a master dataset and was joined or merged upon throughout the process, and acted as the \textit{left} of all operations. The Longitude and Latitude features served as specific coordinates for valued properties but were in few cases repetitive regarding different apartments from the same complex. The municipality code was used for translational purposes between the master dataset and other datasets.  
 
 \paragraph{DAWA\newline}
-The DAWA dataset was scraped with an input of a distinct municipality code from the master dataset, returning a dataframe of municipality names for each code. This dataframe was merged onto the Boliga dataframe as a many-to-one merge with municipality code as the merge keys. The scraped municipality names from DAWA was used as the merge key for all further merges of municipal data. 
+The DAWA dataset was scraped with an input of a distinct municipality code from the master dataset, returning a dataframe of municipality names for each code. This dataframe was merged onto the Boliga dataframe using a many-to-one merge with municipality codes as the merge keys. The scraped municipality names from DAWA was used as the merge key for all further merges of municipal data. 
 
 \paragraph{Danmarks Statistik, Danish Police \& Social og Indenrigsministeriet\newline}
 Of the municipality-based data collected, the merging of these to our master dataframe was subsequently performed identically. Every dataset contained a column for unique municipality names and values for the given feature of the dataset. A many-to-one left merge was performed with the master dataframe, using municipality names. The result being a master dataframe containing municipal specific features for properties. 
 
-The Danish Police datasets contained totals for different categories of crimes reported within municipalities. These datasets were outer joined with an index set to contain municipality names. Afterwards, the values were added to each other, providing a total of reported crimes within each municipality. The police statistics webpage does not specify whether different types of reported crimes can relate to a single case, but we assessed that the number of crimes reported provides a meaningful feature either way. The dataset containing total reported crimes per municipality, was merged with the master dataset in the same fashion as previous municipality-based features. 
+The Danish Police datasets contained totals for different categories of crimes reported within municipalities. These datasets were outer joined with an index set to contain municipality names. Afterwards, the values were added to each other, providing a total of reported crimes within each municipality. The police statistics webpage does not specify whether different types of reported crimes can relate to a single case, but we assessed that the number of crimes reported provides a meaningful feature either way. The dataset containing total reported crimes per municipality was merged with the master dataset in the same fashion as previous municipality-based features. 
 
 \paragraph{Hvorlangterder.dk\newline}
-The hvorlangterder scrape provided location specific features, taking an input of Latitude and Longitude coordinates. The scraping function, which was created for returning location-based features, created a column for the row specific values. Therefore, a merge operation was not necessary, but could alternatively have been managed with a one-to-one inner-merge id. As few coordinates regarding apartment properties are repetitive, these are not suitable for merging upon. 
+The hvorlangterder scrape provided location specific features, taking an input of Latitude and Longitude coordinates. The scraping function, which was created for returning location-based features, created a column for the row specific values. Therefore, a merge operation was not necessary, but could alternatively have been managed with a one-to-one inner-merge on id. As few coordinates regarding apartment properties are repetitive, these are not suitable for merging upon. 
 
 \subsection{Data Cleaning}
 The scraping of Boliga left us with 65,950 observations. However, big data is often dirty and requires tidying before it can be used in any meaningful statistical context (Salganik 2018). In the following sections we describe our data cleaning efforts. 
 \subsubsection{Initial clean-up}
-The initial clean-up sorted out rows that contained an illogical value. Here we focused our efforts on the removing any and all observations that contained a municipality code of 0. Additionally, we chose to exclude any real estate valued below DKK. 100, while these listings existed on Boliga's website, they were all listings, where the seller wanted  to sell to the highest bidder. We excluded these listings on the basis that they were unrealistically priced compared to the property's real market value.\newline
-Boliga subdivides its listings into ten real estate types. We chose to exclude the typification "other", as there were only 17 houses listed in the category - too few for training our machine learning model. Furthermore, we also removed any listing without coordinates as these were vital for the scraping process on hvorlangerder.dk.\newline
-We dropped all observations with an unreasonably high days-for-sale, as we saw these instances to not  represent reasonable pricing or demand. We have thus set an arbitrary limit of 3 years (1,095 days), and omitted any observations that has been on the market for longer than that. This results in the omission of approximately 5\% of our dataset. The highest mean "days-for-sale" on a municipal level was roughly 600 days, so as not to discriminate against the observations from the municipalities with a longer average 'sales time' we set the cut-off somewhat higher than the highest mean. Another option was to set the limit according to each municipality's mean, a solution that was a bit more time consuming, and would have yielded approximately the same result, hence we opted not to do it.
+The initial clean-up filter out rows that contained illogical values. Here we focused our efforts on removing any and all observations that contained a municipality code of zero. Additionally, we chose to exclude any real estate valued below DKK 100, these listings existed on Boliga's website, but were all auction listings. We excluded these listings on the basis that they were unrealistically priced compared to the property's real market value.\newline
+Boliga subdivides its listings into ten real estate types. We chose to exclude the typification "other", as there were only 17 houses listed in the category - too few for training our machine learning model. Furthermore, we also removed any listing without coordinates as these were vital for the scraping process of hvorlangterder.dk.\newline
+We dropped all observations with an unreasonably high days-for-sale, as we saw these instances to not  represent reasonable pricing or demand. We have thus set an arbitrary limit of 3 years (1,095 days), and omitted any observations that has been on the market for longer than that. This results in the omission of approximately 5\% of our dataset. The highest mean "days-for-sale" on a municipal level was roughly 600 days, so to avoid discrimination against the observations from the municipalities with a longer average days-for-sale we set the cut-off somewhat higher than the highest mean. Another option was to set the limit according to each municipality's mean, a solution that was a bit more time consuming.
 In figure XX the number of rows dropped at each step of the cleaning can be perused.
+\begin{table}
 \begin{center}
+\caption{Filtered Rows\label{time}}
 \begin{tabular}{|l|c|}
 \hline 
-Feature & \emph{n} \\
+\textbf{Feature} & \textbf{\emph{n}} \\
 \hline 
 Municipality code & 231 \\ 
 \hline 
@@ -241,11 +247,12 @@ Type & 17 \\
 \hline 
 days-for-sale & 3,940\\
 \hline 
-Total\footnote{"The total is the count of how many rows were dropped. Some rows were missing multiple features.} & 4,332\\
+Total\tablefootnote{The total is the count of how many rows were dropped. Some rows were missing multiple features} & 4,332\\
 \hline
 \end{tabular} 
-\end{center}
 
+\end{center}
+\end{table}
 \subsubsection{Ejerlejlighed's lot size}
 Inspecting our data we found that from 8,028 apartments 1,176 of these had a lot size. These listings included the apartment complex' common area, whereas the rest did not. To overcome this discrepancy we chose to set all non-zero values to zero, as not to confuse our model with an inconsistent feature (Raschka \& Mirjalili 2017).
 
@@ -323,14 +330,14 @@ $$L_{Ridge}(\hat{\beta}) = \left(\sum_{i=1}^{n} (y_i-\hat{y_i}(\beta))^2+\lambda
 
 
 \subsubsection{Elastic-net}
-The Elastic net combines the penalizing terms of Lasso and Ridge, with $\alpha$ defining the relative weights between Lasso and Ridge. Elastic net minimises the function: 
+The Elastic net combines the penalising terms of Lasso and Ridge, with $\alpha$ defining the relative weights between Lasso and Ridge. Elastic net minimises the function: 
 $$L_{elasticnet}(\hat{\beta}) = \frac{\sum_{i=1}^{n}\left(y_i-\hat{y_i}(\beta)\right)^2}{2n} + \lambda\left(\frac{1-\alpha}{2}\sum_{j=1}^{p}\hat{\beta_j}^2+\alpha\sum_{j=1}^{p}|\hat{\beta_j}|\right)$$
 $$0 \leq \alpha \leq 1 \quad \wedge \quad \lambda \geq 0$$
 
 \subsection{Selecting Features}
 In case regularization is not sufficient to cope with the overfitting of the model. Exclusion of features are a viable approach. With the number of scraped features in this project, taking into consideration. A recurring overfitting of the model would be likely. As a consequence a deliberate exclusion of features of interest will need to be carried out.    
 
-\subsection{Optimizing the Hyperparameter}
+\subsection{Optimising the Hyperparameter}
 To minimise the mean squared errors of our Lasso and Ridge regression we performed k-fold cross validation to optimise the hyperparameter $\lambda$. 
 We split the data into a test set and a development set, consisting of respectively 20\% and 80\% of the total observations. Subsequently, we use k-fold cross-validation to randomly split the development set into k folds, where k-1 folds are used to train the model. The remaining fold is used to validate the model’s generalizability by calculating the mean squared errors of the trained model’s prediction of the left-out fold\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow}. p.191}. This process is repeated k times and each time a new fold is left out for validation. Since we are working with a relatively large dataset we chose to split our data into 5 folds, and computed the average MSE for the 5 iterations. By using the k-fold cross-validation method we relieve ourselves of the concern that the estimation of our model’s performance is simply due to a lucky or unlucky split of the data. \newline
 We performed this procedure for 12 different values of $\lambda$ spanning between \textcolor{red}{$10^(-4) and 10^4$}. We chose the value of $\lambda$ which yields the smallest average MSE over the 5 folds. 
@@ -460,7 +467,7 @@ Finally, we have discussed the results of our analysis. We have critically asses
 
 \section{An Ethical Overview}
 The ethical principles of social research are anchored in the fundamental human rights, which are broadly formulated in the UN Declaration of Human Rights. Additional policies and declarations that codify principles of research ethics and the ethical treatment of research participants include the Nuremberg Code, the Helsinki Declaration, the Belmont Report, and the Menlo Report\footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit Bit - Social research in the digital age.}}\, \footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}}. These codes and addendums originate mostly in the biomedical field, though they encompass the central principles applied to all human research, which have led some academics to call for a Hippocratic oath for data scientists to safeguard against powerful new technologies under development in laboratories and tech firms\footnote{Rotblat, Joseph (1999) \textit{A Hippocratic Oath for Scientists}}\, \footnote{Sample, Ian (2019, Fri 16 Aug 2019) \textit{and tech specialists need Hippocratic oath, says academic.}}. This discussion is nothing new however, as a tentative reformulation of the Hippocratic oath was introduced by Karl Popper\footnote{Popper, Karl (1969) \textit{The Moral Responsibility of the Scientist}}, wherein he stressed the importance of professional responsibility, a critical mind, and an overriding loyalty towards the betterment of mankind.\newline
-Matthew Salganik offer four principles deduced from the Belmont and Menlo Report that should guide the ethical deliberations of the researcher: 1) the respect for persons, that is individuals should be treated as autonomous and if circumstances require it individuals should be entitled to additional protections. 2) Beneficence stresses the importance of doing no harm and to maximise the possible benefits and minimizing any potential harms. 3) The principle of justice touches upon the importance of the distribution of burdens and benefits of the social scientist's research. This principle stress that is should not be a single stratum of society that bears the costs of the research while another stratum benefits. 4) The fourth and final principle is the respect for law and public interest, according to Salganik, the principle consists of two distinct elements, that is compliance to relevant laws and legal contracts and transparency-based accountability. It is worth noting that Popper’s tentative Hippocratic oath mirrors the first three principles put forth by Salganik, stressing the importance of the ethical conduct of the researcher.\newline
+Matthew Salganik offer four principles deduced from the Belmont and Menlo Report that should guide the ethical deliberations of the researcher: 1) the respect for persons, that is individuals should be treated as autonomous and if circumstances require it individuals should be entitled to additional protections. 2) Beneficence stresses the importance of doing no harm and to maximise the possible benefits and minimising any potential harms. 3) The principle of justice touches upon the importance of the distribution of burdens and benefits of the social scientist's research. This principle stress that is should not be a single stratum of society that bears the costs of the research while another stratum benefits. 4) The fourth and final principle is the respect for law and public interest, according to Salganik, the principle consists of two distinct elements, that is compliance to relevant laws and legal contracts and transparency-based accountability. It is worth noting that Popper’s tentative Hippocratic oath mirrors the first three principles put forth by Salganik, stressing the importance of the ethical conduct of the researcher.\newline
 The need for rigid ethical standards within computational social science was made apparent by the Cambridge Analytica Scandal that broke on the 17th of March 2018. Where Steve Bannon could reveal that between 2013 and 2015 Cambridge Analytica had exploited a loophole in Facebook’s API which allowed the company to harvest profile data from 87 million Facebook users, without the user’s permission and use the harvested data to construct a massive targeted marketing database based on the user’s likes and interests\footnote{Vox.com (2018) \textit{The Cambridge Analytica Facebook scandal} [Online]}. Other examples of misuse of data acquired from Facebook include the Harvard-run experiment, where students' data was used to create new knowledge about how social networks form and how these networks and their actors' behavior co-evolve, and the emotional contagion experiment from 2012, where approximately 700,000 users were involved in a research experiment to examine the extent to which a person's emotions are affected by the emotions of the people they interact with (Salganik. 2018).\newline
 From this it should be evident that clear ethical guidelines are required in order to protect the user's privacy from tech-savvy companies. To this end, the European Parliament introduced the General Data Protection Regulation (GDPR). With its seven overarching principles the GDPR seeks to formalise the procedures involved in the data processing and storing of sensitive and private information (CDRC\footnote{Consumer Data Research Center, UK  [CDRC] (2018) \textit{The General Data Protection Regulation \& Social Science Research} [Online]:}). These principles include and expand upon the principles found in the Belmont and Menlo Report. The most important consideration, however, must be that even a dataset comprising tens of thousands of observations involve human beings who must be protected from adverse side-effects of the social research. There is considerable evidence that point to the fact that even in anonymised data sets it can be possible to backtrack an individual's identity. A researcher must therefore be mindful of the mosaic effect if the dataset combines large amount of data from various sources (European Commission 2018).
 
