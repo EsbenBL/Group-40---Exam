@@ -327,6 +327,22 @@ The prediction-errors of each model, with two and three degrees of polynomial fe
 The Ridge model with three degrees of polynomial features are selected as the best performing model. In regard to MAE as well as MSE.\newline
 We examine the validation curve, figure \textcolor{red}{XX}, of the model to examine whether we have found a good bias-variance-balance with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 
+\paragraph{Learning Curve}
+We examine the learning curve of the model to examine whether the model suffers from immediate over- or underfitting problems and whether these would be remedied by collecting more data\footnote{Rashka, Sebastian; Mirjalli, Vahid; \textit{Python Machine Learning, Machine Learning and Deep Learning with Python, scikit-learn, and Tensorflow} p. 196}
+The following plot illustrates the learning curve of our model:
+\begin{figure}[H]
+\centering
+\caption{}
+\includegraphics[scale=0.6]{Learncurvridge.png}
+%\source{}
+\end{figure}
+The plotted curved represent the average performance of the sets, while the width of the plotted curves expresses the 95\%-confidence interval of the performance.  
+Interpreting the graph could appear quite daunting, as the performances on the validation set are very inconsistent and varies a lot. Though inconsistent, it seems as if the gap is decreasing between the performances of the training- and validation sets as the sample size increases. 
+At around 33,000 observations the validation curve drastically decreases and both curves flatten out. Though the confidence interval of the validation performance is still noteworthy it also improves dramatically when the sample gets sufficiently high. Just before 40,000 observations, the confidence interval of the validation curve actually drops below the train curve, which should not be possible. We have not found a meaningful explanation aside from noise or chance \footnote{\href{https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html}{jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html}} 
+All in all, the learning curve would indicate that the performance of the model will not benefit from additional training data. 
+
+\paragraph{Validation Curve}
+We examine the validation curve of the model to see whether we have found a good bias-variance-trade-off with our optimized hyperparameter. We plot the average train and cross-validation performance for different values of $\lambda$: 
 \begin{figure}[H]
 \centering
 \caption{}
@@ -335,18 +351,11 @@ We examine the validation curve, figure \textcolor{red}{XX}, of the model to exa
 \end{figure}
 The dotted line approximately represents the optimized value of lambda from our previously conducted k-fold cross-validation. 
 
-Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data. 
+\textcolor{red}{Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data.} 
 The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
-Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem to make for more less variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
+Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, \textcolor{red}{this would not seem to make for more less variance}. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
 
-The learning-curve is depicted in figure \textcolor{red}{XX}
-\begin{figure}[H]
-\centering
-\caption{}
-\includegraphics[scale=0.6]{Learncurvridge.png}
-%\source{}
-\end{figure}
 
 
 
@@ -436,8 +445,9 @@ Mullainathan, Sendhil, and Jann Spiess (2017) \textit{Machine Learning: An Appli
 
 Anderson, Chris (2008) \textit{The end of theory: The data deluge makes the scientific method obsolete}. Wired, 16-07 [Online] \href{https://www.wired.com/2008/06/pb-theory/}{www.wired.com/2008/06/pb-theory/} [Accessed on 27/08/2019]\newline
 
-Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}. Available at \href{http://kt.ijs.si/theses/phd_aleksandar_peckov.pdf}{kt.ijs.si/theses/phd\_aleksandar\_peckov.pdf}. Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012
+Peckov, Aleksandar. (2012)  \textit{A Machine Learning Approach To Polynomial Regression}. Available at \href{http://kt.ijs.si/theses/phd_aleksandar_peckov.pdf}{kt.ijs.si/theses/phd\_aleksandar\_peckov.pdf}. Doctoral Dissertation. Jozef Stefan International Postgraduate School. Ljubljana, Slovenia, October 2012. [Accessed on 29/08/2019]
 
+(https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html). [Accessed on 29/08/2019]
 %Varian, Hal R. (2014) Big Data: New Tricks for Econometrics. Journal of Economic Perspectives. Vol. 28, April: 3-27 \newline
 
 \newpage
