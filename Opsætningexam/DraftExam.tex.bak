@@ -356,7 +356,7 @@ The dotted line approximately represents the optimized value of lambda from our 
 
 \textcolor{red}{Firstly, we are somewhat satisfied with the average performance of the model. With an MSE of approximately $55\cdot10^{10}$ and a MAE of DKK 43,630.55, we find that the model performs quite well on unseen data.} 
 The curve suggest that we have found the optimal degree of regularization with our hyperparameter. Had we chosen a smaller value of $\lambda$, the model would have had too high variance and thus been overfit. This is deduced by how poorly the validation predictions performs at smaller lambdas, as opposed to the training performance. On the contrary, had we chosen a greater value of $\lambda$, the model would have been too biased. This is illustrated by how poorly the training data, as well as the validation data, performs at higher values of $\lambda$ . In that case, we would have underfit our model. 
-Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, \textcolor{red}{this would not seem to make for more less variance}. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
+Nonetheless, it is apparent that our model performs better on the training data, which indicates that it retains a degree of overfitting. For the abovementioned reasons, it would not be meaningful to minimize this performance gab by adjusting the hyperparameter. Other options for decreasing the variance of the model, could be to include more training data, but as illustrated by the learning curve, this would not seem effect the variance. Lastly, as overfitting is often caused by a sizeable number of features, omission would be a reasonable mean. As we have already conducted feature selection on the basis of correlations, we did not find a feasible way to conduct further selection. This could be a subject for further studies, to investigate whether this could improve the performance and evaluation of the model. \newline
 In conclusion, it would seem that we have found the hyperparameter which yields the optimal bias-variance-trade-off. We can thus conclude that we have optimized our model under the given circumstances. 
 
 
@@ -372,6 +372,8 @@ In conclusion, it would seem that we have found the hyperparameter which yields 
 
 
 \section{Discussion}
+\subsection{No grit search}
+
 \subsection{Data critique}
 Another interesting prediction which could have been done using the same methods, would have been to predict selling prices. This could have been done simply by scraping data on sold housing instead. This could be of more value for private agents, whose main interest should be the selling price of their housing. %This approach would undoubtedly get a greater data basis.  needs to add time series trends 
 \newline 
