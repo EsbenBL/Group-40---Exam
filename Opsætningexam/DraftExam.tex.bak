@@ -65,7 +65,6 @@ This research paper regards listed Danish real estate property valuations. Since
 \end{figure}
 
 Figure 1 shows the average square meter price valuation of active offers per municipality in Denmark. The maximum square meter price being approximately 8 times higher in the municipality of Gentofte, than Lolland, the municipality with the lowest average square meter price valuations. A tendency visualised in the figure, is that average square meter price valuations are higher in highly populated municipalities and in suburban areas surrounding Copenhagen. \newline
-
 The valuations included in the research are collected from one of Denmarks largest online real estate websites named Boliga.dk. The Boliga data contains approximately 66,000 active offerings with valuations ranging from DKK 15,000 to DKK 85 million. This research paper intends to use machine learning to analyse real estate price valuations and which geographical and sociodemographic criteria affect valuations. Our research question is as follows: 
 \begin{center}
  \textit{How can geographic and sociodemographic features be utilised to predict real estate property valuations in Denmark?}
@@ -112,8 +111,8 @@ Continuous: & basementSize, buildYear, ownersExspenses, lotSize	, price, rooms, 
 \begin{tabular}{c c}
 Categorical: & ForClosure, Type, Municipality	 \\	
 \end{tabular}
-\paragraph{\href{https://www.hvorlangterder.dk}{hvorlangterder.dk}\newline}
-\href{https://www.hvorlangterder.dk}{hvorlangterder.dk} returns distances from a given address, to everyday commodities such as supermarkets, hospitals and schools.   
+\paragraph{\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk}\newline}
+\href{https://www.hvorlangterder.dk}{Hvorlangterder.dk} returns distances from a given address, to everyday commodities such as supermarkets, hospitals and schools.   
 The scraping of \href{https://www.hvorlangterder.dk}{hvorlangterder.dk} was achieved by writing a function that took in the GPS-coordinates gathered from Boliga. The function returned 65,950 URL responses, from which relevant information was extracted.\newline
 As Jupyter performs poorly when running long asynchronous tasks and the estimated running time was 18 hours, this procedure was run in Visual Studio Code.
  \vspace*{10px} \newline

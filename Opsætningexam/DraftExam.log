@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  30 AUG 2019 01:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.17)  30 AUG 2019 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1575,11 +1575,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1587,7 +1582,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4 <./123.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 77.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 76.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1627,7 +1622,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <1log.png, id=351, 1005.7575pt x 293.095pt>
 File: 1log.png Graphic file (type png)
 <use 1log.png>
-Package pdftex.def Info: 1log.png  used on input line 164.
+Package pdftex.def Info: 1log.png  used on input line 163.
 (pdftex.def)             Requested size: 455.24411pt x 132.66522pt.
 
 
@@ -1638,16 +1633,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 169.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 168.
 <2log.png, id=360, 1001.7425pt x 296.60812pt>
 File: 2log.png Graphic file (type png)
 <use 2log.png>
-Package pdftex.def Info: 2log.png  used on input line 174.
+Package pdftex.def Info: 2log.png  used on input line 173.
 (pdftex.def)             Requested size: 455.24411pt x 134.79396pt.
 <3log.png, id=361, 996.22188pt x 296.60812pt>
 File: 3log.png Graphic file (type png)
 <use 3log.png>
-Package pdftex.def Info: 3log.png  used on input line 184.
+Package pdftex.def Info: 3log.png  used on input line 183.
 (pdftex.def)             Requested size: 455.24411pt x 135.54074pt.
 
 
@@ -1660,12 +1655,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <4log.png, id=372, 999.735pt x 293.095pt>
 File: 4log.png Graphic file (type png)
 <use 4log.png>
-Package pdftex.def Info: 4log.png  used on input line 193.
+Package pdftex.def Info: 4log.png  used on input line 192.
 (pdftex.def)             Requested size: 455.24411pt x 133.46576pt.
 <5log.png, id=373, 1003.75pt x 293.095pt>
 File: 5log.png Graphic file (type png)
 <use 5log.png>
-Package pdftex.def Info: 5log.png  used on input line 200.
+Package pdftex.def Info: 5log.png  used on input line 199.
 (pdftex.def)             Requested size: 455.24411pt x 132.93356pt.
 
 
@@ -1690,7 +1685,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 248.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 246.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1709,17 +1704,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <Box1.png, id=418, 939.51pt x 361.35pt>
 File: Box1.png Graphic file (type png)
 <use Box1.png>
-Package pdftex.def Info: Box1.png  used on input line 299.
+Package pdftex.def Info: Box1.png  used on input line 297.
 (pdftex.def)             Requested size: 469.75385pt x 180.67456pt.
 
-Overfull \hbox (14.50974pt too wide) in paragraph at lines 299--301
+Overfull \hbox (14.50974pt too wide) in paragraph at lines 297--299
  [][] 
  []
 
 <Box2.png, id=419, 810.02625pt x 299.1175pt>
 File: Box2.png Graphic file (type png)
 <use Box2.png>
-Package pdftex.def Info: Box2.png  used on input line 309.
+Package pdftex.def Info: Box2.png  used on input line 307.
 (pdftex.def)             Requested size: 405.01213pt x 149.55838pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1731,7 +1726,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <bar1.png, id=429, 787.94376pt x 507.8975pt>
 File: bar1.png Graphic file (type png)
 <use bar1.png>
-Package pdftex.def Info: bar1.png  used on input line 320.
+Package pdftex.def Info: bar1.png  used on input line 318.
 (pdftex.def)             Requested size: 393.97092pt x 253.94814pt.
 
 
@@ -1755,14 +1750,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 <Corrplot.png, id=464, 758.835pt x 621.32124pt>
 File: Corrplot.png Graphic file (type png)
 <use Corrplot.png>
-Package pdftex.def Info: Corrplot.png  used on input line 362.
+Package pdftex.def Info: Corrplot.png  used on input line 360.
 (pdftex.def)             Requested size: 455.30452pt x 372.79562pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1781,10 +1776,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <predictactual.png, id=478, 1071.00125pt x 539.01375pt>
 File: predictactual.png Graphic file (type png)
 <use predictactual.png>
-Package pdftex.def Info: predictactual.png  used on input line 401.
+Package pdftex.def Info: predictactual.png  used on input line 399.
 (pdftex.def)             Requested size: 428.39291pt x 215.60167pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
@@ -1798,12 +1793,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <Learncurvridge.png, id=487, 639.38875pt x 273.02pt>
 File: Learncurvridge.png Graphic file (type png)
 <use Learncurvridge.png>
-Package pdftex.def Info: Learncurvridge.png  used on input line 413.
+Package pdftex.def Info: Learncurvridge.png  used on input line 411.
 (pdftex.def)             Requested size: 383.6362pt x 163.81326pt.
 <ValCurveRidge3deg.png, id=490, 580.1675pt x 394.47375pt>
 File: ValCurveRidge3deg.png Graphic file (type png)
 <use ValCurveRidge3deg.png>
-Package pdftex.def Info: ValCurveRidge3deg.png  used on input line 426.
+Package pdftex.def Info: ValCurveRidge3deg.png  used on input line 424.
 (pdftex.def)             Requested size: 348.10316pt x 236.68607pt.
 
 
@@ -1841,81 +1836,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
-
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 472.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (3.19966pt too wide) in paragraph at lines 478--479
+[]\T1/ptm/m/n/12 DST (2019) []$\T1/pcr/m/n/12 https : / / www . dst . dk / da /
+ Statistik / nyt / NytHtml ? cid = 27979$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
-
+Overfull \hbox (3.19966pt too wide) in paragraph at lines 481--482
+[]\T1/ptm/m/n/12 DST (2019) []$\T1/pcr/m/n/12 https : / / www . dst . dk / da /
+ Statistik / nyt / NytHtml ? cid = 28741$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
-
- []
-
-
-Overfull \hbox (5.31017pt too wide) in paragraph at lines 482--483
-[]\T1/ptm/m/n/12 ec.europa.eu/research/participants/data/ref/h2020/other/hi/h20
-20_ethics-soc-science-humanities[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
-
- []
-
-
-Overfull \hbox (5.91246pt too wide) in paragraph at lines 484--485
-\T1/ptm/m/n/12 52-56 [On-line]: []http://www.unz.com/print/Encounter-1969mar-00
-052[] [Ac-cessed on 25/08/2019] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
-
- []
-
-
-Overfull \hbox (26.63339pt too wide) in paragraph at lines 492--493
-[]\T1/ptm/m/n/12 Vox.com (2018) \T1/ptm/m/it/12 The Cam-bridge An-a-lyt-ica Fac
-e-book scan-dal \T1/ptm/m/n/12 [On-line]: [][[]Ac-cessed on 26/08/2019] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
-
+Overfull \hbox (114.18306pt too wide) in paragraph at lines 485--486
+[]\T1/ptm/m/n/12 European Com-mis-sion (2018) \T1/ptm/m/it/12 Ethics in So-cial
+ Sci-ences and the Hu-man-i-ties\T1/ptm/m/n/12 [Online]: []https://ec.europa.eu
+/[][Accessed
  []
 
 
@@ -1925,61 +1865,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
-
- []
-
-
-Overfull \hbox (3.68867pt too wide) in paragraph at lines 514--515
-[]\T1/ptm/m/n/12 (https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyp
-erparameters-and-model-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1989,10 +1874,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [30]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 527.
+(hyperref)                than one, level fixed on input line 523.
 
 
-Overfull \hbox (92.5989pt too wide) in paragraph at lines 528--530
+Overfull \hbox (92.5989pt too wide) in paragraph at lines 524--526
 \T1/ptm/m/n/12 municipality, lot-Size, un-em-ploy-ment, To-tal_reported_crime, 
 So-cioe-co-nomic_index, ex-penses_per_school_student,
  []
@@ -2011,11 +1896,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 641.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 641.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 637.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 637.
  (./DraftExam.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 641.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 641.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 637.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 637.
 Package rerunfilecheck Info: File `DraftExam.out' has not changed.
 (rerunfilecheck)             Checksum: FD8DBB8DDB37F9A34EE372B14E486140;2528.
 
@@ -2025,14 +1910,14 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 534 ({)
+### simple group (level 1) entered at line 530 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33629 strings out of 492649
- 646967 string characters out of 6129622
- 730941 words of memory out of 5000000
- 36838 multiletter control sequences out of 15000+600000
- 584450 words of font info for 98 fonts, out of 8000000 for 9000
+ 33660 strings out of 492649
+ 647405 string characters out of 6129622
+ 729941 words of memory out of 5000000
+ 36864 multiletter control sequences out of 15000+600000
+ 585071 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,78p,10378b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -2043,14 +1928,15 @@ usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on DraftExam.pdf (32 pages, 2494566 bytes).
+al/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on DraftExam.pdf (32 pages, 2507786 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 541 compressed objects within 6 object streams
+ 640 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
  145 named destinations out of 1000 (max. 500000)
  402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
