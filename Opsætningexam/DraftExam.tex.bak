@@ -82,7 +82,7 @@ The contribution from the social sciences to machine learning help create new me
 
 \subsection{Ethical Considerations in the Current Research Project}
 In the current paper the appropriate care and consideration has been given to the ethical concerns regarding the scraping, processing, and the presentation of the data. Drawing upon the European Comissions\footnote{European Commission (2018). \textit{Ethics in Social Sciences and the Humanities}} guidelines and principles for ethical conduct in social data science, the potential harm to users of Boliga's web-page were carefully considered. As a step to prevent the mosaic effect and in an effort to anonymize the scraped data only aggregated data will be presented in this paper, so that no single observation can be identified from the analysed data.\newline
-No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age.} p.303} Adhering to this, more complex understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism}. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
+No informed consent has been obtained from the users of the site, prompting us to consider the consequences of the lack thereof, as informed consent is paramount to the proper, ethical conduct in social science. However, as in this instance, informed consent can be logistically impossible to collect from all participants in the study. Salganik mentions that informed consent for everything is an ideal, but in practice impossible to obtain and researchers should instead strive to follow an alternative rule, that he describes as: "some form of consent for most things." \footnote{Salganik, Matthew J. (2018) \textit{Bit by Bit - Social research in the digital age.} p.303} Adhering to this, more complex understanding of the practicality of informed consent, we chose to contact Boliga to inform them of our intent to scrape their website and use the data in an educational context\footnote{Shiab, Nael (2015) \textit{On the Ethics of Web Scraping and Data Journalism}}. Boliga responded positively to our inquiry, which we took as informed consent from a third party on behalf of the participating users in our study.\newline
 In considering the legal ramifications of our research and to make sure we adhere to the seven principles of GDPR, and other appropriate legislation and legal contracts, we consulted the general guidelines introduced by the Consumer Data Research Center. In particular we noted that we are justified to collect and use the data on the lawful basis of legitimate interests. Furthermore, we consulted with Boliga's Terms and Conditions to avoid any legal ramifications and the appropriate contractual terms of interest can be seen in \href{https://www.boliga.dk/vilkaar-og-betingelser}{§10 Terms and Conditions}. In order to comply with these terms we refrained from burdening their website's performance by implementing a time.sleep function. This causes each scraping iteration to pause for 0.5 seconds before commencing on scraping the next page \textcolor{red}{(see Jupyter XX)}. 
 \subsection{Data Scraping Process}
 In the following paragraphs our scraping efforts will be described. The scrapers can be examined in the attached Jupyter Notebooks labelled \textcolor{red}{XX and XX.} 
@@ -142,10 +142,54 @@ Socioeconomic factors on municipality level was collected from \href{https://sta
 Three datasets were obtained through web scraping from Boliga.dk, Hvorlangterder.dk and DAWA.dk. This section will analyze the logs created in the scraping process, with the intention of providing evidence of the data quality. The analysis the scraping logs was done according to Snorres demand on analyzing logs. 
 \paragraph{Response Code}
 When parsing data from websites, the goal is to receive a response code ‘200’, expressing a successful request. \textcolor{red}{Fig XA} displays response codes for the duration of the web scrapings. Every single request received a response code 200. Further evaluation of the response codes was not necessary.
-
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{1log.png} 
+  \label{fig:}
+\end{figure}
 
 \paragraph{Error Codes}
-\textcolor{red}Figure XB plots errors codes received throughout the duration of the scrapings. Boliga and DAWA received no errors, while hvorlangterder received a total of 80 errors. The error code returns the same response in all 80 cases: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+\textcolor{red}{Figure XB} plots errors codes received throughout the duration of the scrapings. Boliga and DAWA received no errors, while hvorlangterder received a total of 80 errors. The error code returns the same response in all 80 cases: \small{\textbf{('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))}}
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{2log.png} 
+  \label{fig:}
+\end{figure}
+To understand the errors, a closer manual analysis of the log was performed on requests receiving errors. The errors occur in random intervals and are subsequently followed by another request to an identical URL. Therefore, we assessed that these errors were due to connection problems or server traffic. Since the errors were corrected by a following request, we assessed it would not affect the research.
+
+\paragraph{Server Response Times}
+An indicator of poor data quality is varying the response times from the server being scraped. \textcolor{red}{Figure XC} plots changes in response times for the duration of the web scrapings. The 3 data sources all resulted in few variations of response times.  Responses times differing from usual within the logs, have been assessed to be caused by two either a slow server time or connection, or due to larger quantities of data being requested. To validate the quality of data, manual control of the returned result and the webpage result was performed, without the notice of significant corruptions in the data to be utilized in the research.
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{3log.png} 
+  \label{fig:}
+\end{figure}
+
+\paragraph{Response Sizes}
+To validate the response quality, an assessment of the response size was performed. \textcolor{red}{Figure XD} plots response sizes throughout the duration of the web scrapings. Boliga contains a single noticeable large response size within short time, while hvorlangterder response sizes vary throughout the scrape. The DAWA scrape resulted in indifferent response sizes, and therefore needed no further investigation. 
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{4log.png} 
+  \label{fig:}
+\end{figure}
+With a further analysis the distribution of sample sizes in figure XE, the Boliga and DAWA response sizes seem to be close to normally distributed, except for two single cases of large sample sizes in the Boliga log. By manually assessing the returned output of the Boliga scrape, these two requests were found to return a larger amount of data than usual. The two requests were made to two pages, where few properties contain nested dictionary attributes approximately 59 times larger than the average size of dictionaries within the ‘image’ data column. These dictionaries are image descriptions, and are not utilized within this research. These larger responses were deemed as not polluting the results of the research.
+\begin{figure}[H]
+  \centering
+   \caption{}
+   \includegraphics[width=\linewidth]{5log.png} 
+  \label{fig:}
+\end{figure}
+\textcolor{red}{Figure XE depicts that the hvorlangerder response sizes are a bit left scewed, while Figure XD} shows that the distribution of large sizes happens during the middle of the scrape. With a further glimpse into the log, we observed two things. First, all response sizes of 0 are related to the errors, displayed in figure XB. The variance of responses could be explained by the type of data retrieved from the scrape. The request was set to return names, addresses, distances and other information, which sizes are varying in nature. When extracting the value from every single key of the dictionary output, no errors or missing values were found. Further control of samples of large and small sizes were performed without discovering flaws. The response sizes from hvorlangterder are found to vary by nature, which may explain the difference.  
+
+\paragraph{Assesment of the Scraping Logs}
+The individual analyses of the scraping logs showed minor suspicious traits which were assessed manually through the output or logs. The most concerning analysis being difference in response sizes and response times from the hvorlangterder scrape. This scrape consumed large amounts of time and computing power, as every single observation from the Boliga data, had to be input for requesting a response. In an extensive research, these problems could be handled by gaining direct access to the website instead of scraping and would benefit by running on a server with greater computing power. The results of the data collection were evaluated to be satisfying, and not corrupting the results of our research, as fairly reasonable explanations for noticeable dissimilarities within the logs were found. 
+
+\paragraph{Critique of Logs Using Scraping Class}
+In the process of analyzing the scraping logs, minor flaws from the scraping library named ‘scraping\_class’ were detected. The returned columns ‘t’ and ‘delta\_t’ contained non-generic formats of epoch time. This was fixed by applying string manipulation and datetime conversions. 
 
 \subsection{Merging Data}
 Pandas objects can be combined in different ways according to the nature of features in the dataset. Relational database style operations are based on linking keys together, thereby maintaining the relationship between the combined datasets\footnote{McKinney, W. (2018). \textit{Data Wrangling: Join, Combine and Reshape}. p. 231 }
