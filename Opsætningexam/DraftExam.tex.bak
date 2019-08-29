@@ -339,7 +339,7 @@ In a prediction-model like this it is near impossible to evade some form of omit
 The prediction of the cooperative housing valuation %\footnote{http://housingpeople.dk/en/housing-guide/housing-types/cooperative-andelsbolig/},
 are subject to significant bias, since the cooperative housing that enters the marked through a realtor often would be those with critical amount of undesirable characteristics. Like debt - which deflate the valuation accordingly.
 
-\subsection{Model Limitations and Irrelevancy}
+\subsection{Model Limitations}
 The necessity to exclude municipality dummies as regressors in the prediction models. Leaves the model to only separate municipalities by the socio-economic factors, which are subject to low variance. This makes distinction between municipality a lot more difficult as well as uncertain.   
 Without the municipality dummies, the interpretation of the prediction results are more insecure. %Instead of predicting the valuation of a given estate, of a given type, in a given municipality or city. It predicts the valuation of a estate at a \textit{more or less} location in Denmark by type, only geographically controlled by distances to various conveniences. 
 Geographical boundaries could have been limited way more, resulting in easier interpretation of predictions. Potentially by predicting only for a specific city or municipality. \\
@@ -404,8 +404,8 @@ Excluded Features:\newline
 municipality, lotSize, unemployment, Total\_reported\_crime, Socioeconomic\_index, expenses\_per\_school\_student, expenses\_sport\_and\_other\_cultural\_activities, forest\_distance, coast\_distance, isForeclosure, owners\_expense
 \subsubsection{}
 The model used for prediction
-$$ \hat{Y_i}=\hat{\beta_i}\textbf{X}_i+\hat{\epsilon_i}$$
-$$\textbf{X}_i^T=\begin{bmatrix}
+$$ \hat{Y_i}=\alpha+\hat{\beta}^T\textbf{X}_i+\hat{\epsilon_i}$$
+$$\textbf{X}_i=\begin{bmatrix}
            basementSize \\
            buildYear \\
            rooms \\
